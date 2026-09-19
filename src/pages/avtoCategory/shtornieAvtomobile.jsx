@@ -1,17 +1,21 @@
-import { data } from "react-router-dom";
-import Header from "../../components/header/header";
 import { useLanguage } from "../../context/languageContext";
 import allImages from "../../assets/icons/icons";
-import { span } from "motion/react-client";
 
 const ShortnieAvtomobile = () => {
     const { data } = useLanguage();
 
     return (
         <>
-            <Header />
             <div className='bg-[#f9f9f9]'>
                 <div className='mx-auto max-w-360 px-5'>
+                    <div className='flex gap-1'>
+                        <a href='/' className='text-gray-400 text-[14px]'>
+                            Главная /
+                        </a>
+                        <a href='catalog' className='text-gray-400 text-[14px]'>
+                            Каталог /
+                        </a>
+                    </div>
                     <div className='flex gap-6 items-center py-5'>
                         <h1 className='font-medium text-3xl whitespace-nowrap'>
                             {
@@ -20,18 +24,27 @@ const ShortnieAvtomobile = () => {
                             }
                         </h1>
                         <div className='flex justify-between w-full'>
-                            <p className='text-gray-400'>
-                                {data.CategoryProducts.Products.shtornie.length}
-                                {data.CategoryProducts.Marka.product}
-                            </p>
+                            {/* {Object.values(data.CategoryProducts.Products).map(
+                                (item, i) => (
+                                    <p key={i} className='text-gray-400'>
+                                        {item?.length}
+                                    </p>
+                                ),
+                            )} */}
+                            {/* {data.CategoryProducts.Products.map((item, i) => (
+                                <p key={i} className='text-gray-400'>
+                                    {item.length()}
+                                </p>
+                            ))} */}
+                            <span>{data.CategoryProducts.Marka.product}</span>
                             <form action='#'>
                                 <label htmlFor='' className='text-gray-400'>
-                                    {" "}
                                     {data.CategoryProducts.Marka.sort}:
                                 </label>
                                 <input
                                     type='text'
-                                    className='border border-amber-400 rounded-full'
+                                    placeholder='По бренду'
+                                    className='bg-white rounded p-2'
                                 />
                             </form>
                         </div>
@@ -58,8 +71,11 @@ const ShortnieAvtomobile = () => {
                             {/* marka */}
                             <div>
                                 {data.CategoryProducts.Marka.type.map(
-                                    (index) => (
-                                        <div className='flex items-center gap-2 mb-3'>
+                                    (index, i) => (
+                                        <div
+                                            key={i}
+                                            className='flex items-center gap-2 mb-3'
+                                        >
                                             <input
                                                 type='checkbox'
                                                 className='w-6 h-6 hover:border-b-black accent-black '

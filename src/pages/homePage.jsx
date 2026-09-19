@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,6 +21,7 @@ import YellowSection from "../components/yellowSection/yellow";
 import { useLanguage } from "../context/languageContext";
 
 const HomePage = () => {
+    const navigate = useNavigate();
     const { data } = useLanguage();
     const [likedCards, setLikedCards] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
@@ -266,16 +267,21 @@ const HomePage = () => {
                 >
                     {data.CategoryProducts.Category.categoryCards.map(
                         (card, index) => (
-                            <SwiperSlide key={index}>
+                            <SwiperSlide
+                                key={index}
+                                onClick={() =>
+                                    navigate(`/category/${card.path}`)
+                                }
+                            >
                                 <Link to={`/category/${card.path}`}>
                                     <div className='border border-[#EBEBEB] rounded-lg p-3 sm:p-5 h-auto  transition-all duration-300 hover:border-amber-400 hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)]  cursor-pointer'>
                                         <h3 className='font-normal text-[18px] sm:text-2xl leading-[120%] text-[#000000] overflow-hidden truncate'>
                                             {card.name}
                                         </h3>
 
-                                        <p className='font-normal text-base leading-[160%] text-[#A1A1A1]'>
-                                            {card.model}
-                                        </p>
+                                        {/* <p className='font-normal text-base leading-[160%] text-[#A1A1A1]'>
+                                            {card.}
+                                        </p> */}
                                         <img
                                             src={card.image}
                                             className='w-auto h-auto object-contain'

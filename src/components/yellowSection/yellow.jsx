@@ -7,10 +7,9 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../context/languageContext";
-// import { useLanguage } from "../../context/LanguageContext";
 
 const YellowSection = () => {
-    const { language, data } = useLanguage();
+    const { data } = useLanguage();
 
     function CountMotion({ value, duration = 2.5 }) {
         const ref = useRef(null);
