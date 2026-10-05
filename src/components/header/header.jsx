@@ -4,24 +4,22 @@ import {
     BasketButton,
     HeaderCallButton,
     HeartButton,
+    LanguageButton,
 } from "../buttons/buttons";
-import { icons } from "../../assets/iconkalar";
-const { RussiaIcon, EnglishIcon, UzbekIcon } = icons;
 import { useLanguage } from "../../context/languageContext";
+import { Link, useNavigate } from "react-router-dom";
+import { useCart } from "../../context/cardContext";
 
 function Header() {
+    const { data } = useLanguage();
+    const { cart } = useCart();
+    const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
     const [catalogOpen, setCatalogOpen] = useState(null);
     const [workingTimeOpen, setWorkingTimeOpen] = useState(false);
-    const [languageOpen, setLanguageOpen] = useState(false);
-    const { language, setLanguage, data } = useLanguage();
-
-    const languageFlags = {
-        uz: <UzbekIcon />,
-        ru: <RussiaIcon />,
-        en: <EnglishIcon />,
-    };
-
+    const [categoryDropdown, setCategoryDropdown] = useState(null);
+    const [aboutDropdown, setAboutDropdown] = useState(null);
+    const [mediaDropdown, setMediaDropdown] = useState(null);
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 130);
@@ -33,10 +31,18 @@ function Header() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-
-    // Catalog / About Us / Media ochish
+    // Catalog / About Us / Mediani ochodo`n
     const handleCatalogOpen = (name) => {
         setCatalogOpen((prev) => (prev === name ? null : name));
+    };
+    const handleCategoryDropdown = (name) => {
+        setCategoryDropdown((prev) => (prev === name ? null : name));
+    };
+    const handleAboutDropdown = (name) => {
+        setAboutDropdown((prev) => (prev === name ? null : name));
+    };
+    const handleMediaDropdown = (name) => {
+        setMediaDropdown((prev) => (prev === name ? null : name));
     };
     return (
         <header className='relative w-full'>
@@ -198,60 +204,7 @@ function Header() {
                     </div>
 
                     <div className='flex items-center gap-3 sm:gap-5'>
-                        {/* laguage */}
-                        <div className='relative'>
-                            <button
-                                onClick={() => setLanguageOpen((prev) => !prev)}
-                                className='flex items-center gap-1 rounded text-sm'
-                            >
-                                <span>{languageFlags[language]}</span>
-
-                                <span>{language.toUpperCase()}</span>
-
-                                <span
-                                    className={`text-yellow-400 transition-transform duration-300 ${
-                                        languageOpen ? "rotate-180" : ""
-                                    }`}
-                                >
-                                    ▼
-                                </span>
-                            </button>
-
-                            {languageOpen && (
-                                <div className='absolute p-4 z-70 flex flex-col gap-2 rounded bg-white shadow-lg'>
-                                    <button
-                                        onClick={() => {
-                                            setLanguage("uz");
-                                            setLanguageOpen(false);
-                                        }}
-                                        className='flex items-center gap-1'
-                                    >
-                                        {languageFlags.uz} O'zbek
-                                    </button>
-
-                                    <button
-                                        onClick={() => {
-                                            setLanguage("ru");
-                                            setLanguageOpen(false);
-                                        }}
-                                        className='flex items-center gap-1'
-                                    >
-                                        {languageFlags.ru} Русский
-                                    </button>
-
-                                    <button
-                                        onClick={() => {
-                                            setLanguage("en");
-                                            setLanguageOpen(false);
-                                        }}
-                                        className='flex items-center gap-1'
-                                    >
-                                        {languageFlags.en} English
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                        {/* input div */}
+                        <LanguageButton />
                         <div className='hidden lg:flex'>
                             <input
                                 type='text'
@@ -262,23 +215,23 @@ function Header() {
                                 className='-ml-8'
                             />
                         </div>
+                        <div
+                            className='relative cursor-pointer'
+                            onClick={() => navigate("/basket")}
+                        >
+                            <BasketButton />
 
-                        <a href='#'>
-                            <img
-                                src={allImages.headerImages.basketImg}
-                                className='h-6 w-6'
-                            />
-                        </a>
-                        <a href='#'>
-                            <img
-                                src={allImages.headerImages.heartImg}
-                                className='h-6 w-6'
-                            />
-                        </a>
+                            {cart.length > 0 && (
+                                <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#FFC400] px-1 text-[11px] font-medium'>
+                                    {cart.length}
+                                </span>
+                            )}
+                        </div>
+                        <HeartButton />
                     </div>
                 </div>
             </div>
-            {/* scroll header */}
+            {/* scroll headerrrrrrrrrrrrrrrrrrrrrrrrrrrrr */}
             <div
                 className={`fixed top-0 z-50 w-full bg-white shadow-sm ${scrolled ? "block opacity-100" : "hidden opacity-0"}`}
             >
@@ -300,8 +253,8 @@ function Header() {
                         </a>
                         <div className='hidden sm:block lg:hidden'>
                             <a
-                                href='#'
-                                className='font-extrabold text-[16px] text-[#000000] mt-1'
+                                href='home'
+                                className='font-extrabold text-base mt-1'
                             >
                                 РУСТРАК
                             </a>
@@ -313,7 +266,7 @@ function Header() {
                         <nav className='items-center gap-7 hidden xl:flex'>
                             <button
                                 onClick={() => handleCatalogOpen("aboutUs")}
-                                className='flex items-center gap-1 text-[15px] transition duration-300 hover:text-[#C99024]'
+                                className='flex items-center gap-1 text-base transition duration-300 hover:text-[#C99024]'
                             >
                                 {data.header.navigations.aboutUs}
                                 <span
@@ -325,7 +278,7 @@ function Header() {
                             </button>
                             <button
                                 onClick={() => handleCatalogOpen("media")}
-                                className='flex items-center gap-1 text-[15px] transition duration-300 hover:text-[#C99024]'
+                                className='flex items-center gap-1 text-base transition duration-300 hover:text-[#C99024]'
                             >
                                 {data.header.navigations.media}
                                 <span
@@ -342,59 +295,7 @@ function Header() {
                         </nav>
                     </div>
                     <div className='flex items-center gap-2 sm:gap-5'>
-                        {/* laguage */}
-                        <div className='relative'>
-                            <button
-                                onClick={() => setLanguageOpen((prev) => !prev)}
-                                className='flex items-center gap-1 rounded text-sm'
-                            >
-                                <span>{languageFlags[language]}</span>
-
-                                <span>{language.toUpperCase()}</span>
-
-                                <span
-                                    className={`text-yellow-400 transition-transform duration-300 ${
-                                        languageOpen ? "rotate-180" : ""
-                                    }`}
-                                >
-                                    ▼
-                                </span>
-                            </button>
-
-                            {languageOpen && (
-                                <div className='absolute p-4 z-70 flex flex-col gap-2 rounded bg-white shadow-lg'>
-                                    <button
-                                        onClick={() => {
-                                            setLanguage("uz");
-                                            setLanguageOpen(false);
-                                        }}
-                                        className='flex items-center gap-1'
-                                    >
-                                        {languageFlags.uz} O'zbek
-                                    </button>
-
-                                    <button
-                                        onClick={() => {
-                                            setLanguage("ru");
-                                            setLanguageOpen(false);
-                                        }}
-                                        className='flex items-center gap-1'
-                                    >
-                                        {languageFlags.ru} Русский
-                                    </button>
-
-                                    <button
-                                        onClick={() => {
-                                            setLanguage("en");
-                                            setLanguageOpen(false);
-                                        }}
-                                        className='flex items-center gap-1'
-                                    >
-                                        {languageFlags.en} English
-                                    </button>
-                                </div>
-                            )}
-                        </div>
+                        <LanguageButton />
                         <div className='hidden lg:flex'>
                             <input
                                 type='text'
@@ -405,95 +306,232 @@ function Header() {
                                 className='-ml-8'
                             />
                         </div>
-                        <BasketButton />
+                        <div
+                            className='relative cursor-pointer'
+                            onClick={() => navigate("/basket")}
+                        >
+                            <BasketButton />
+
+                            {cart.length > 0 && (
+                                <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#FFC400] px-1 text-[11px] font-medium'>
+                                    {cart.length}
+                                </span>
+                            )}
+                        </div>
                         <HeartButton />
                         <HeaderCallButton />
                     </div>
                 </div>
             </div>
-            {/* catalog modal */}
+            {/* catalog modalllllllllllllllllllllllllll */}
             {catalogOpen && (
-                <div className={`absolute left-0 z-40 w-full bg-[#F9F9F9]`}>
-                    <div className='mx-auto flex max-w-360 justify-between px-5 py-7 flex-wrap'>
-                        <div>
-                            <h2 className='text-[22px] font-bold leading-[160%] text-[#000000] transition duration-300 hover:text-[#C99024]'>
-                                {data.header.allCategories.title}
-                            </h2>
-                            <nav className='grid grid-cols-1'>
-                                {data.header.allCategories.types.map(
-                                    (type, index) => (
-                                        <a
-                                            href={type.path}
-                                            key={index}
-                                            className='text-sm leading-[250%] text-[#000000] transition duration-300 hover:text-[#C99024]'
+                <div className='absolute left-0 top-full z-40 w-full bg-[#F9F9F9] shadow-md'>
+                    <div className='mx-auto max-w-360 px-5 py-7'>
+                        <div className='hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8'>
+                            <div>
+                                <h2 className='text-[22px] font-bold leading-[160%]'>
+                                    {data.header.allCategories.title}
+                                </h2>
+                                <nav className='grid grid-cols-1'>
+                                    {data.header.allCategories.types.map(
+                                        (type, i) => (
+                                            <Link
+                                                to={type.path}
+                                                key={i}
+                                                className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
+                                            >
+                                                {type.name}
+                                            </Link>
+                                        ),
+                                    )}
+                                </nav>
+                            </div>
+                            <div>
+                                <h2 className='text-[22px] font-bold leading-[160%]'>
+                                    {data.header.navigations.aboutUs}
+                                </h2>
+                                <nav className='grid grid-cols-1'>
+                                    {data.header.allAboutUs.types.map(
+                                        (type, index) => (
+                                            <Link
+                                                to={type.path}
+                                                key={index}
+                                                className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
+                                            >
+                                                {type.name}
+                                            </Link>
+                                        ),
+                                    )}
+                                </nav>
+                            </div>
+                            <div>
+                                <h2 className='text-[22px] font-bold leading-[160%]'>
+                                    {data.header.navigations.media}
+                                </h2>
+                                <nav className='grid grid-cols-1'>
+                                    {data.header.allMedia.types.map(
+                                        (type, index) => (
+                                            <Link
+                                                to={type.path}
+                                                key={index}
+                                                className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
+                                            >
+                                                {type.name}
+                                            </Link>
+                                        ),
+                                    )}
+                                </nav>
+                            </div>
+                            <div className='flex flex-col gap-5'>
+                                {data.header.navigations.media1.map(
+                                    (item, i) => (
+                                        <Link
+                                            key={i}
+                                            to={item.path}
+                                            className='text-[18px] font-bold transition duration-300 hover:text-[#C99024]'
                                         >
-                                            {type.name}
-                                        </a>
+                                            {item.name}
+                                        </Link>
                                     ),
                                 )}
-                            </nav>
+                            </div>
                         </div>
-                        <div>
-                            <h2 className='text-[22px] font-bold leading-[160%] text-[#000000] transition duration-300 hover:text-[#C99024]'>
-                                {data.header.navigations.aboutUs}
-                            </h2>
-                            <nav className='grid grid-cols-1'>
-                                {data.header.allAboutUs.types.map(
-                                    (type, index) => (
-                                        <a
-                                            href={type.path}
-                                            key={index}
-                                            className='text-sm leading-[250%] text-[#000000] transition duration-300 hover:text-[#C99024]'
+                        <div className='sm:hidden flex flex-col'>
+                            <div>
+                                <button
+                                    type='button'
+                                    onClick={() =>
+                                        handleCategoryDropdown("categories")
+                                    }
+                                    className='flex items-center gap-3 text-[22px] font-bold'
+                                >
+                                    {data.header.allCategories.title}
+                                    <svg
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        width='24'
+                                        height='24'
+                                        viewBox='0 0 1024 1024'
+                                        className={`transition duration-300 ${categoryDropdown ? "rotate-180" : ""} `}
+                                    >
+                                        <path
+                                            d='M0 0h1024v1024H0z'
+                                            fill='none'
+                                        />
+                                        <path
+                                            fill='#f5c206'
+                                            d='M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35'
+                                        />
+                                    </svg>
+                                </button>
+                                {categoryDropdown === "categories" && (
+                                    <nav className='flex flex-col pb-4'>
+                                        {data.header.allCategories.types.map(
+                                            (type, i) => (
+                                                <Link
+                                                    key={i}
+                                                    to={type.path}
+                                                    className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
+                                                >
+                                                    {type.name}
+                                                </Link>
+                                            ),
+                                        )}
+                                    </nav>
+                                )}
+                            </div>
+                            <div>
+                                <button
+                                    type='button'
+                                    onClick={() => handleAboutDropdown("about")}
+                                    className='flex items-center gap-3 text-[22px] font-bold'
+                                >
+                                    {data.header.navigations.aboutUs}
+                                    <svg
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        width='24'
+                                        height='24'
+                                        viewBox='0 0 1024 1024'
+                                        className={`transition duration-300 ${aboutDropdown ? "rotate-180" : ""} `}
+                                    >
+                                        <path
+                                            d='M0 0h1024v1024H0z'
+                                            fill='none'
+                                        />
+                                        <path
+                                            fill='#f5c206'
+                                            d='M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35'
+                                        />
+                                    </svg>
+                                </button>
+                                {aboutDropdown === "about" && (
+                                    <nav className='flex flex-col pb-4'>
+                                        {data.header.allAboutUs.types.map(
+                                            (type, i) => (
+                                                <Link
+                                                    key={i}
+                                                    to={type.path}
+                                                    className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
+                                                >
+                                                    {type.name}
+                                                </Link>
+                                            ),
+                                        )}
+                                    </nav>
+                                )}
+                            </div>
+                            <div>
+                                <button
+                                    type='button'
+                                    onClick={() => handleMediaDropdown("media")}
+                                    className='flex items-center gap-3 text-[22px] font-bold'
+                                >
+                                    {data.header.navigations.media}
+                                    <svg
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        width='24'
+                                        height='24'
+                                        viewBox='0 0 1024 1024'
+                                        className={`transition duration-300 ${mediaDropdown ? "rotate-180" : ""} `}
+                                    >
+                                        <path
+                                            d='M0 0h1024v1024H0z'
+                                            fill='none'
+                                        />
+                                        <path
+                                            fill='#f5c206'
+                                            d='M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35'
+                                        />
+                                    </svg>
+                                </button>
+                                {mediaDropdown === "media" && (
+                                    <nav className='flex flex-col pb-4'>
+                                        {data.header.allMedia.types.map(
+                                            (type, i) => (
+                                                <Link
+                                                    key={i}
+                                                    to={type.path}
+                                                    className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
+                                                >
+                                                    {type.name}
+                                                </Link>
+                                            ),
+                                        )}
+                                    </nav>
+                                )}
+                            </div>
+                            <div className='flex flex-col gap-2 sm:py-5'>
+                                {data.header.navigations.media1.map(
+                                    (item, i) => (
+                                        <Link
+                                            key={i}
+                                            to={item.path}
+                                            className='text-[22px] font-bold transition duration-300 hover:text-[#C99024]'
                                         >
-                                            {type.name}
-                                        </a>
+                                            {item.name}
+                                        </Link>
                                     ),
                                 )}
-                            </nav>
-                        </div>
-                        <div>
-                            <h2 className='text-[22px] font-bold leading-[160%] text-[#000000] transition duration-300 hover:text-[#C99024]'>
-                                {data.header.navigations.media}
-                            </h2>
-                            <nav className='grid grid-cols-1'>
-                                {data.header.allMedia.types.map(
-                                    (type, index) => (
-                                        <a
-                                            href={type.path}
-                                            key={index}
-                                            className='text-sm leading-[250%] text-[#000000] transition duration-300 hover:text-[#C99024]'
-                                        >
-                                            {type.name}
-                                        </a>
-                                    ),
-                                )}
-                            </nav>
-                        </div>
-                        <div className='flex flex-col'>
-                            <a
-                                href='#'
-                                className='text-[22px] font-bold leading-[160%] text-[#000000] transition duration-300 hover:text-[#C99024]'
-                            >
-                                {data.header.navigations.service}
-                            </a>
-                            <a
-                                href='#'
-                                className='text-[22px] font-bold leading-[230%] text-[#000000] transition duration-300 hover:text-[#C99024]'
-                            >
-                                {data.header.navigations.repair}
-                            </a>
-                            <a
-                                href='#'
-                                className='text-[22px] font-bold leading-[230%] text-[#000000] transition duration-300 hover:text-[#C99024]'
-                            >
-                                {data.header.navigations.news}
-                            </a>
-                            <a
-                                href='#'
-                                className='text-[22px] font-bold leading-[230%] text-[#000000] transition duration-300 hover:text-[#C99024]'
-                            >
-                                {data.header.navigations.contacts}
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>

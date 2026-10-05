@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "../context/languageContext";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
+import Breadcrumb from "../components/breadcrum/breadcrum";
 const RepairPage = () => {
     const { data } = useLanguage();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -8,14 +9,7 @@ const RepairPage = () => {
     return (
         <>
             <div className='mx-auto max-w-360 px-5 mb-10'>
-                <div className='flex gap-1'>
-                    <a href='/' className='text-gray-400 text-[14px]'>
-                        Главная /
-                    </a>
-                    <a href='repair' className='text-gray-400 text-[14px]'>
-                        Ремонт
-                    </a>
-                </div>
+                <Breadcrumb />
                 <h1 className='font-medium text-[20px] md:text-[28px] lg:text-[32px] my-4 sm:my-7'>
                     {data.repairPage.pageTitle}
                 </h1>

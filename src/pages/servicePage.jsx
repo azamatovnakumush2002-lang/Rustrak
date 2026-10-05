@@ -1,3 +1,4 @@
+import Breadcrumb from "../components/breadcrum/breadcrum";
 import { useLanguage } from "../context/languageContext";
 
 const ServicePage = () => {
@@ -6,14 +7,7 @@ const ServicePage = () => {
     return (
         <>
             <div className='mx-auto max-w-360 px-5 mb-10'>
-                <div className='flex gap-1'>
-                    <a href='/' className='text-gray-400 text-[14px]'>
-                        Главная /
-                    </a>
-                    <a href='service' className='text-gray-400 text-[14px]'>
-                        Сервис и гарантии
-                    </a>
-                </div>
+                <Breadcrumb />
                 <div>
                     <h1 className='font-medium text-xl sm:text-3xl my-5'>
                         {data.servicePage.pageTitle}

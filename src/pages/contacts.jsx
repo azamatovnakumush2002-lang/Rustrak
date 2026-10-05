@@ -1,3 +1,4 @@
+import Breadcrumb from "../components/breadcrum/breadcrum";
 import { useLanguage } from "../context/languageContext";
 
 const ContactsPage = () => {
@@ -6,45 +7,37 @@ const ContactsPage = () => {
     return (
         <>
             <div className='mx-auto px-5 max-w-360'>
-                <div className='flex gap-1'>
-                    <a href='/' className='text-gray-400 text-[14px]'>
-                        Главная /
-                    </a>
-                    <a href='contact' className='text-gray-400 text-[14px]'>
-                        Контакты
-                    </a>
-                </div>
-                {/* hero */}
+                <Breadcrumb />
                 <h1 className='font-medium text-[20px] sm:text-[24px] md:text-3xl mb-4 md:my-7'>
-                    {data.contactPage.contactHero.title}
+                    {data.contactPage.title}
                 </h1>
                 <div className='grid grid-cols-1 md:grid-cols-3 mb-10 md:mb-20'>
                     <div className='col-span-1 bg-[#FEC80B] max-h-87.5 p-5'>
                         <p className='text-base sm:text-[18px] max-w-60'>
-                            {data.contactPage.contactHero.location}
+                            {data.contactPage.location}
                         </p>
                         <div className='my-5 md:my-1 lg:my-10'>
                             <p className='font-bold text-base sm:text-[18px]'>
-                                {data.contactPage.contactHero.call1}
+                                {data.contactPage.call1}
                                 <span className='font-normal cursor-pointer'>
                                     8 (831) 235-25-51
                                 </span>
                             </p>
                             <p className='font-bold text-base sm:text-[18px]'>
-                                {data.contactPage.contactHero.call2}
+                                {data.contactPage.call2}
                                 <span className='font-normal cursor-pointer'>
                                     8 (800)-511-05-25
                                 </span>
                             </p>
                             <p className='font-bold text-base sm:text-[18px]'>
-                                {data.contactPage.contactHero.pochta}
+                                {data.contactPage.pochta}
                                 <span className='font-normal cursor-pointer'>
                                     info+7605@rtrf.ru
                                 </span>
                             </p>
                         </div>
                         <p className='font-bold text-base sm:text-[18px]'>
-                            {data.contactPage.contactHero.call3}
+                            {data.contactPage.call3}
                             <span className='font-normal cursor-pointer'>
                                 8(831) 225-00-55
                             </span>
@@ -60,7 +53,7 @@ const ContactsPage = () => {
                         ></iframe>
                     </div>
                 </div>
-                {/* testimonials */}
+                {/* testimonialsssssssssssssss */}
                 <div className='mb-10'>
                     <h1 className='font-medium text-3xl mb-6'>
                         {data.contactPage.employees}

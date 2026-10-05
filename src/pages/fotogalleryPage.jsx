@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "../context/languageContext";
+import Breadcrumb from "../components/breadcrum/breadcrum";
 
 const FotogalleryPage = () => {
     const { data } = useLanguage();
@@ -20,14 +21,7 @@ const FotogalleryPage = () => {
     return (
         <>
             <div className='mx-auto max-w-360 px-5 mb-10'>
-                <div className='flex gap-1'>
-                    <a href='/' className='text-gray-400 text-[14px]'>
-                        Главная /
-                    </a>
-                    <a href='news' className='text-gray-400 text-[14px]'>
-                        Фотогалерея
-                    </a>
-                </div>
+                <Breadcrumb />
                 <div className='flex justify-between items-center my-4 sm:my-7'>
                     <h1 className='font-medium text-xl sm:text-2xl md:text-3xl'>
                         {data.fotogalereyaPage.pageTitle}

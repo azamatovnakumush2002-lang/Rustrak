@@ -13,9 +13,11 @@ import {
     PodrobneButton,
     PodrobneeButton,
     PoluchitButton,
-    RecommendedPodrobneeBtn,
 } from "../components/buttons/buttons";
-import { PoluchitButtonModal } from "../components/modals/modals";
+import {
+    PoluchitButtonModal,
+    ZakazatZvonokModal,
+} from "../components/modals/modals";
 import ScrollSlider from "../components/scrollSlider/scrollSlider";
 import YellowSection from "../components/yellowSection/yellow";
 import { useLanguage } from "../context/languageContext";
@@ -25,6 +27,9 @@ const HomePage = () => {
     const { data } = useLanguage();
     const [likedCards, setLikedCards] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
+    const [zakazatOpen, setZakazatOpen] = useState(false);
+    const allProducts = Object.values(data.CategoryProducts.Products).flat();
+
     return (
         <div>
             {/* hero section*/}
@@ -51,7 +56,7 @@ const HomePage = () => {
                             <p className='font-normal text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7'>
                                 {data.homePageSwiper.swiperSlide1.text}
                             </p>
-                            <CallButton />
+                            <CallButton onClick={() => setZakazatOpen(true)} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -67,12 +72,13 @@ const HomePage = () => {
                                 <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
                                     {data.homePageSwiper.swiperSlide2.title}
                                 </h1>
-
                                 <p className='font-normal text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
                                     {data.homePageSwiper.swiperSlide2.text}
                                 </p>
 
-                                <CallButton />
+                                <CallButton
+                                    onClick={() => setZakazatOpen(true)}
+                                />
                             </div>
                         </div>
                     </SwiperSlide>
@@ -89,11 +95,9 @@ const HomePage = () => {
                                 <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
                                     {data.homePageSwiper.swiperSlide3.title}
                                 </h1>
-
-                                <p className='font-normal text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
+                                <p className='text-sm md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
                                     {data.homePageSwiper.swiperSlide3.text}
                                 </p>
-
                                 <PodrobneButton />
                             </div>
                         </div>
@@ -111,14 +115,14 @@ const HomePage = () => {
                                 <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
                                     {data.homePageSwiper.swiperSlide4.title}
                                 </h1>
-
-                                <p className='font-normal text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130'>
+                                <p className='font-normal text-sm md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130'>
                                     {data.homePageSwiper.swiperSlide4.text}
                                 </p>
-
                                 <div className='flex gap-4'>
                                     <OpenCatalogButton />
-                                    <CallButton />
+                                    <CallButton
+                                        onClick={() => setZakazatOpen(true)}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -136,14 +140,14 @@ const HomePage = () => {
                                 <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
                                     {data.homePageSwiper.swiperSlide5.title}
                                 </h1>
-
                                 <p className='font-normal text-[12px] md:text-[18px] leading-[130%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130 line-clamp-5'>
                                     {data.homePageSwiper.swiperSlide5.text}
                                 </p>
-
                                 <div className='flex gap-4'>
                                     <PodrobneButton />
-                                    <CallButton />
+                                    <CallButton
+                                        onClick={() => setZakazatOpen(true)}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -161,14 +165,14 @@ const HomePage = () => {
                                 <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
                                     {data.homePageSwiper.swiperSlide6.title}
                                 </h1>
-
                                 <p className='font-normal text-[12px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130 line-clamp-4'>
                                     {data.homePageSwiper.swiperSlide6.text}
                                 </p>
-
                                 <div className='flex gap-4'>
                                     <PodrobneButton />
-                                    <CallButton />
+                                    <CallButton
+                                        onClick={() => setZakazatOpen(true)}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -186,25 +190,28 @@ const HomePage = () => {
                                 <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
                                     {data.homePageSwiper.swiperSlide7.title}
                                 </h1>
-
                                 <p className='font-normal text-[12px] sm:text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-120'>
                                     {data.homePageSwiper.swiperSlide7.text}
                                 </p>
-
                                 <div className='flex gap-4'>
                                     <OpenCatalogButton />
-                                    <CallButton />
+                                    <CallButton
+                                        onClick={() => setZakazatOpen(true)}
+                                    />
                                 </div>
                             </div>
                         </div>
                     </SwiperSlide>
                 </Swiper>
+                {zakazatOpen && (
+                    <ZakazatZvonokModal onClose={() => setZakazatOpen(false)} />
+                )}
             </div>
             {/* category section*/}
             <div className='mx-auto max-w-360 px-5 mb-16'>
                 <div className='flex justify-between items-center mb-5 sm:mb-8'>
-                    <h1 className='font-medium text-[30px] sm:text-[42px] leading-[120%] texy-[#000000]'>
-                        {data.CategoryProducts.Category.categoryTitle}
+                    <h1 className='font-medium text-[30px] sm:text-[42px]'>
+                        {data.CategoryProducts.categoryTitle}
                     </h1>
                     <div className='hidden sm:block items-center gap-3'>
                         <button className='custom-prev-btn border border-gray-800 rounded justify-center  hover:bg-amber-300 transition-all duration-300 group mr-4'>
@@ -265,47 +272,39 @@ const HomePage = () => {
                     }}
                     className='mySwiper'
                 >
-                    {data.CategoryProducts.Category.categoryCards.map(
-                        (card, index) => (
-                            <SwiperSlide
-                                key={index}
-                                onClick={() =>
-                                    navigate(`/category/${card.path}`)
-                                }
-                            >
-                                <Link to={`/category/${card.path}`}>
-                                    <div className='border border-[#EBEBEB] rounded-lg p-3 sm:p-5 h-auto  transition-all duration-300 hover:border-amber-400 hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)]  cursor-pointer'>
-                                        <h3 className='font-normal text-[18px] sm:text-2xl leading-[120%] text-[#000000] overflow-hidden truncate'>
-                                            {card.name}
-                                        </h3>
-
-                                        {/* <p className='font-normal text-base leading-[160%] text-[#A1A1A1]'>
-                                            {card.}
-                                        </p> */}
-                                        <img
-                                            src={card.image}
-                                            className='w-auto h-auto object-contain'
-                                        />
-                                    </div>
-                                </Link>
-                            </SwiperSlide>
-                        ),
-                    )}
+                    {data.CategoryProducts.categoryCards.map((card, index) => (
+                        <SwiperSlide
+                            key={index}
+                            onClick={() => navigate(`/category/${card.path}`)}
+                        >
+                            <Link to={`/category/${card.path}`}>
+                                <div className='border border-[#EBEBEB] rounded-lg p-3 sm:p-5 h-auto  transition-all duration-300 hover:border-amber-400 hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)]  cursor-pointer'>
+                                    <h3 className='font-normal text-[18px] sm:text-2xl overflow-hidden truncate'>
+                                        {card.name}
+                                    </h3>
+                                    <img
+                                        src={card.image}
+                                        className='w-auto h-auto object-contain'
+                                    />
+                                </div>
+                            </Link>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
             {/* about rustrack section */}
             <div className='mx-auto max-w-360 px-5 my-10 lg:my-20 lg:flex lg:justify-between items-center'>
                 <div>
-                    <h1 className='max-w-70 sm:max-w-full font-medium text-[30px] sm:text-[42px] leading-[120%] text-[#000000] sm:whitespace-nowrap'>
-                        {data.homePageAboutRustrak.aboutTitle}{" "}
+                    <h1 className='max-w-70 sm:max-w-full font-medium text-[30px] sm:text-[42px]sm:whitespace-nowrap'>
+                        {data.homePageAboutRustrak.aboutTitle}
                         <span className='text-[#FEC80B]'>
                             {data.homePageAboutRustrak.rustrak}
                         </span>
                     </h1>
-                    <p className='font-normal text-base sm:text-[18px] leading-[150%] text-[#000000] w-full lg:max-w-120 my-3 sm:my-6'>
+                    <p className='font-normal text-base sm:text-[18px] w-full lg:max-w-120 my-3 sm:my-6'>
                         {data.homePageAboutRustrak.firstText}
                     </p>
-                    <p className='font-normal text-base sm:text-[18px] leading-[150%] text-[#000000] w-full lg:max-w-120 mb-5 sm:mb-10'>
+                    <p className='font-normal text-base sm:text-[18px] w-full lg:max-w-120 mb-5 sm:mb-10'>
                         {data.homePageAboutRustrak.secondText}
                     </p>
                     <PodrobneeButton />
@@ -325,8 +324,8 @@ const HomePage = () => {
             <div className='bg-[#F9F9F9]'>
                 <div className='mx-auto max-w-360 px-5 py-6 sm:py-10'>
                     <div className='flex justify-between items-center mb-5 sm:mb-8'>
-                        <h1 className='font-medium text-[24px] sm:text-[36px] md:text-[42px] leading-[120%] texy-[#000000]'>
-                            {data.homePageRecomendedProduct.recomendTitle}
+                        <h1 className='font-medium text-[24px] sm:text-[36px] md:text-[42px]'>
+                            {data.CategoryProducts.recomendTitle}
                         </h1>
                         {/* navigation */}
                         <div className='hidden sm:block items-center gap-3'>
@@ -388,23 +387,38 @@ const HomePage = () => {
                         }}
                         className='mySwiper'
                     >
-                        {data.homePageRecomendedProduct.productCards.map(
-                            (card) => (
-                                <SwiperSlide key={card.id}>
+                        {allProducts.map((card) => {
+                            const category =
+                                data.CategoryProducts.categoryCards.find(
+                                    (item) => item.id === card.categoryId,
+                                );
+
+                            return (
+                                <SwiperSlide
+                                    key={`${card.categoryId}-${card.id}`}
+                                >
                                     <div
-                                        className='absolute right-0 cursor-pointer'
+                                        className='absolute right-0 cursor-pointer z-10'
                                         onClick={() => {
                                             setLikedCards((prev) =>
-                                                prev.includes(card.id)
+                                                prev.includes(
+                                                    `${card.categoryId}-${card.id}`,
+                                                )
                                                     ? prev.filter(
                                                           (id) =>
-                                                              id !== card.id,
+                                                              id !==
+                                                              `${card.categoryId}-${card.id}`,
                                                       )
-                                                    : [...prev, card.id],
+                                                    : [
+                                                          ...prev,
+                                                          `${card.categoryId}-${card.id}`,
+                                                      ],
                                             );
                                         }}
                                     >
-                                        {likedCards.includes(card.id) ? (
+                                        {likedCards.includes(
+                                            `${card.categoryId}-${card.id}`,
+                                        ) ? (
                                             <svg
                                                 xmlns='http://www.w3.org/2000/svg'
                                                 width='34'
@@ -432,7 +446,6 @@ const HomePage = () => {
                                                     d='M0 0h24v24H0z'
                                                     fill='none'
                                                 />
-
                                                 <path
                                                     fill='#000'
                                                     fillRule='evenodd'
@@ -441,36 +454,43 @@ const HomePage = () => {
                                             </svg>
                                         )}
                                     </div>
-                                    <a href='#'>
-                                        <div>
-                                            <img
-                                                src={card.image}
-                                                className='w-full h-full object-cover'
+                                    <div>
+                                        <img
+                                            src={card.image}
+                                            className='w-full h-50 object-cover'
+                                        />
+                                    </div>
+                                    <div className='bg-white p-3 text-center md:text-left'>
+                                        <h3 className='font-normal text-sm sm:text-base line-clamp-2 text-left'>
+                                            {card.name}
+                                        </h3>
+                                        <p className='mx-auto text-center font-medium text-[22px]'>
+                                            {data.CategoryProducts.sena}
+                                        </p>
+                                        <div className='flex flex-col'>
+                                            <button
+                                                onClick={() =>
+                                                    navigate(
+                                                        `/category/${category.slug}/${card.id}`,
+                                                    )
+                                                }
+                                                className='py-1 md:py-2 rounded bg-[#FEC80B] border border-[#FEC80B] hover:text-[#FEC80B] hover:bg-white w-full text-center justify-center text-[12px] sm:text-base transition duration-300'
+                                            >
+                                                {
+                                                    data.CategoryProducts
+                                                        .podrobneBtn
+                                                }
+                                            </button>
+                                            <PoluchitButton
+                                                onClick={() =>
+                                                    setModalOpen(true)
+                                                }
                                             />
                                         </div>
-
-                                        <div className='bg-white p-3 text-center md:text-left w-auto'>
-                                            <h3 className='font-normal text-[14px] sm:text-base md:text-[18px] leading-[120%] text-[#000000] truncate text-left'>
-                                                {card.name}
-                                            </h3>
-
-                                            <p className='font-medium text-base sm:text-[18px] md:text-[22px] leading-[120%] text-[#000000] hover:text-amber-400 mb-2 mt-2 sm:mb-4 transition duration-300'>
-                                                {card.text}
-                                            </p>
-                                            {/* buttons */}
-                                            <div className='flex flex-col'>
-                                                <RecommendedPodrobneeBtn />
-                                                <PoluchitButton
-                                                    onClick={() =>
-                                                        setModalOpen(true)
-                                                    }
-                                                />
-                                            </div>
-                                        </div>
-                                    </a>
+                                    </div>
                                 </SwiperSlide>
-                            ),
-                        )}
+                            );
+                        })}
                     </Swiper>
                     {modalOpen && (
                         <PoluchitButtonModal
@@ -479,15 +499,15 @@ const HomePage = () => {
                     )}
                 </div>
             </div>
-            {/* news section */}
-            <div className='mx-auto max-w-360 px-5 py-5 sm:my-16'>
+            {/* news sectionnnnnnnnnnnnnnnnn */}
+            <div className='mx-auto max-w-360 px-5 sm:my-8'>
                 <div className='flex justify-between items-center mb-5 sm:mb-8'>
-                    <h1 className='font-medium text-[24px] sm:text-[36px] md:text-[42px] leading-[120%] texy-[#000000]'>
-                        {data.homePageNews.newsTitle}
+                    <h1 className='font-medium text-[24px] sm:text-[36px] md:text-[42px]'>
+                        {data.newsPage.newsTitle}
                     </h1>
-                    {/* navigation */}
+                    {/* navigationnnnnnnnnnnnnnnnnnnnn */}
                     <div className='hidden sm:block items-center gap-3'>
-                        <button className='custom-prev-btn border border-gray-800 rounded justify-center  hover:bg-amber-300 transition-all duration-300 group mr-4'>
+                        <button className='custom-prev-btn border border-gray-800 rounded justify-center hover:bg-amber-300 transition-all duration-300 group mr-4'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 width='40px'
@@ -545,9 +565,9 @@ const HomePage = () => {
                     }}
                     className='mySwiper'
                 >
-                    {data.homePageNews.newsCards.map((card) => (
-                        <SwiperSlide key={card.id}>
-                            <a href='#'>
+                    {data.newsPage.allAvto.map((card, i) => (
+                        <SwiperSlide key={i}>
+                            <Link to={`/news/${card.path}`}>
                                 <div>
                                     <img
                                         src={card.image}
@@ -556,14 +576,14 @@ const HomePage = () => {
                                 </div>
 
                                 <div className='py-1 sm:py-3'>
-                                    <span>{card.date}</span>
+                                    <span>{card.year}</span>
 
-                                    <p className='font-medium text-base sm:text-[18px] leading-[120%] text-[#000000] hover:text-amber-400 mt-1 mb-2 sm:mt-2 sm:mb-4 line-clamp-2 transition duration-300'>
-                                        {card.text}
+                                    <p className='font-medium text-base sm:text-[18px] hover:text-amber-400 mt-1 mb-2 sm:mt-2 sm:mb-4 line-clamp-2 transition duration-300'>
+                                        {card.name}
                                     </p>
                                     <NewsPodrobneeButton />
                                 </div>
-                            </a>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -571,5 +591,4 @@ const HomePage = () => {
         </div>
     );
 };
-
 export default HomePage;

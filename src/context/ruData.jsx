@@ -9,6 +9,7 @@ export const ruData = {
             place: "г. Нижний Новгород ул. Торфяная, 35",
             forRegion: "Для регионов: 8 (800) 77-77-210",
             forRegion2: "Нижний Новгород: 8 (831) 225-00-55",
+            main: "Главная",
             navigations: {
                 katalogBtn: "Каталог",
                 aboutUs: "О нас",
@@ -41,39 +42,43 @@ export const ruData = {
                     },
                     {
                         name: "Краны-манипуляторы",
-                        path: "/krany-manipulyatory",
+                        path: "/category/krany-manipulyatory",
                     },
-
                     {
                         name: "Автотопливозаправщики",
-                        path: "/avtotoplivozapravshiki",
+                        path: "/category/avtotoplivozapravshiki",
                     },
                     {
                         name: "Автогидроподъёмники",
+                        path: "/category/avtogidropodyomniki",
                     },
                     {
                         name: "Автоцистерны",
+                        path: "/category/avtocisterny",
                     },
                     {
                         name: "Автоэвакуаторы",
-                    },
-                    {
-                        name: "Бортовые автомобили",
+                        path: "/category/avtoevakuatory",
                     },
                     {
                         name: "Изотермические фургоны",
+                        path: "/category/izotermicheskie-furgony",
                     },
                     {
                         name: "Контейнеровозы",
+                        path: "/category/konteynerovozy",
                     },
                     {
                         name: "Крюковые погрузчики",
+                        path: "/category/kryukovye-pogruzchiki",
                     },
                     {
                         name: "Самосвалы",
+                        path: "/category/samosvaly",
                     },
                     {
                         name: "Автомобили ДОПОГ категория EXII",
+                        path: "/category/dopog-exii",
                     },
                 ],
             },
@@ -86,25 +91,31 @@ export const ruData = {
                     },
                     {
                         name: "Наши партнёры",
-                        path: "/nashiPartnyori",
+                        path: "/partners",
                     },
                     {
                         name: "Производство",
+                        path: "/production",
                     },
                     {
                         name: "Поставщикам и партнёрам",
+                        path: "/suppliers",
                     },
                     {
                         name: "Отзывы",
+                        path: "/otziv",
                     },
                     {
                         name: "Сертификаты",
+                        path: "/sertificate",
                     },
                     {
                         name: "Вакансии",
+                        path: "/vacancies",
                     },
                     {
                         name: "Кредит и лизинг",
+                        path: "/leasing",
                     },
                 ],
             },
@@ -120,14 +131,26 @@ export const ruData = {
                     },
                     {
                         name: "Рекламные материалы",
-                        path: "/media",
+                        path: "/promo",
                     },
                     {
                         name: "Информационные материалы",
-                        path: "/media",
+                        path: "/info",
                     },
                 ],
             },
+        },
+        // ///////////////////////BASKET///////////////////////
+        basket: {
+            pageTitle: "Корзина",
+            text1: "Ваша корзина пуста.",
+            text2: "Воспользуйтесь каталогом или поиском, чтобы найти подходящий товар.",
+            button1: "На главную",
+            button2: "Открыть каталог",
+        },
+        like: {
+            pageTitle:"Избранное",
+            text: "Ваше избранное пусто.",
         },
         // ///////////////////////HOME////////////////////////////////////////////////
         homePageSwiper: {
@@ -168,100 +191,122 @@ export const ruData = {
             },
         },
         CategoryProducts: {
-            Category: {
-                categoryTitle: "Категории",
-                categoryCards: [
-                    {
-                        id: 1,
-                        image: "/homePagePhotos/category-img-1.webp",
-                        name: "Шторные автомобили",
-                        slug: "шторные автомобили",
-                        path: "/shtornye-avtomobili",
-                    },
-                    {
-                        id: 2,
-                        image: "/homePagePhotos/category-img-2.webp",
-                        name: "Краны-манипуляторы",
-                        slug: "краны-манипуляторы",
-                        path: "/krani-manipulyatori",
-                    },
-                    {
-                        id: 3,
-                        image: "/homePagePhotos/category-img-3.png",
-                        name: "Автотопливозаправщики",
-                        slug: "автотопливозаправщики",
-                        path: "/avtotoplivozapravshiki",
-                    },
-                    {
-                        id: 4,
-                        image: "/homePagePhotos/category-img-4.webp",
-                        name: "Автогидроподёмники",
-                        slug: "автогидроподёмники",
-                        path: "/avtogidropodyomniki",
-                    },
-                    {
-                        id: 5,
-                        image: "/homePagePhotos/category-img-5.webp",
-                        name: "Автоцистерны",
-                        slug: "автоцистерны",
-                        path: "/avtosisterni",
-                    },
-                    {
-                        id: 6,
-                        image: "/homePagePhotos/category-img-6.webp",
-                        name: "Автоэвакуаторы",
-                        slug: "автоэвакуаторы",
-                        path: "/avtoevakuatori",
-                    },
-                    {
-                        id: 7,
-                        image: "/homePagePhotos/category-img-7.webp",
-                        name: "Изотермические фургоны",
-                        slug: "изотермические фургоны",
-                        path: "/izotermicheskiye-furgoni",
-                    },
-                    {
-                        id: 8,
-                        image: "/homePagePhotos/category-img-8.png",
-                        name: "Контейнеровозы",
-                        slug: "контейнеровозы",
-                        path: "/konteynerovozi",
-                    },
-                    {
-                        id: 9,
-                        image: "/homePagePhotos/category-img-9.webp",
-                        name: "Крюковые погрузчики",
-                        slug: "крюковые погрузчики",
-                        path: "/kryukovie-pogruzchiki",
-                    },
-                    {
-                        id: 10,
-                        image: "/homePagePhotos/category-img-10.png",
-                        name: "Самосвалы",
-                        slug: "самосвалы",
-                        path: "/samosvali",
-                    },
-                    {
-                        id: 11,
-                        image: "/homePagePhotos/category-img-11.webp",
-                        name: "Автомобили ДОПОГ категория EXII",
-                        slug: "автомобили ДОПОГ категория EXII",
-                        path: "/avtomobili-DOPOG-kategoriya-EXIT",
-                    },
-                ],
-            },
+            categoryTitle: "Категории",
+            recomendTitle: "Рекомендуемая продукция",
+            sena: "Цена по запросу",
+            podrobneBtn: "Подробнее",
+            categoryCards: [
+                {
+                    id: 1,
+                    image: "/homePagePhotos/category-img-1.webp",
+                    name: "Шторные автомобили",
+                    slug: "shtornye-avtomobili",
+                    path: "/shtornye-avtomobili",
+                },
+                {
+                    id: 2,
+                    image: "/homePagePhotos/category-img-2.webp",
+                    name: "Краны-манипуляторы",
+                    slug: "krany-manipulyatory",
+                    path: "/krani-manipulyatori",
+                },
+                {
+                    id: 3,
+                    image: "/homePagePhotos/category-img-3.png",
+                    name: "Автотопливозаправщики",
+                    slug: "avtotoplivozapravshiki",
+                    path: "/avtotoplivozapravshiki",
+                },
+                {
+                    id: 4,
+                    image: "/homePagePhotos/category-img-4.webp",
+                    name: "Автогидроподёмники",
+                    slug: "avtogidropodyomniki",
+                    path: "/avtogidropodyomniki",
+                },
+                {
+                    id: 5,
+                    image: "/homePagePhotos/category-img-5.webp",
+                    name: "Автоцистерны",
+                    slug: "avtocisterny",
+                    path: "/avtosisterni",
+                },
+                {
+                    id: 6,
+                    image: "/homePagePhotos/category-img-6.webp",
+                    name: "Автоэвакуаторы",
+                    slug: "avtoevakuatory",
+                    path: "/avtoevakuatori",
+                },
+                {
+                    id: 7,
+                    image: "/homePagePhotos/category-img-7.webp",
+                    name: "Изотермические фургоны",
+                    slug: "izotermicheskiye-furgony",
+                    path: "/izotermicheskiye-furgoni",
+                },
+                {
+                    id: 8,
+                    image: "/homePagePhotos/category-img-8.png",
+                    name: "Контейнеровозы",
+                    slug: "konteynerovozy",
+                    path: "/konteynerovozi",
+                },
+                {
+                    id: 9,
+                    image: "/homePagePhotos/category-img-9.webp",
+                    name: "Крюковые погрузчики",
+                    slug: "kryukovye-pogruzchiki",
+                    path: "/kryukovie-pogruzchiki",
+                },
+                {
+                    id: 10,
+                    image: "/homePagePhotos/category-img-10.png",
+                    name: "Самосвалы",
+                    slug: "samosvali",
+                    path: "/samosvaly",
+                },
+                {
+                    id: 11,
+                    image: "/homePagePhotos/category-img-11.webp",
+                    name: "Автомобили ДОПОГ категория EXII",
+                    slug: "dopog-exii",
+                    path: "/avtomobili-DOPOG-kategoriya-EXIT",
+                },
+            ],
             Products: {
                 shtornie: [
                     {
                         id: 1,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
+                        image: "/categoryPhotos/shtornieAvto/shtornie1.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-1-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-1-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-1-3.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-1-4.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-1-5.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-1-6.webp",
+                        ],
                         drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
+                            "/categoryPhotos/shtornieAvto/shtorDrawing1.png",
                         name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        path: "/Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        marka: {
+                            title: "Марка",
+                            value: "МАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9510 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "6340",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -370,13 +415,29 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie2.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-2-1.webp",
+                        ],
                         drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
+                            "/categoryPhotos/shtornieAvto/shtorDrawing2.png",
                         name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        path: "/Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        marka: {
+                            title: "Марка",
+                            value: "МАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10070 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "13800",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -485,11 +546,29 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie3.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie3.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-3-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-3-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-3-3.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ 4308",
+                        path: "/Шторный грузовик КАМАЗ 4308",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10900 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "4780",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -598,11 +677,29 @@ export const ruData = {
                     {
                         id: 4,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie4.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie4.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-4-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-4-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-4-3.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ 65657",
+                        path: "/Шторный грузовик КАМАЗ 65657",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "11985 x 2440 x 2440 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "14800",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -711,11 +808,29 @@ export const ruData = {
                     {
                         id: 5,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/065/768_547_0/6tii8f07858ux1y3m06lant5faiadcss.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie5.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie5.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-5-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-5-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-5-3.webp",
+                        ],
                         name: "Шторный грузовик КОМПАС 5",
+                        path: "/Шторный грузовик КОМПАС 5",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "6410 x 2300 x 2300 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "1220",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КОМПАС 5",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -824,12 +939,30 @@ export const ruData = {
                     {
                         id: 6,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/890/768_547_0/d0hjyz2igcrmxq212zp0ywn5fobewa5m.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie6.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie6.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-6-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-6-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-6-3.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-6-4.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
+                        path: "/Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10320 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "12600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle:
-                            "Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -938,12 +1071,31 @@ export const ruData = {
                     {
                         id: 7,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/024/768_547_0/kt52qzyjuzaj7mf3juw1sfqjjh5hxzsz.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie7.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie7.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-7-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-7-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-7-3.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-7-4.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-7-5.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ 65207 (модель 438812)",
+                        path: "/Шторный грузовик КАМАЗ 65207 (модель 438812)",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "11210 / 11610 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "14800",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle:
-                            "Бортовой автомобиль со шторным механизмом открытия тента КАМАЗ 65207-1002-87",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1052,12 +1204,28 @@ export const ruData = {
                     {
                         id: 8,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/d36/768_547_0/ek77ix99yr809qx6k3v3tgducd8vtjh4.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie8.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie8.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-8-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-8-2.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
+                        path: "/Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "8290 x 2250 x 2250 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "14800",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle:
-                            "Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1166,12 +1334,31 @@ export const ruData = {
                     {
                         id: 9,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/f8d/768_547_0/x3dlou5z9x2i27vu9al10ytmt5op22ix.webp",
+                        image: "/categoryPhotos/shtornieAvto/shtornie9.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie9.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-9-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-9-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-9-3.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-9-4.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-9-5.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
+                        path: "/Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10770 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "6540",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle:
-                            "Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1280,11 +1467,28 @@ export const ruData = {
                     {
                         id: 10,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/shtornieAvto/shtornie10.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie10.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-10-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-10-2.webp",
+                        ],
+                        name: "Шторный грузовик ВАЛДАЙ 12",
+                        path: "/Шторный грузовик ВАЛДАЙ 12",
+                        marka: {
+                            title: "Марка",
+                            value: "ГАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9610 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "6400",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1393,11 +1597,29 @@ export const ruData = {
                     {
                         id: 11,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/shtornieAvto/shtornie11.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie11.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-11-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-11-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-11-3.webp",
+                        ],
+                        name: "Шторный грузовик JAC 200",
+                        path: "/Шторный грузовик JAC 200",
+                        marka: {
+                            title: "Марка",
+                            value: "JAC",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "7632 x 2520 x 2520 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "13750",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1506,11 +1728,29 @@ export const ruData = {
                     {
                         id: 12,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/shtornieAvto/shtornie12.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie12.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-12-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-12-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-12-3.webp",
+                        ],
+                        name: "Бортовой автомобиль со шторным механизмом открытия тента JAC N120 (модель 538922)",
+                        path: "/Бортовой автомобиль со шторным механизмом открытия тента JAC N120 (модель 538922)",
+                        marka: {
+                            title: "Марка",
+                            value: "JAC",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10640 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "5150",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1619,11 +1859,29 @@ export const ruData = {
                     {
                         id: 13,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/shtornieAvto/shtornie13.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie13.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-13-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-13-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-13-3.webp",
+                        ],
+                        name: "Шторный грузовик JAC 120",
+                        path: "/Шторный грузовик JAC 120",
+                        marka: {
+                            title: "Марка",
+                            value: "JAC",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10640 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "6040",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1732,124 +1990,30 @@ export const ruData = {
                     {
                         id: 14,
                         categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/shtornieAvto/shtornie14.webp",
+                        images: [
+                            "/categoryPhotos/shtornieAvto/shtornie14.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-14-1.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-14-2.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-14-3.webp",
+                            "/categoryPhotos/shtornieAvto/shtor-14-4.webp",
+                        ],
+                        name: "Шторный грузовик JAC 90 (модель 538932)",
+                        path: "/Шторный грузовик JAC 90 (модель 538932)",
+                        marka: {
+                            title: "Марка",
+                            value: "JAC",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "5600 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "5920",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 15,
-                        categoryId: 1,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -1960,13 +2124,32 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 2,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/kranAvto/kran1.webp",
+                        images: [
+                            "/categoryPhotos/kranAvto/kran1.webp",
+                            "/categoryPhotos/kranAvto/kran-1-1.webp",
+                            "/categoryPhotos/kranAvto/kran-1-2.webp",
+                            "/categoryPhotos/kranAvto/kran-1-3.webp",
+                        ],
+                        drawingImage: "kranDrawing1.png",
+                        name: "Кран-манипулятор МАЗ 6312С5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
+                        path: "/Кран-манипулятор МАЗ 6312С5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
+                        marka: [
+                            {
+                                title: "Марка",
+                                value: "МАЗ",
+                            },
+                        ],
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10650 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "17360",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2075,13 +2258,31 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 2,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/kranAvto/kran2.webp",
+                        images: [
+                            "/categoryPhotos/kranAvto/kran2.webp",
+                            "/categoryPhotos/kranAvto/kran-2-1.webp",
+                            "/categoryPhotos/kranAvto/kran-2-2.webp",
+                            "/categoryPhotos/kranAvto/kran-2-3.webp",
+                            "/categoryPhotos/kranAvto/kran-2-4.webp",
+                            "/categoryPhotos/kranAvto/kran-2-5.webp",
+                        ],
+                        name: "Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
+                        path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
                         allCharacter: "Смотреть все характеристики",
+                        marka: {
+                            title: "Марка",
+                            value: "МАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10580 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "17500",
+                        },
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2190,11 +2391,30 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 2,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
+                        image: "/categoryPhotos/kranAvto/kran3.webp",
+                        images: [
+                            "/categoryPhotos/kranAvto/kran3.webp",
+                            "/categoryPhotos/kranAvto/kran-3-1.webp",
+                            "/categoryPhotos/kranAvto/kran-3-2.webp",
+                            "/categoryPhotos/kranAvto/kran-3-3.webp",
+                            "/categoryPhotos/kranAvto/kran-3-4.webp",
+                        ],
+                        name: "Кран-манипулятор МАЗ 631228 с КМУ ИНМАН ИТ 150",
+                        path: "/Кран-манипулятор МАЗ 631228 с КМУ ИНМАН ИТ 150",
+                        marka: {
+                            title: "Марка",
+                            value: "МАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10540 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "17360",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2303,11 +2523,29 @@ export const ruData = {
                     {
                         id: 4,
                         categoryId: 2,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/kranAvto/kran4.webp",
+                        images: [
+                            "/categoryPhotos/kranAvto/kran4.webp",
+                            "/categoryPhotos/kranAvto/kran-4-1.webp",
+                            "/categoryPhotos/kranAvto/kran-4-2.webp",
+                        ],
+                        drawingImage: "/categoryPhotos/kranAvto/kranDrawing4",
+                        name: "Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
+                        path: "/Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "10560 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "9520",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2416,11 +2654,29 @@ export const ruData = {
                     {
                         id: 5,
                         categoryId: 2,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/065/768_547_0/6tii8f07858ux1y3m06lant5faiadcss.webp",
-                        name: "Шторный грузовик КОМПАС 5",
+                        image: "/categoryPhotos/kranAvto/kran5.webp",
+                        images: [
+                            "/categoryPhotos/kranAvto/kran5.webp",
+                            "/categoryPhotos/kranAvto/kran-5-1.webp",
+                            "/categoryPhotos/kranAvto/kran-5-2.webp",
+                        ],
+                        name: "Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
+                        path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КОМПАС 5",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2531,13 +2787,30 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 3,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
+                        image: "/categoryPhotos/avtotoplivozapravshiki/toplivo1.webp",
+                        images: [
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo1.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-1-1.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-1-2.webp",
+                        ],
                         drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivoDrawing1.png",
+                        name: "Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
+                        path: "/Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2646,13 +2919,33 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 3,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/avtotoplivozapravshiki/toplivo2.webp",
+                        images: [
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo2.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-2-1.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-2-2.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-2-3.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-2-4.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-2-5.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-2-6.webp",
+                        ],
+                        name: "Автотопливозаправщик на шасси ГАЗ C41R13 (модель 4389JY)",
+                        path: "/Автотопливозаправщик на шасси ГАЗ C41R13 (модель 4389JY)",
+                        model: "ГАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2761,11 +3054,30 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 3,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
+                        image: "/categoryPhotos/avtotoplivozapravshiki/toplivo3.webp",
+                        images: [
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo3.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-3-1.webp",
+                        ],
+                        drawingImage:
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivoDrawing3.png",
+                        name: "Автотопливозаправщик Валдай 18 FB6R31",
+                        path: "/Автотопливозаправщик Валдай 18 FB6R31",
+                        model: "Валдай",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -2874,124 +3186,31 @@ export const ruData = {
                     {
                         id: 4,
                         categoryId: 3,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/avtotoplivozapravshiki/toplivo4.webp",
+                        images: [
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo4.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-4-1.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-4-2.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-4-3.webp",
+                            "/categoryPhotos/avtotoplivozapravshiki/toplivo-4-4.webp",
+                        ],
+                        name: "Автотопливозаправщик Валдай 12 АТЗ 6",
+                        path: "/Автотопливозаправщик Валдай 12 АТЗ 6",
+                        model: "Валдай",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 5,
-                        categoryId: 3,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/065/768_547_0/6tii8f07858ux1y3m06lant5faiadcss.webp",
-                        name: "Шторный грузовик КОМПАС 5",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КОМПАС 5",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -3102,13 +3321,23 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 4,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/avtogidropodyomniki/avtogidro1.webp",
+                        name: "Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
+                        path: "/Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -3217,13 +3446,23 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 4,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/avtogidropodyomniki/avtogidro2.webp",
+                        name: "Автогидроподъёмники PALFINGER P 240A на шасси HD-78",
+                        path: "/Автогидроподъёмники PALFINGER P 240A на шасси HD-78",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -3326,345 +3565,6 @@ export const ruData = {
                             {
                                 title: "Прочее оборудование",
                                 value: "Пластиковые крылья, брызговики. Боковые влагозащитные габаритные огни. Боковая защита от базового шасси Заднее защитное устройство Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 3,
-                        categoryId: 4,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 4308-3083-69(G5)",
-                            },
-                            {
-                                title: "Двигатель Cummins",
-                                value: "ISB6.7 E5 250, 250 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Механическая, 9-ступенчатая ZF9",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "10900",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2550",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3990",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "4780",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8500",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "11980",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "6020",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "4780",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "38...59",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 4308-3083-69(G5)",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "Cummins ISB6.7 E5 250, 250 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Механическая, 9-ступенчатая ZF9",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "4780",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 4,
-                        categoryId: 4,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 5,
-                        categoryId: 4,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/065/768_547_0/6tii8f07858ux1y3m06lant5faiadcss.webp",
-                        name: "Шторный грузовик КОМПАС 5",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КОМПАС 5",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
                             },
                         ],
                     },
@@ -3673,13 +3573,30 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 5,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/avtosisterni/sisterni1.webp",
+                        images: [
+                            "/categoryPhotos/avtosisterni/sisterni1.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-1-1.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-1-2.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-1-3.webp",
+                        ],
+                        name: "Пищевая цистерна КАМАЗ 43089",
+                        path: "/Пищевая цистерна КАМАЗ 43089",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -3788,13 +3705,29 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 5,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/avtosisterni/sisterni2.webp",
+                        images: [
+                            "/categoryPhotos/avtosisterni/sisterni2.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-2-1.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-2-2.webp",
+                        ],
+                        name: "ГАЗон NEXТ с пищевой цистерной 4,2 куба",
+                        path: "/ГАЗон NEXТ с пищевой цистерной 4,2 куба",
+                        modal: "NEXТ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -3903,11 +3836,29 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 5,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
+                        image: "/categoryPhotos/avtosisterni/sisterni3.webp",
+                        images: [
+                            "/categoryPhotos/avtosisterni/sisterni3.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-3-1.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-3-2.webp",
+                            "/categoryPhotos/avtosisterni/sisterni-3-3.webp",
+                        ],
+                        name: "Пищевая цистерна JAC N90",
+                        path: "/Пищевая цистерна JAC N90",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -3990,232 +3941,6 @@ export const ruData = {
                             {
                                 title: "Борта платформы",
                                 value: "Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 4,
-                        categoryId: 5,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 5,
-                        categoryId: 5,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/065/768_547_0/6tii8f07858ux1y3m06lant5faiadcss.webp",
-                        name: "Шторный грузовик КОМПАС 5",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КОМПАС 5",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
                             },
                             {
                                 title: "Передняя стенка",
@@ -4244,13 +3969,24 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 6,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
+                        image: "/categoryPhotos/avtoevakuator/avakuator1.webp",
                         name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
-                        allCharacter: "Смотреть все характеристики",
+                        path: "/Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
+                        allCharacter:
+                            "Эвакуатор на шасси КАМАЗ-4308 с КМУ PALFINGER РК 13500Т",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -4359,13 +4095,23 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 6,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/avtoevakuator/evakuator2.webp",
+                        name: "Эвакуатор на шасси ISUZU FSR-34UL-NCUN с КМУ PALFINGER РК 13500Т",
+                        path: "/Эвакуатор на шасси ISUZU FSR-34UL-NCUN с КМУ PALFINGER РК 13500Т",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -4476,6 +4222,19 @@ export const ruData = {
                         categoryId: 6,
                         image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
                         name: "Шторный грузовик КАМАЗ 4308",
+                        path: "/Шторный грузовик КАМАЗ 4308",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
                         yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
@@ -4589,6 +4348,19 @@ export const ruData = {
                         categoryId: 6,
                         image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
                         name: "Шторный грузовик КАМАЗ 65657",
+                        path: "/Шторный грузовик КАМАЗ 65657",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
                         yellowTitle: "Шторный грузовик КАМАЗ 65657",
@@ -4702,13 +4474,30 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 7,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/izotermicheskie/furgon1.webp",
+                        images: [
+                            "/categoryPhotos/izotermicheskie/furgon1.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-1-1.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-1-2.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-1-3.webp",
+                        ],
+                        name: "Изотермический фургон КАМАЗ 43089",
+                        path: "/Изотермический фургон КАМАЗ 43089",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -4817,13 +4606,30 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 7,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/izotermicheskie/furgon2.webp",
+                        images: [
+                            "/categoryPhotos/izotermicheskie/furgon2.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-2-1.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-2-2.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-2-3.webp",
+                        ],
+                        name: "Изотермический фургон КАМАЗ 43082",
+                        path: "/Изотермический фургон КАМАЗ 43082",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -4932,11 +4738,30 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 7,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
+                        image: "/categoryPhotos/izotermicheskie/furgon3.webp",
+                        images: [
+                            "/categoryPhotos/izotermicheskie/furgon3.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-3-1.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-3-2.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-3-3.webp",
+                        ],
+                        name: "Изотермический фургон SHACMAN X3000",
+                        path: "/Изотермический фургон SHACMAN X3000",
+                        model: "SHACMAN",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5045,11 +4870,31 @@ export const ruData = {
                     {
                         id: 4,
                         categoryId: 7,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/izotermicheskie/furgon4.webp",
+                        images: [
+                            "/categoryPhotos/izotermicheskie/furgon4.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-4-1.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-4-2.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-4-3.webp",
+                            "/categoryPhotos/izotermicheskie/furgon-4-4.webp",
+                        ],
+                        name: "Изотермический фургон JAC 35",
+                        path: "/Изотермический фургон JAC 35",
+                        model: "JAC",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5160,13 +5005,31 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 8,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/konteynerovozi/konteyner1.webp",
+                        images: [
+                            "/categoryPhotos/konteynerovozi/konteyner1.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-1-1.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-1-2.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-1-3.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-1-4.webp",
+                        ],
+                        name: "Контейнеровоз на шасси КАМАЗ 65115",
+                        path: "/Контейнеровоз на шасси КАМАЗ 65115",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5275,13 +5138,30 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 8,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/konteynerovozi/konteyner2.webp",
+                        images: [
+                            "/categoryPhotos/konteynerovozi/konteyner2.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-2-1.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-2-2.webp",
+                            "/categoryPhotos/konteynerovozi/konteyner-2-3.webp",
+                        ],
+                        name: "Контейнеровоз на шасси ГАЗ С41R33",
+                        path: "/Контейнеровоз на шасси ГАЗ С41R33",
+                        model: "ГАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "ГАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5384,232 +5264,6 @@ export const ruData = {
                             {
                                 title: "Прочее оборудование",
                                 value: "Пластиковые крылья, брызговики. Боковые влагозащитные габаритные огни. Боковая защита от базового шасси Заднее защитное устройство Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 3,
-                        categoryId: 8,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 4308-3083-69(G5)",
-                            },
-                            {
-                                title: "Двигатель Cummins",
-                                value: "ISB6.7 E5 250, 250 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Механическая, 9-ступенчатая ZF9",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "10900",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2550",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3990",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "4780",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8500",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "11980",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "6020",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "4780",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "38...59",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 4308-3083-69(G5)",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "Cummins ISB6.7 E5 250, 250 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Механическая, 9-ступенчатая ZF9",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "4780",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 4,
-                        categoryId: 8,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
                             },
                         ],
                     },
@@ -5618,13 +5272,24 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 9,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/kryukovie/pogruzchiki1.webp",
+                        name: "Крюковой погрузчик PALFINGER PH T20Pi на шасси ISUZU GIGA-Q",
+                        path: "/Крюковой погрузчик PALFINGER PH T20Pi на шасси ISUZU GIGA-Q",
+                        model: "ISUZU",
+                        marka: {
+                            title: "Марка",
+                            value: "ISUZU",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5733,13 +5398,24 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 9,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/kryukovie/pogruzchiki2.webp",
+                        name: "Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси ISUZU NPR75L-K",
+                        path: "/Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси ISUZU NPR75L-K",
+                        model: "ISUZU",
+                        marka: {
+                            title: "Марка",
+                            value: "ISUZU",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5848,11 +5524,24 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 9,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
+                        image: "/categoryPhotos/kryukovie/pogruzchiki3.webp",
+                        name: "Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси Hyundai QT EX8",
+                        path: "/Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси Hyundai QT EX8",
+                        model: "Hyundai",
+                        marka: {
+                            title: "Марка",
+                            value: "Hyundai",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -5935,119 +5624,6 @@ export const ruData = {
                             {
                                 title: "Борта платформы",
                                 value: "Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 4,
-                        categoryId: 9,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
                             },
                             {
                                 title: "Передняя стенка",
@@ -6076,13 +5652,30 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 10,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/samosvali/samosvali1.webp",
+                        images: [
+                            "/categoryPhotos/samosvali/samosvali-1-1.webp",
+                            "/categoryPhotos/samosvali/samosvali-1-2.webp",
+                            "/categoryPhotos/samosvali/samosvali-1-3.webp",
+                            "/categoryPhotos/samosvali/samosvali-1-4.webp",
+                        ],
+                        name: "Самосвал на шасси КОМПАС 9",
+                        path: "/Самосвал на шасси КОМПАС 9",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6191,13 +5784,29 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 10,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/samosvali/samosvali2.webp",
+                        images: [
+                            "/categoryPhotos/samosvali/samosvali-2-1.webp",
+                            "/categoryPhotos/samosvali/samosvali-2-2.webp",
+                            "/categoryPhotos/samosvali/samosvali-2-3.webp",
+                        ],
+                        name: "Самосвал-зерновоз на шасси КАМАЗ 6520-3072-53 (модель 4388G6)",
+                        path: "/Самосвал-зерновоз на шасси КАМАЗ 6520-3072-53 (модель 4388G6)",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6306,11 +5915,26 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 10,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
+                        image: "/categoryPhotos/samosvali/samosvali3.webp",
+                        images: [
+                            "/categoryPhotos/samosvali/samosvali-3-1.webp",
+                        ],
                         name: "Шторный грузовик КАМАЗ 4308",
+                        path: "/Шторный грузовик КАМАЗ 4308",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6393,119 +6017,6 @@ export const ruData = {
                             {
                                 title: "Борта платформы",
                                 value: "Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
-                            },
-                            {
-                                title: "Передняя стенка",
-                                value: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-                            },
-                            {
-                                title: "Каркас",
-                                value: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса Обрешетка из доски в четыре ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте Водоотводящий алюминиевый козырек над задними воротами Задние и передние стойки оцинкованные",
-                            },
-                            {
-                                title: "Задние ворота",
-                                value: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-                            },
-                            {
-                                title: "Тент",
-                                value: "Тент из ткани, удельный вес 650 г/м2 Усиление тента крыши на углах Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон Натяжители тента в вертикальном направлении (натяжной замок с стропом и крюком) шаг 0,5 м Съёмная передняя штанга боковой шторы для облегченного сдвижения шторы назад.",
-                            },
-                            {
-                                title: "Прочее оборудование",
-                                value: "Пластиковые крылья, брызговики из энергопоглощающего материала. Боковые влагозащитные габаритные огни. Задний противоподткатный брус-от базового шасси. Устройства световой сигнализации и светоотражающая лента в соответствии с требованиями по эксплуатации автомобиля. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-                            },
-                        ],
-                    },
-                    {
-                        id: 4,
-                        categoryId: 10,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
-                        allCharacter: "Смотреть все характеристики",
-                        characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
-                        trucInfo: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая",
-                            },
-                            {
-                                title: "Длина автомобиля, мм",
-                                value: "11985",
-                            },
-                            {
-                                title: "Ширина автомобиля, мм",
-                                value: "2440",
-                            },
-                            {
-                                title: "Высота автомобиля, мм",
-                                value: "3940",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Длина платформы, м",
-                                value: "8300",
-                            },
-                            {
-                                title: "Полная масса, кг",
-                                value: "27000",
-                            },
-                            {
-                                title: "Снаряженная масса, кг",
-                                value: "12200",
-                            },
-                            {
-                                title: "Грузоподъёмность, кг",
-                                value: "14800",
-                            },
-                            {
-                                title: "Объем фургона, м3",
-                                value: "33...52",
-                            },
-                        ],
-                        character: [
-                            {
-                                title: "Базовое шасси",
-                                value: "КАМАЗ 65657",
-                            },
-                            {
-                                title: "Двигатель",
-                                value: "КАМАЗ 910.12-450, 450 л. с.",
-                            },
-                            {
-                                title: "КПП",
-                                value: "Автоматическая, 12-ступенчатая Fast Gear F12JZ22DD+QHG50B-GM02184",
-                            },
-                            {
-                                title: "Колесная база, мм",
-                                value: "5150+1350",
-                            },
-                            {
-                                title: "Габаритные размеры надстройки, мм",
-                                value: "8500х2550х2850",
-                            },
-                            {
-                                title: "Основание бортовой платформы",
-                                value: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-                            },
-                            {
-                                title: "Пол",
-                                value: "Влагостойкая фанера с противоскользящим покрытием толщиной 27 мм.",
-                            },
-                            {
-                                title: "Борта платформы",
-                                value: "Алюминиевые борта, откидывающиеся, количество секций – 3 шт. на сторону, высота 600 мм. Угол открывания бортов – 180О Сдвижные стойки 2 шт. на сторону с алюминиевыми замками.",
                             },
                             {
                                 title: "Передняя стенка",
@@ -6534,13 +6045,29 @@ export const ruData = {
                     {
                         id: 1,
                         categoryId: 11,
-                        image: "https://rtrf.ru/upload/iblock/cb2/yqv5uhc3ob1unyhg10batwyq2oyqj1d0.jpg",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/89f/zyn5uakiq2ezad35z0p22k6otn101niu/438121.png",
-                        name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        image: "/categoryPhotos/dopog/dopog1.webp",
+                        images: [
+                            "/categoryPhotos/dopog/dopog1.webp",
+                            "/categoryPhotos/dopog/dopog-1-1.webp",
+                            "/categoryPhotos/dopog/dopog-1-2.webp",
+                        ],
+                        name: "Шторный грузовик КАМАЗ 4308 ДОПОГ ЕХII (модель 4388Н2-10)",
+                        path: "/Шторный грузовик КАМАЗ 4308 ДОПОГ ЕХII (модель 4388Н2-10)",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 438121-2540-025",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6649,13 +6176,29 @@ export const ruData = {
                     {
                         id: 2,
                         categoryId: 11,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/11a/768_547_0/7pyjukocowss7phe63pk9qn1fdze2ep7.webp",
-                        drawingImage:
-                            "https://rtrf.ru/upload/iblock/225/datab7tmg9qarstes0bczzhtfzkp0dd9/631228.png",
-                        name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        image: "/categoryPhotos/dopog/dopog2.webp",
+                        images: [
+                            "/categoryPhotos/dopog/dopog2.webp",
+                            "/categoryPhotos/dopog/dopog-2-1.webp",
+                            "/categoryPhotos/dopog/dopog-2-2.webp",
+                        ],
+                        name: "Бортовой автомобиль КАМАЗ 4308-3083-69, ДОПОГ категория EX II (модель 4388Н2-10)",
+                        path: "/Бортовой автомобиль КАМАЗ 4308-3083-69, ДОПОГ категория EX II (модель 4388Н2-10)",
+                        model: "КАМАЗ",
+                        marka: {
+                            title: "Марка",
+                            value: "КАМАЗ",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик МАЗ 631228-524-010",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6764,11 +6307,28 @@ export const ruData = {
                     {
                         id: 3,
                         categoryId: 11,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
-                        name: "Шторный грузовик КАМАЗ 4308",
+                        image: "/categoryPhotos/dopog/dopog3.webp",
+                        images: [
+                            "/categoryPhotos/dopog/dopog3.webp",
+                            "/categoryPhotos/dopog/dopog-3-1.webp",
+                        ],
+                        name: "Кран-манипулятор JAC N200L c КМУ ИНМАН ИМ150N, ДОПОГ категория EX II (модель 4389К8-10)",
+                        path: "/Кран-манипулятор JAC N200L c КМУ ИНМАН ИМ150N, ДОПОГ категория EX II (модель 4389К8-10)",
+                        model: "JAC",
+                        marka: {
+                            title: "Марка",
+                            value: "JAC",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 4308-3083-69(G5)",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6877,11 +6437,29 @@ export const ruData = {
                     {
                         id: 4,
                         categoryId: 11,
-                        image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
-                        name: "Шторный грузовик КАМАЗ 65657",
+                        image: "/categoryPhotos/dopog/dopog4.webp",
+                        images: [
+                            "/categoryPhotos/dopog/dopog4.webp",
+                            "/categoryPhotos/dopog/dopog-4-1.webp",
+                            "/categoryPhotos/dopog/dopog-4-2.webp",
+                        ],
+                        name: "Кран-манипулятор DAEWOO CL8CF С КМУ PALFINGER PK 8500, ДОПОГ категория EX II (модель 5389M2)",
+                        path: "/Кран-манипулятор DAEWOO CL8CF С КМУ PALFINGER PK 8500, ДОПОГ категория EX II (модель 5389M2)",
+                        model: "DAEWOO",
+                        marka: {
+                            title: "Марка",
+                            value: "DAEWOO",
+                        },
+                        gabariti: {
+                            title: "Габариты ТС",
+                            value: "9000 x 2550 x 2550 мм",
+                        },
+                        kg: {
+                            title: "Грузоподъёмность, кг",
+                            value: "3600",
+                        },
                         allCharacter: "Смотреть все характеристики",
                         characterTitle: "Характеристики",
-                        yellowTitle: "Шторный грузовик КАМАЗ 65657",
                         trucInfo: [
                             {
                                 title: "Базовое шасси",
@@ -6989,6 +6567,63 @@ export const ruData = {
                     },
                 ],
             },
+            texts: {
+                text1: "Шторный грузовик сочетает удобство загрузки и надежность на дороге. Мощные двигатели и современная техника делают управление безопасным и комфортным. Компания «РусТрак» предлагает шторные автомобили, готовые к любым задачам. Надёжная конструкция и качественные материалы обеспечивают долгий срок службы машин. Выбор подходящей машины поможет справиться с самыми разными задачами. Каждая модель создаётся с учётом потребностей владельцев, сочетая практичность и долговечность.",
+                assortiment: "Ассортимент",
+                text2: "Мы предлагаем широкий ассортимент коммерческих автомобилей, отвечающих современным стандартам качества. В нашем каталоге представлена шторная машина в различных исполнениях и марках, что позволяет подобрать технику под любые задачи эксплуатации.",
+                marki: "Марки:",
+                text3: "Размеры и тоннаж автомобилей зависят от выбранного шасси: от компактных моделей грузоподъёмностью 3 тонны до мощных машин, рассчитанных на перевозку до 30 тонн. Такой диапазон позволяет подобрать оптимальное решение для любых логистических и коммерческих задач, обеспечивая надёжность и долговечность техники.",
+                title2: "Особенности шторных автомобилей",
+                text: [
+                    "Оцинкованные стойки на болтовых соединениях — при повреждении их можно быстро заменить без сложного ремонта, что снижает затраты и сокращает простои.",
+                    "Алюминиевые направляющие с резиновым уплотнителем — шторно бортовой автомобиль получает надёжную герметизацию, защищающую груз от влаги и пыли при эксплуатации в любых условиях.",
+                    "Профиль Hossen — усиленный конструктивный элемент, который повышает жёсткость и долговечность всей надстройки.",
+                    "Откидные борта на 180° — позволяют легко загружать и разгружать груз с любой стороны, экономя время на маршруте.",
+                    "Сдвижная штора в обе стороны — гибкость эксплуатации: доступ к грузу возможен с любой стороны платформы.",
+                    "Алюминиевая передняя стенка — лёгкая и прочная, она снижает общий вес конструкции и повышает устойчивость к коррозии.",
+                    "Сдвижная крыша — обеспечивает удобный доступ сверху, что особенно важно при погрузке негабаритных грузов в шторно бортовой фургон.",
+                    "Тент крыши с крестообразным усилителем — выдерживает дополнительные нагрузки и сохраняет форму даже при длительной эксплуатации.",
+                    "Двунаправленное усиление бокового тента — повышает надёжность при перевозке тяжёлых и хрупких грузов.",
+                    "Скрытые петли крепления груза — безопасная фиксация без выступающих элементов, что делает платформу аккуратной и удобной.",
+                    "Складная лестница — быстрый и безопасный доступ к кузову без дополнительных приспособлений.",
+                    "Три варианта крепления надстройки к подрамнику — шторный фургон адаптируется к разным условиям монтажа, обеспечивая универсальность для различных задач и типов шасси.",
+                    "Сдвижные центральные стойки — позволяют оптимально использовать пространство и упрощают работу с крупногабаритными грузами.",
+                    "Алюминиевые ворота со скрытой запорной арматурой — надёжная защита груза и эстетичный внешний вид без лишних деталей.",
+                    "Противозаливной козырёк — дополнительная защита от осадков и грязи, повышающая сохранность перевозимого груза.",
+                ],
+                sferi: "Сферы применения",
+                sferiText:
+                    "Шторный грузовик от компании «РусТрак» находят широкое применение в строительных компаниях, логистических и транспортных организациях, обеспечивая безопасную и удобную доставку материалов. Они используются для коммерческой доставки товаров, в торговых и оптовых компаниях, а также при перевозке негабаритных и тяжёлых грузов. Надёжная конструкция и качественная защита груза делают их удобными для длительных маршрутов и работы в любых погодных условиях, обеспечивая эффективность перевозок и сохранность имущества.",
+                rustrak: "Преимущества работы с компанией «РусТрак»",
+                rustraks: [
+                    {
+                        title: "Большой выбор техники",
+                        text: "У нас представлены шторные и другие коммерческие автомобили различных марок и типов, что позволяет подобрать технику под любые задачи.",
+                    },
+                    {
+                        title: "Профессиональная поддержка",
+                        text: "Наши специалисты помогают подобрать технику с учётом задач клиента и особенностей бизнеса.",
+                    },
+                    {
+                        title: "Сертификация и контроль качества",
+                        text: "Все грузовики проходят строгую проверку и сертифицированы, что гарантирует безопасность эксплуатации.",
+                    },
+                    {
+                        title: "Гарантийное и послегарантийное обслуживание",
+                        text: "Компания обеспечивает поддержку после покупки, включая техническое обслуживание и консультации.",
+                    },
+                    {
+                        title: "Удобство покупки",
+                        text: "Предоставляются прозрачные условия приобретения, различные формы оплаты и индивидуальные предложения для клиентов.",
+                    },
+                    {
+                        title: "Опыт и репутация",
+                        text: "«РусТрак» имеет многолетний опыт работы на рынке коммерческих автомобилей, что подтверждает высокий профессионализм и доверие клиентов.",
+                    },
+                ],
+                texnika: "Техника, созданная для надежности и комфорта",
+                text4: "Купить шторный грузовик — выгодное решение, позволяющее оптимизировать логистику и сократить затраты на эксплуатацию. Выбирая технику, которая соответствует вашим требованиям и стандартам качества, вы получаете надёжный автомобиль, полностью готовый к эксплуатации. Компания «РусТрак» поможет подобрать модель, идеально подходящую для ваших нужд. Ознакомьтесь с характеристиками и возможностями каждой машины. Сделайте выбор в пользу надёжности, комфорта и долговечности вашей техники. Для оформления заказа свяжитесь с нами любым удобным способом и получите консультацию специалистов.",
+            },
             Marka: {
                 marka: "Марка",
                 product: "товаров",
@@ -7007,10 +6642,25 @@ export const ruData = {
                         name: "DAEWOO",
                     },
                     {
+                        name: "FAW",
+                    },
+                    {
                         name: "FOTON",
                     },
                     {
                         name: "DONG FENG",
+                    },
+                    {
+                        name: "SHACMAN",
+                    },
+                    {
+                        name: "SOLLERS",
+                    },
+                    {
+                        name: "YANSHI",
+                    },
+                    {
+                        name: "Валдай",
                     },
                     {
                         name: "МАЗ",
@@ -7020,6 +6670,52 @@ export const ruData = {
                 before: "до",
                 smthng: "свыше",
                 button: "Показать товары",
+                dlina: "Длина платформы, м",
+                number: [
+                    {
+                        num: "3500",
+                    },
+                    {
+                        num: "4400",
+                    },
+                    {
+                        num: "5200",
+                    },
+                    {
+                        num: "5500",
+                    },
+                    {
+                        num: "6135",
+                    },
+                    {
+                        num: "6195",
+                    },
+                    {
+                        num: "6200",
+                    },
+                    {
+                        num: "6400",
+                    },
+                    {
+                        num: "6500",
+                    },
+                    {
+                        num: "6700",
+                    },
+                    {
+                        num: "6800",
+                    },
+                    {
+                        num: "7000",
+                    },
+                    {
+                        num: "7200",
+                    },
+                    {
+                        num: "8200",
+                    },
+                ],
+                tonna: "Грузоподъёмность КМУ, тонн",
                 sort: "Сортировка",
                 sort1: "По популярности",
                 sort2: "Сначала новые",
@@ -7027,6 +6723,9 @@ export const ruData = {
                 sort4: "По возрастанию цены",
                 sort5: "По бренду",
             },
+            sena: "Цена по запросу",
+            dobavitButton: "Добавить в корзину",
+            poluchitButton: "Получить КП",
         },
         homePageAboutRustrak: {
             aboutTitle: "О компании",
@@ -7086,222 +6785,254 @@ export const ruData = {
                 },
             ],
         },
-        homePageRecomendedProduct: {
-            recomendTitle: "Рекомендуемая продукция",
-            productCards: [
-                {
-                    id: 1,
-                    image: "/homePagePhotos/recomendedProduct-1.webp",
-                    name: "Кран-манипулятор SOLLERS TR80-47 с КМУ HKTC 3014 (модель 4389A8)",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 2,
-                    image: "/homePagePhotos/recomendedProduct-2.webp",
-                    name: "Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 3,
-                    image: "/homePagePhotos/recomendedProduct-3.webp",
-                    name: "Кран-манипулятор JAC N200L c КМУ ИНМАН ИМ150N, ДОПОГ категория EX II (модель 4389К8-10)",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 4,
-                    image: "/homePagePhotos/recomendedProduct-4.webp",
-                    name: "Шторный грузовик КАМАЗ 4308 ДОПОГ ЕХII (модель 4388Н2-10)",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 5,
-                    image: "/homePagePhotos/recomendedProduct-5.webp",
-                    name: "Кран-манипулятор Валдай-18 (FB6R51) с КМУ ИНМАН ИМ 240N (модель 438918)",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 6,
-                    image: "/homePagePhotos/recomendedProduct-6.webp",
-                    name: "Автотопливозаправщик JAC N200 АТЗ-10 м. куб",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 7,
-                    image: "/homePagePhotos/recomendedProduct-7.webp",
-                    name: "Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 8,
-                    image: "/homePagePhotos/recomendedProduct-8.webp",
-                    name: "Топливозаправщик Валдай 12 АТЗ 8",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 9,
-                    image: "/homePagePhotos/recomendedProduct-9.webp",
-                    name: "Шторный грузовик ВАЛДАЙ 12",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 10,
-                    image: "/homePagePhotos/recomendedProduct-10.webp",
-                    name: "Шторный грузовик КАМАЗ 65657",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 11,
-                    image: "/homePagePhotos/recomendedProduct-11.webp",
-                    name: "Шторный грузовик DONG FENG C120L (модель 5389H2-03)",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 12,
-                    image: "/homePagePhotos/recomendedProduct-12.webp",
-                    name: "Самосвал на шасси КОМПАС 9",
-                    text: "Цена по запросу",
-                },
-                {
-                    id: 13,
-                    image: "/homePagePhotos/recomendedProduct-13.webp",
-                    name: "Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
-                    text: "Цена по запросу",
-                },
-            ],
-        },
-        homePageNews: {
-            newsTitle: "Новости",
-            newsCards: [
-                {
-                    id: 0,
-                    image: "/homePagePhotos/news-img1.webp",
-                    date: "07.07.2026",
-                    text: "Первый в России контейнеровоз на шасси КАМАЗ‑65658 выпустил «Рустрак»",
-                },
-                {
-                    id: 1,
-                    image: "/homePagePhotos/news-img-2.webp",
-                    date: "08.06.2026",
-                    text: "«Рустрак» подвёл итоги участия в выставке COMVEX 2026.",
-                },
-                {
-                    id: 2,
-                    image: "/homePagePhotos/news-img-3.webp",
-                    date: "26.03.2026",
-                    text: "Садко 9 Фермер обзавелся КМУ с бурильной установкой",
-                },
-                {
-                    id: 3,
-                    image: "/homePagePhotos/news-img-4.webp",
-                    date: "06.03.2026",
-                    text: "Рустрак поздравляет с Международным женским днём!",
-                },
-                {
-                    id: 4,
-                    image: "/homePagePhotos/news-img-6.webp",
-                    date: "26.02.2026",
-                    text: "РУСТРАК продлил статус официального дилера ИНМАН и ВЕЛМАШ-С!",
-                },
-                {
-                    id: 5,
-                    image: "/homePagePhotos/news-img-7.webp",
-                    date: "20.02.2026",
-                    text: "Рустрак поздравляет с Днем защитника Отечества.",
-                },
-                {
-                    id: 6,
-                    image: "/homePagePhotos/news-img-8.webp",
-                    date: "30.12.2025",
-                    text: "Рустрак поздравляет партнеров с Новым годом и Рождеством!",
-                },
-                {
-                    id: 7,
-                    image: "/homePagePhotos/news-img-9.webp",
-                    date: "28.11.2024",
-                    text: "Рустрак ввел в эксплуатацию новую покрасочную камеру",
-                },
-                {
-                    id: 8,
-                    image: "/homePagePhotos/news-img-10.webp",
-                    date: "10.07.2024",
-                    text: "Рустрак провел тимбилдинг-мероприятие для сотрудников",
-                },
-                {
-                    id: 9,
-                    image: "/homePagePhotos/news-img-11.webp",
-                    date: "26.03.2024",
-                    text: "Рустрак ввел в эксплуатацию новую дробеструйную камеру",
-                },
-                {
-                    id: 10,
-                    image: "/homePagePhotos/news-img-12.webp",
-                    date: "01.03.2024",
-                    text: "Рустрак принял участие в XV дилерской конференции Палфингер",
-                },
-                {
-                    id: 11,
-                    image: "/homePagePhotos/news-img-13.webp",
-                    date: "08.07.2023",
-                    text: "Рустрак на выставке СТТ и Comvex 2023",
-                },
-                {
-                    id: 12,
-                    image: "/homePagePhotos/news-img-14.webp",
-                    date: "17.04.2023",
-                    text: "Рустрак поставил партию автомобилей с КМУ ИМ 77 для строительного сектора Санкт-Петербурга",
-                },
-                {
-                    id: 13,
-                    image: "/homePagePhotos/news-img-15.webp",
-                    date: "15.04.2023",
-                    text: "Рустрак примет участие в ежегодной выставке СТТ EXPO 2023 и COMVEX",
-                },
-                {
-                    id: 14,
-                    image: "/homePagePhotos/news-img-16.webp",
-                    date: "28.03.2023",
-                    text: "«РусТрак» принял участие в форуме-совещании Минского Автомобильного Завода",
-                },
-                {
-                    id: 15,
-                    image: "/homePagePhotos/news-img-17.webp",
-                    date: "22.03.2023",
-                    text: '«РусТрак» принял участие в дилерской конференции "Палфингер"',
-                },
-                {
-                    id: 16,
-                    image: "/homePagePhotos/news-img-18.webp",
-                    date: "27.02.2023",
-                    text: '"Рустрак" принял участие в дилерской конференции Daewoo Trucks',
-                },
-                {
-                    id: 17,
-                    image: "/homePagePhotos/news-img-19.webp",
-                    date: "07.02.2023",
-                    text: "«РусТрак» принял участие в дилерской конференции «ДК РУС»",
-                },
-                {
-                    id: 18,
-                    image: "/homePagePhotos/news-img-20.webp",
-                    date: "06.02.2023",
-                    text: "Конференция официальных дилеров и партнёров ПАО «КАМАЗ»",
-                },
-            ],
-        },
         // //////////////////////////ABOUT PAGE INFO/////////////////////////////////
-        aboutPageHero: {
-            heroTitle:
+        aboutPage: {
+            pageTitle:
                 "Автомобильный завод «РусТрак» - ведущий производитель коммерческого транспорта и специализированной техники в Нижнем Новгороде.",
             yellowTitle: "лет опыта",
-        },
-        aboutPageSwiper: {
-            aboutSwiperTitle:
+            swiperTitle:
                 "Автомобильный завод «РусТрак» является предприятием полного цикла: от конструкторско-технологических разработок до готового изделия.",
             swiperInfo: [
                 {
                     id: 1,
-                    title: "",
+                    image: "/aboutPagePhotos/about_icon_1.svg",
+                    title: "Собственная производственная база",
+                    text: "позволяет максимально снизить себестоимость продукции, повышая её конкурентоспособность",
                 },
+                {
+                    id: 2,
+                    image: "/aboutPagePhotos/about_icon_2.svg",
+                    title: "Отдел контроля качества",
+                    text: "проверяет каждую единицу спецтехники, что гарантирует длительный срок эксплуатации и безотказную работу техники.",
+                },
+                {
+                    id: 3,
+                    image: "/aboutPagePhotos/about_icon_3.svg",
+                    title: "Разработка надстроек шасси",
+                    text: "производится на шасси мировых производителей и позволяет предлагать уникальную технику — надёжную в эксплуатации и максимально адаптированную под конкретные условия работы.",
+                },
+                {
+                    id: 4,
+                    image: "/aboutPagePhotos/about_icon_4.svg",
+                    title: "Наличие конструкторского бюро",
+                    text: "обеспечивает возможность индивидуального подхода к каждому клиенту",
+                },
+                {
+                    id: 5,
+                    image: "/aboutPagePhotos/about_icon_5.svg",
+                    title: "Собственная служба логистики",
+                    text: "предельно уменьшает сроки доставки комплектующих и агрегатов.",
+                },
+                {
+                    id: 6,
+                    image: "/aboutPagePhotos/about_icon_6.svg",
+                    title: "Сервисная партнёрская сеть",
+                    text: "гарантирует техническую помощь на всей территории РФ.",
+                },
+            ],
+            title: "Сегодня ООО «Рустрак» - это:",
+            texts: [
+                "3 производственных корпуса, общей площадью более 7000 м2;",
+                "производственная территория более 20000 м2;",
+                "служба качества, гарантирующая выпуск высококачественной техники;",
+                "современный парк станочного оборудования;",
+                "ежемесячный объём выпускаемой техники - до 110 единиц.",
+                "наличие собственной конструкторско-технологической службы",
+            ],
+            yellowTitle1: "Отрасли применения выпускаемой техники:",
+            yellowText1:
+                "Cтроительная, телекоммуникационная, коммунальная, дорожное хозяйство, логистика, сельское хозяйство.",
+            yellowTitle2: "Выпускаемая техника:",
+            yellowText2:
+                "Краны-манипуляторы, автотопливозаправщики, автовышки, фургоны, самосвалы, бортовые платформы, эвакуаторы, крюковые погрузчики, мастерские, пищевые цистерны, вакуумные машины, автогидроподъёмники.",
+            lastText1:
+                "ООО «РусТрак» является официальным дилером на территории РФ следующих марок: Palfinger, ИНМАН, HKTC, UNIC, DongYang, FASSI, Hangil, XCMG, HIAB.",
+            lastText2:
+                "За 16 лет деятельности компания заслужила высокий уровень доверия дистрибьютеров и автопроизводителей: ИСУЗУ РУС, КАМАЗ, ГАЗ, DAEWOO, FAW, JAC, ТРАКС ВОСТОК РУС (КОМПАС), МАЗ РУС, ДАЙМЛЕР КАМАЗ РУС (FUSO), ХИНО МОТОРС, FOTON, DONG FENG, SHACHMAN, НЕФАЗ, ЗАВОД СТАРТ",
+            lastText3:
+                "Наши клиенты: Газпром, Росатом, Россети, РСК «МИГ», Роснефть и др.",
+        },
+        // /////////////////////////////PARTNERS PAGE INFO/////////////////////////////////
+        partnersPage: {
+            pageTitle: "Партнёры",
+            title1: "КАМАЗ",
+            text1: "Группа компаний «КАМАЗ» – крупнейшая автомобильная корпорация Российской Федерации. ПАО «КАМАЗ» входит в 20-ку ведущих мировых производителей тяжёлых грузовых автомобилей и находится на 16-м месте по объёмам производства тяжёлых грузовиков полной массой более 16 тонн. Группа организаций ПАО «КАМАЗ» объединяет 109 компаний на территории России, СНГ и дальнего зарубежья. Единый производственный комплекс группы организаций ПАО «КАМАЗ» охватывает весь технологический цикл производства грузовых автомобилей – от разработки, изготовления, сборки автотехники и автокомпонентов до сбыта готовой продукции и сервисного сопровождения.",
+            title2: "Группа ГАЗ",
+            text2: "«Группа ГАЗ» специализируется на разработке и производстве легких и среднетоннажных коммерческих автомобилей, автобусов, тяжелых грузовиков, силовых агрегатов и автокомпонентов.",
+            info: [
+                {
+                    title: `ООО "Тракс Восток Руc"`,
+                    text: "ООО «Тракс Восток Рус» является официальным дистрибьютором среднетоннажных грузовых автомобилей Компас 9 и Компас 12 с различными вариантами надстроек.",
+                    link: `https://compasstrucks.ru/`,
+                },
+                {
+                    title: "Публичное акционерное общество «НЕФАЗ».",
+                    text: `Публичное акционерное общество "НЕФАЗ" входит в группу предприятий ПАО «КАМАЗ» и является крупнейшим в России заводом по производству спецнадстроек на шасси КАМАЗ.`,
+                    link: `https://nefaz.ru`,
+                },
+                {
+                    title: `ООО "Палфингер Кран Рус"`,
+                    text: `"Палфингер Кран Рус" - совместное предприятие концерна Palfinger(Австрия) и Группы Крафт Инвест (Россия) является эксклюзивным дистрибьютором Palfinger на территории Российский Федерации и стран СНГ`,
+                    link: `https://www.palfinger.ru`,
+                },
+                {
+                    title: `ООО «КМУ-РУС»`,
+                    text: `"Палфингер Кран Рус" - совместное предприятие концерна Palfinger(Австрия) и Группы Крафт Инвест (Россия) является эксклюзивным дистрибьютором Palfinger на территории Российский Федерации и стран СНГ`,
+                    link: `https://kmu-rus.ru`,
+                },
+                {
+                    title: `ОАО "Завод Старт"`,
+                    text: `ОАО "Завод Старт" специализируется на производстве и реализации транспортных автоцистерн на широком ассортименте разновидностей шасси отечественного и зарубежного производства.`,
+                    link: `https://zavod-start.ru`,
+                },
+                {
+                    title: `МАЗ`,
+                    text: `Официальный дистрибьютор коммерческой техники МАЗ в России.`,
+                    link: `https://maz.by`,
+                },
+                {
+                    title: `JAC Motors RUS`,
+                    text: `Компания JAC Motors RUS является эксклюзивным импортером и дистрибьютором продукции китайского автоконцерна JAC на территории России.`,
+                    link: `https://jaccar.ru`,
+                },
+                {
+                    title: `ДУНФЭН ТРАК РУС`,
+                    text: `ДУНФЭН ТРАК РУС`,
+                },
+                {
+                    title: `ООО «Фотон Мотор»`,
+                    text: `Компания ООО «Фотон Мотор» основана 27 апреля 2009 года в городе Москва, является представительством Пекинской машиностроительной компании Beiqi Foton Motor Co., Ltd.на территории РФ.`,
+                    link: `https://foton-motor.ru`,
+                },
+                {
+                    title: `ООО «ФЕРРО ОТТИМО»`,
+                    text: `FASSI Эксклюзивный дистрибьютор в РФ ООО «ФЕРРО ОТТИМО»`,
+                    link: `https://fassi.ru`,
+                },
+                {
+                    title: `FAW`,
+                    text: `FAW`,
+                },
+                {
+                    title: `ООО «Шакман моторс»`,
+                    text: `Официальный дистрибьютор грузовой техники Shacman в России.`,
+                    link: `https://shacman.ru`,
+                },
+            ],
+        },
+        // /////////////////////////////PRODUCTION PAGE INFO/////////////////////////////////
+        productionPage: {
+            pageTitle: "Производство",
+            text1: "Компания «РусТрак» — ведущий производитель коммерческого транспорта и специализированной техники в Нижнем Новгороде. Наша продукция - это автофургоны, бортовые платформы, краны-манипуляторы, мастерские, пищевые цистерны, автотопливозаправщики, автогидроподъёмники, самосвалы, выкуумные машины эвакуаторы, крюковые погрузчики. Все автомобили собираются на собственном производстве.",
+            text2: "Производственные мощности «РусТрак» состоят из 3 корпусов, общей площадью более 7000 квадратных метров. Станочный парк оснащён современным высокотехнологичным оборудованием, что определяет высокое качество готовой продукции. Компания использует комплектующие известных мировых и отечественных производителей. Сегодня производительность компании - от 110 единиц в месяц.",
+            title1: "Высококвалифицированный персонал",
+            text3: "Залог качества продукции ООО «РусТрак» - это работа команды профессионалов на технологичном оборудовании компании. Руководство компании заботится о своих сотрудниках, создавая максимально комфортные условия труда и повышая профессиональную подготовку сотрудников. Каждые полгода сотрудники компании проходят переаттестацию знаний и навыков и проходят курсы повышения квалификации.",
+            title2: "Собственное конструкторское бюро",
+            text4: "Компания «РусТрак» имеет собственное конструкторско-технологическое бюро, которое работает в тесном сотрудничестве с производством. Такая схема работы позволяет постоянно улучшать и модернизировать выпускаемую спецтехнику, учитывая пожелания наших клиентов. Мы готовы изготовить автомобиль практически для любых нужд!",
+            title3: "Контроль качества",
+            text5: "Контроль качества нашей продукции осуществляется на всех этапах производства. Мы используем только надёжные комплектующие, покупая их у проверенных поставщиков. Специалисты «РусТрак» строго следят за выполнением технологии производства. Постоянное тестирование и испытания выпускаемой продукции исключают поступление рекламаций. На производстве введена общемировая практика сертификации соответствия продукции: на каждую единицу спецтехники, которая сходит с нашего производства, имеется сертификат международного образца (ISO 9001).",
+            text6: "Отдел контроля качества оценивает каждую единицу техники, что гарантирует нашим покупателям длительный срок эксплуатации и безотказную работу техники.",
+        },
+        // /////////////////////////////SUPPLIERS PAGE INFO/////////////////////////////////
+        suppliersPage: {
+            pageTitle: "Поставщикам и партнёрам",
+            title1: "ООО «Рустрак» приглашает к сотрудничеству.",
+            text1: "Наша компания 17 лет работает на рынке производства и продажи коммерческого транспорта и спецтехники и прочно занимает ведущие позиции на российском рынке.",
+            text2: "Мы приглашаем к сотрудничеству поставщиков комплектующих, как одно из основных направлений развития компании. Наша компания заинтересована в долгосрочном и эффективном сотрудничестве.",
+            text3: "Мы ценим в партнёрах:",
+            num1: "Высококачественную продукцию;",
+            num2: "Гибкую ценовую политику;",
+            num3: "Регулярное информирование об ассортименте и складских остатках продукции;",
+            num4: "Минимальные сроки поставки.",
+            text4: "Основные принципы ООО «РусТрак» при взаимодействии с партнёрами:",
+            texts: ["- Доверие,", "- честность,", "- взаимопомощь;"],
+            text5: "Долгосрочное сотрудничество на взаимовыгодной основе. Обязательность и точность выполнения договоренностей. Соблюдение международных норм деловой этики. Всегда рады Вам!",
+        },
+        // /////////////////////////////VACANCIES PAGE INFO/////////////////////////////////
+        vacanciesPage: {
+            pageTitle: "Вакансии",
+            avtoelektrik: "Автоэлектрик",
+            obyazannosti: [
+                "электромонтаж осветительного оборудования",
+                "монтаж электрооборудования и надстроек на спецавтомобили",
+            ],
+            trebovaniya: [
+                "опыт работы приветствуется",
+                "желание обучаться новому",
+            ],
+            usloviya: [
+                "желание обучаться новому",
+                "полный соцпакет",
+                "отапливаемый цех, хорошие бытовые условия",
+                "предоставляем обучение по данному направлению",
+            ],
+            title1: "Обязанности:",
+            title2: "Требования",
+            title3: "Условия:",
+            button: "Откликнуться",
+            modalInfo: {
+                title: "Оставить заявку",
+                miniTitle: "на вакансию «Автоэлектрик»",
+                name: "Ваше имя *",
+                telefon: "Телефон *",
+                silka: "Ссылка на резюме",
+                checkText: "Я согласен",
+                checkLink: "на обработку персональных данных",
+            },
+        },
+        // /////////////////////////////KREDIT I LIZING PAGE INFO/////////////////////////////////
+        kreditPage: {
+            pageTitle: "Кредит и лизинг на автоспецтехнику компании РусТрак",
+            text: "Компания Рустрак предоставляет возможность покупки автоспецтехники в кредит и в лизинг. Мы работаем со всеми банками и лизинговыми компаниями. Помните, Вы можете выбрать любую лизинговую компанию, которая Вас устроит.",
+            title1: "Основные условия лизинга",
+            text1: "Сумма аванса 5-30% от стоимости техники. Удорожание объекта лизинга в год на 8-9% Срок выплаты лизинговых платежей от 6-ти месяцев до 5-ти лет. После полного расчёта по лизингу техника переходит в собственность Вашей фирмы.",
+            title2: "Преимущества лизинговых схем:",
+            text2: "Максимальная отсрочка платежа. Ускоренная амортизация: участники лизинговой сделки имеют право применять механизм ускоренной амортизации предмета лизинга с коэффициентом ускорения до 3, что позволяет быстрее окупить технику, варьировать длительность лизингового договора. Налоговая оптимизация: все платежи, производимые по договору лизинга, относятся на себестоимость продукции, тем самым, уменьшая налогооблагаемую базу по налогу на прибыль. Экономия средств лизингополучателя в результате отсутствия необходимости уплаты налога на имущество, т.к. предмет лизинга в большинстве случаев находится на балансе лизинговой компании. Возможность приобрести и использовать имущество, не отвлекая при этом собственные средства предприятия единовременно и в полном объёме. Возможность приобретения в собственность предмета лизинга, полностью освобожденного от налоговой нагрузки, по истечению срока договора лизинга. Самостоятельный выбор предмета лизинга и его продавца лизингополучателем.",
+            title3: "Три основных вида лизинга:",
+            titleInfo: [
+                {
+                    title: "Финансовый лизинг",
+                    text: "Лизингодатель (лизинговая компания) приобретает в собственность указанное лизингополучателем имущество у определённого продавца и передаёт лизингополучателю это имущество в качестве предмета лизинга на определённых условиях во временное владение и пользование. Имущество (предмет лизинга) переходит в собственность лизингополучателя при условии выплаты лизингополучателем всех лизинговых платежей.",
+                },
+                {
+                    title: "Оперативный лизинг",
+                    text: "Имущество не выкупается лизингополучателем, а остаётся в собственности лизинговой компании и после окончания срока действия договора лизинга ещё раз передаётся в лизинг или аренду.",
+                },
+                {
+                    title: "Возвратный лизинг",
+                    text: "Предприятие покупает имущество на собственные средства, а затем обращается в лизинговую компанию. Это один из способов достаточно быстро вернуть оборотные средства. Лизинговая компания рассматривает имущество как предмет лизинга и приобретает его по договору купли-продажи у предприятия. Это же имущество передается в лизинг этому же предприятию.",
+                },
+            ],
+            title4: `Информация о партнёре - компания "CARCADE"`,
+            text4: "Компания CARCADE – это универсальный лизинговый партнёр. CARCADE финансирует покупку как легковых автомобилей, так и коммерческого транспорта. Оформить коммерческие автомобили или спецтехнику в лизинг можно без предоставления финансовой отчётности по 2 документам. Условия оформления сделки: аванс от 4% до 50%, срок лизинга от 12 до 60 месяцев, последний платёж от 1% до 15%. Дополнительная выгода клиентов CARCADE: каско в рассрочку, бесплатная цессия, электронный документооборот. За получением более подробной информации по спецтехники и приобретению в лизинг обращайтесь по телефону:",
+            telefon: "8 (831) 225-00-55",
+        },
+        // /////////////////////////////OTZIV PAGE INFO/////////////////////////////////
+        otzivPage: {
+            pageTitle: "Отзывы",
+            images: [
+                "/otzivPhotos/otziv1.jpg",
+                "/otzivPhotos/otziv2.jpg",
+                "/otzivPhotos/otziv3.jpg",
+                "/otzivPhotos/otziv4.jpg",
+                "/otzivPhotos/otziv5.jpg",
+            ],
+        },
+        // /////////////////////////////SERTIFICATION  PAGE INFO/////////////////////////////////
+        sertificatePage: {
+            pageTitle: "Сертификаты",
+            images: [
+                "/sertificationPhoto/sert1.jpg",
+                "/sertificationPhoto/sert2.jpg",
+                "/sertificationPhoto/sert3.jpg",
+                "/sertificationPhoto/sert4.jpg",
+                "/sertificationPhoto/sert5.jpg",
+                "/sertificationPhoto/sert6.jpg",
+                "/sertificationPhoto/sert7.jpg",
+                "/sertificationPhoto/sert8.jpg",
+                "/sertificationPhoto/sert9.jpg",
+                "/sertificationPhoto/sert10.jpg",
+                "/sertificationPhoto/sert11.jpg",
             ],
         },
         // ////////////////////////////////FOTOGALEREYA PAGE INFO///////////////////////////////////
@@ -7369,6 +7100,109 @@ export const ruData = {
                 "https://rtrf.ru/upload/iblock/a69/4ty691y4ko8ynl76mz2tm4vt62handmf.webp",
             ],
         },
+        // ///////////////////////VIDEO PAGE INFO ///////////////////////////
+        videoPage: {
+            pageTitle: "Видеогалерея производителя автоспецтехники РусТрак",
+            button: "Смотреть фото",
+            videos: [
+                {
+                    id: 0,
+                    name: "Кран манипулятор HKTC на шасси Камаз Компас",
+                    link: "https://youtu.be/08tNWRWhfo0?si=L7JdKqaqsqMyAbwB",
+                },
+                {
+                    id: 1,
+                    name: "КАМАЗ Компас 2022 | Cдвижная Штора и Крыша Тента | Обзор КАМАЗ | Грузовик с Бортом |",
+                    link: "https://youtu.be/rD2Jr1l0kfM?si=svszc5K6AopFfC1f",
+                },
+                {
+                    id: 2,
+                    name: "Крано-манипуляторная установка UNIC374К на шасси FUSO Canter",
+                    link: "https://youtu.be/SZFOxY44O_Q?si=3WDsP6AR849RyQj7",
+                },
+                {
+                    id: 3,
+                    name: "Эвакуатор с прямой платформой на базе ISUZU с манипулятором PALFINGER",
+                    link: "https://youtu.be/40Pt1Oi7r-s?si=hNz5_4eAgJEpUqKV",
+                },
+                {
+                    id: 4,
+                    name: "ISUZU GIGA самосвал зерновоз",
+                    link: "https://youtu.be/Cw-rxJR_RNg?si=S1tfY-nigAc7M94V",
+                },
+                {
+                    id: 5,
+                    name: "Hyundai HD78 с автовышкой АГП HANSIN",
+                    link: "https://youtu.be/Zm1lZ53PK2I?si=k-IgNvlNzbZ9MAxn",
+                },
+                {
+                    id: 6,
+                    name: "Топливозаправщик 5,2 м куб на базе ISUZU NPR75 АТЗ ELF 7 5",
+                    link: "https://youtu.be/Zr9zpCgeEIU?si=ol3ifsFUUCd0pzd0",
+                },
+                {
+                    id: 7,
+                    name: "Автотопливозаправщик ГАЗон NEXT",
+                    link: "https://youtu.be/F2C_uBd3l5o?si=SAN7YFp1IVsUxohH",
+                },
+                {
+                    id: 8,
+                    name: "Пищевая цистерна FUSO Canter",
+                    link: "https://youtu.be/EhAdt8qwvDw?si=L2IB7XxyUxHsJa_4",
+                },
+                {
+                    id: 9,
+                    name: "ISUZU грузовой бортовой со сдвижной крышей и боковыми шторками",
+                    link: "https://youtu.be/7Ekr8KlqKi8?si=A2dcxamQbY36oCRG",
+                },
+                {
+                    id: 10,
+                    name: "С наступающим новым годом!",
+                    link: "https://youtu.be/LURhQdc2q8g?si=mENK90UaH1HX9zRc",
+                },
+                {
+                    id: 11,
+                    name: "ГАЗОН NEXT с краном манипулятором UNIC",
+                    link: "https://youtu.be/8hv6F9oxtYU?si=XBldsyV5tPhartB8",
+                },
+                {
+                    id: 12,
+                    name: "Автотопливозаправщик (АТЗ) Газон Некст",
+                    link: "https://youtu.be/isfTuPY2JjU?si=falWaGz62BrIuvWG",
+                },
+                {
+                    id: 13,
+                    name: "СТТ 2017 Итоги выставки ООО Рустрак",
+                    link: "https://youtu.be/cx4412yyZM0?si=oDL0-TjKvUr7oDGq",
+                },
+                {
+                    id: 14,
+                    name: "Бортовая платформа со сдвижной крышей и шторкой ФОТОН 1093/ Сommercial vehicle FOTON 1093",
+                    link: "https://youtu.be/l9Cuj7xPE-w?si=SUi2SlYLKmq2dXLH",
+                },
+                {
+                    id: 15,
+                    name: "Кран-манипулятор ИНМАН ИТ90 на шасси ISUZU NQR90",
+                    link: "https://youtu.be/SrLMHIyOmQM?si=lWhmGnJ4NNP7m2-3",
+                },
+            ],
+        },
+        // //////////////////REKLAMI MATERIALI PAGE INFO /////////////////////////
+        promoPage: {
+            pageTitle: "Рекламные материалы",
+            ooorustrak: "OOO РУСТРАК",
+            avtotoplivozapravshiki: "Автотопливозаправщики",
+            pishevie: "Пищевые цистерны",
+            link1: "Завод-доработчик коммерческого транспорта",
+            link2: "Листовка ГАЗ NEXT",
+            link3: "Листовка ГАЗ",
+            link4: "Листовка FUSO",
+            link5: "Листовка ГАЗ NEXT пишевая цистерна",
+            link6: "Листовка FUSO пишевая цистерна",
+        },
+        infoMaterialPage: {
+            pageTitle: "Информационные материалы",
+        },
         // ////////////////////////////////SERVICE PAGE INFO///////////////////////////////////
         servicePage: {
             pageTitle: "Сервис по гарантийному ремонту автоспецтехники РусТрак",
@@ -7435,6 +7269,7 @@ export const ruData = {
         },
         // ///////////////////////////////NEWS PAGE INFO////////////////////////////////
         newsPage: {
+            newsTitle: "Новости",
             pageTitle: "Новости РусТрак",
             swiperTitle: "Ещё новости",
             allAvto: [
@@ -8017,14 +7852,12 @@ export const ruData = {
         },
         // //////////////////////////////////CONTACTS PAGE INFO///////////////////////
         contactPage: {
-            contactHero: {
-                title: "Контакты производителя автоспецтехники РусТрак",
-                location: "603035 г. Нижний Новгород, ул. Торфяная, д. 35",
-                call1: "Нижний Новгород: ",
-                call2: "Для регионов: ",
-                pochta: "Электронная почта: ",
-                call3: "Запись на техническое обслуживание: ",
-            },
+            title: "Контакты производителя автоспецтехники РусТрак",
+            location: "603035 г. Нижний Новгород, ул. Торфяная, д. 35",
+            call1: "Нижний Новгород: ",
+            call2: "Для регионов: ",
+            pochta: "Электронная почта: ",
+            call3: "Запись на техническое обслуживание: ",
             employees: "Сотрудники",
             testimonials: [
                 {
@@ -8125,6 +7958,7 @@ export const ruData = {
             footerFirstText: "2009 - 2026 © Rus - Trucks",
             footerSecondText:
                 "Информация на сайте не является публичной офертой, определяемой согласно статье 435 Гражданского кодекса РФ и носит исключительно информационный характер.",
+            //    ////////////////////////////////////
             footerMedia: {
                 aboutUs: "О нас",
                 media: "Медиа",
@@ -8132,68 +7966,104 @@ export const ruData = {
                     {
                         id: 0,
                         name: "О компании ООО «Рустрак»",
+                        path: "/about",
                     },
                     {
                         id: 1,
                         name: "Новости",
+                        path: "/news",
                     },
                     {
                         id: 2,
                         name: "Наши партнёры",
+                        path: "/partners",
                     },
                     {
                         id: 3,
                         name: "Производство",
+                        path: "/production",
                     },
                     {
                         id: 4,
                         name: "Поставщикам и партнёрам",
+                        path: "/suppliers",
                     },
                     {
                         id: 5,
                         name: "Отзывы",
+                        path: "/otziv",
                     },
                     {
                         id: 6,
                         name: "Сертификаты",
+                        path: "/sertificate",
                     },
                     {
                         id: 7,
                         name: "Вакансии",
+                        path: "/vacancies",
                     },
                     {
                         id: 8,
                         name: "Кредит и лизинг",
+                        path: "/leasing",
                     },
                     {
                         id: 9,
                         name: "Сервис",
+                        path: "/service",
                     },
                     {
                         id: 10,
                         name: "Ремонт",
+                        path: "/repair",
                     },
                     {
                         id: 11,
                         name: "Контакты",
-                    },
-                    {
-                        id: 12,
-                        name: "Полезные статьи",
+                        path: "/contact",
                     },
                 ],
                 allMedia: [
                     {
                         name: "Фотогалерея",
+                        path: "/fotogallery",
                     },
                     {
                         name: "Видео",
+                        path: "/video",
                     },
                     {
                         name: "Рекламные материалы",
+                        path: "/promo",
+                    },
+                    {
+                        name: "Информационные материалы",
+                        path: "/info",
                     },
                 ],
             },
+        },
+        // ///////////////////MODALS/////////////////////
+        modals: {
+            title1: "Получить коммерческое предложение",
+            name: "Ваше имя ",
+            phone: "Телефон",
+            email: "E-mail",
+            checkText1: "Я согласен на",
+            checkText2: "обработку персональных данных",
+            poluchitKP: "Получить КП",
+            zakazatZvonok: "Заказать звонок",
+            zzText: "Наш менеджер свяжется с Вами в ближайшее время",
+            forRegion1: "Для регионов:",
+            forRegion2: "Нижний Новгород:",
+            zayavkuBtn: "Оставить заявку",
+            podrobne: "Подробнее",
+            udalit: "Удалить",
+            oformitZakaz: "Оформить заказ",
+            required: "This field is required.",
+            question: "Остались вопросы?",
+            text: "Свяжитесь с нашим менеджером или оставьте заявку на обратный звонок",
         },
     },
 };

@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { CallButton, FooterButton } from "../buttons/buttons";
+import { FooterButton } from "../buttons/buttons";
 import { useLanguage } from "../../context/languageContext";
+import { ZakazatZvonokModal } from "../modals/modals";
 
 const Footer = () => {
     const [aboutOpen, setAboutOpen] = useState(true);
     const [mediaOpen, setMediaOpen] = useState(false);
+    const [zakazatOpen, setZakazatOpen] = useState(false);
     const { data } = useLanguage();
 
     return (
@@ -21,7 +23,12 @@ const Footer = () => {
                         <h1 className='text-white mb-5 font-medium'>
                             {data.footer.footerLocation}
                         </h1>
-                        <FooterButton />
+                        <FooterButton onClick={() => setZakazatOpen(true)} />
+                        {zakazatOpen && (
+                            <ZakazatZvonokModal
+                                onClose={() => setZakazatOpen(false)}
+                            />
+                        )}
                         <div className='w-auto h-auto my-5'>
                             <img
                                 src='/homePagePhotos/footer-qr.svg'
@@ -47,7 +54,7 @@ const Footer = () => {
                                             (item, index) => (
                                                 <a
                                                     key={index}
-                                                    href='#'
+                                                    href={item.path}
                                                     className='text-sm font-medium text-[#BDBDBD] hover:text-[#C99024]'
                                                 >
                                                     {item.name}
@@ -74,7 +81,7 @@ const Footer = () => {
                                             (item, index) => (
                                                 <a
                                                     key={index}
-                                                    href='#'
+                                                    href={item.path}
                                                     className='text-sm font-medium text-[#BDBDBD] hover:text-[#C99024]'
                                                 >
                                                     {item.name}
@@ -97,7 +104,7 @@ const Footer = () => {
                                     .slice(0, 7)
                                     .map((index, i) => (
                                         <a
-                                            href='#'
+                                            href={index.path}
                                             key={i}
                                             className='text-sm text-[#FFFFFF] leading-[180%] transition duration-300 hover:text-[#C99024]'
                                         >
@@ -110,7 +117,7 @@ const Footer = () => {
                                     .slice(7, 13)
                                     .map((index, i) => (
                                         <a
-                                            href='#'
+                                            href={index.path}
                                             key={i}
                                             className='text-sm text-[#FFFFFF] leading-[180%] transition duration-300 hover:text-[#C99024]'
                                         >
@@ -128,7 +135,7 @@ const Footer = () => {
                             {data.footer.footerMedia.allMedia.map(
                                 (index, i) => (
                                     <a
-                                        href='#'
+                                        href={index.path}
                                         key={i}
                                         className='text-sm leading-[180%] text-[#FFFFFF] transition duration-300 hover:text-[#C99024]'
                                     >

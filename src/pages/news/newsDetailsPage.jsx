@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
 import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Breadcrumb from "../../components/breadcrum/breadcrum";
 
 const NewsDetail = () => {
     const { path } = useParams();
@@ -29,6 +30,7 @@ const NewsDetail = () => {
         <>
             <div className='bg-[#f9f9f9]'>
                 <div className='mx-auto max-w-360 px-5'>
+                    <Breadcrumb />
                     <div className='py-8'>
                         <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold mb-3'>
                             {news.name}
@@ -37,8 +39,11 @@ const NewsDetail = () => {
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 pb-10 md:pb-30'>
                         <div>
-                            {news.texts?.map((item) => (
-                                <p className='text-base md:text-[20px] mb-5'>
+                            {news.texts?.map((item, i) => (
+                                <p
+                                    key={i}
+                                    className='text-base md:text-[20px] mb-5'
+                                >
                                     {item}
                                 </p>
                             ))}

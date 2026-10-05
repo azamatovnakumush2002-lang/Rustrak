@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Breadcrumb from "../../components/breadcrum/breadcrum";
 
 const NewsPage = () => {
     const { data } = useLanguage();
@@ -37,15 +38,7 @@ const NewsPage = () => {
     return (
         <>
             <div className='mx-auto max-w-360 px-5 mb-10'>
-                <div className='flex gap-1'>
-                    <a href='/' className='text-gray-400 text-[14px]'>
-                        Главная /
-                    </a>
-                    <a href='news' className='text-gray-400 text-[14px]'>
-                        Новости
-                    </a>
-                </div>
-
+                <Breadcrumb />
                 <h1 className='font-semibold text-3xl my-7'>
                     {data.newsPage.pageTitle}
                 </h1>
@@ -157,9 +150,7 @@ const NewsPage = () => {
                     </div>
                 )}
 
-                {/* Pagination */}
                 <div className='flex items-center justify-center gap-1 sm:gap-3 mt-10'>
-                    {/* Назад */}
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
@@ -167,7 +158,6 @@ const NewsPage = () => {
                     >
                         ◁ Назад
                     </button>
-                    {/* Pagination numbers */}
                     {Array.from(
                         { length: totalPages },
                         (_, index) => index + 1,
