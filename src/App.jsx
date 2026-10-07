@@ -1,9 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./layout/layout";
 import AboutPage from "./pages/aboutPage";
-// import ShortnieAvtomobile from "./pages/avtoCategory/shtornieAvtomobile";
 import ContactsPage from "./pages/contacts";
-import HomePage from "./pages/homePage";
 import NewsPage from "./pages/news/news";
 import NewsDetail from "./pages/news/newsDetailsPage";
 import RepairPage from "./pages/repairPage";
@@ -23,6 +21,8 @@ import CategoryPage from "./pages/avtoCategory/categoryPage";
 import CategoryDetailPage from "./pages/avtoCategory/categoryDetail";
 import BasketPage from "./pages/basketPage";
 import LikesPage from "./pages/likesPage";
+import SearchPage from "./pages/searchPage";
+import HomePage from "./pages/home/homePage";
 
 function App() {
     return (
@@ -54,6 +54,7 @@ function App() {
                     <Route path='/news/:path' element={<NewsDetail />} />
                     <Route path='/basket' element={<BasketPage />} />
                     <Route path='/liked' element={<LikesPage />} />
+                    <Route path='/search' element={<SearchPage />} />
                 </Route>
             </Routes>
         </>

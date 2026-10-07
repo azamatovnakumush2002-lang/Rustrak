@@ -2,38 +2,59 @@ import allImages from "../../assets/icons/icons";
 import { icons } from "../../assets/iconkalar";
 import { useState } from "react";
 import { useLanguage } from "../../context/languageContext";
+import { useLike } from "../../context/likeContext";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/cardContext";
 
 // HEADER BASKET BUTTON
 export const BasketButton = () => {
+    const { cart } = useCart();
+    const navigate = useNavigate();
     return (
-        <a href='/basket'>
-            <img
-                src={allImages.headerImages.basketImg}
-                className='h-6 w-6 sm:h-7 sm:w-7'
-            />
-        </a>
+        <div
+            className='relative cursor-pointer'
+            onClick={() => navigate("/basket")}
+        >
+            <button href='/basket'>
+                <img
+                    src={allImages.headerImages.basketImg}
+                    className='h-6 w-6 sm:h-7 sm:w-7'
+                />
+            </button>
+            {cart.length > 0 && (
+                <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-medium'>
+                    {cart.length}
+                </span>
+            )}
+        </div>
     );
 };
 BasketButton;
 // HEADER HEART BUTTON
 export const HeartButton = () => {
+    const { likedProducts } = useLike();
+    const navigate = useNavigate();
     return (
-        <a href='/liked'>
-            <img
-                src={allImages.headerImages.heartImg}
-                className='h-6 w-6 sm:h-7 sm:w-7'
-            />
-        </a>
+        <div className='relative'>
+            <button onClick={() => navigate("/liked")} className='relative'>
+                <img
+                    src={allImages.headerImages.heartImg}
+                    className='h-6 w-6 sm:h-7 sm:w-7'
+                />
+
+                {likedProducts.length > 0 && (
+                    <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-medium'>
+                        {likedProducts.length}
+                    </span>
+                )}
+            </button>
+        </div>
     );
 };
-HeartButton;
 // HEADER CALL BUTTON
 export const HeaderCallButton = () => {
     return (
-        <button
-            className='w-9 h-9 sm:w-11 sm:h-11 p-0 border-0 bg-[#fec80b] transition-all duration-300 
-        rounded-full items-center justify-center'
-        >
+        <button className='w-9 h-9 sm:w-11 sm:h-11 p-0 border-0 bg-[#fec80b] transition-all duration-300 rounded-full items-center justify-center'>
             <img src={allImages.headerImages.callImg} className='mx-auto' />
         </button>
     );
@@ -41,39 +62,43 @@ export const HeaderCallButton = () => {
 HeaderCallButton;
 // HOME PAGE HERO SECTION PODROBNE BUTTON
 export const PodrobneButton = () => {
+    const { data } = useLanguage();
     return (
         <button className='bg-amber-400 rounded text-black hover:bg-transparent hover:text-white border border-amber-400 transition duration-500 px-2 sm:px-5 text-[12px] md:text-base py-2 md:px-7'>
-            Подробнее
+            {data.modals.podrobne}
         </button>
     );
 };
 PodrobneButton;
 // HOME PAGE HERO SECTION OTKRIT CATALOG BUTTON
 export const OpenCatalogButton = () => {
+    const { data } = useLanguage();
     return (
         <button className='bg-amber-400 rounded text-black hover:bg-transparent hover:text-white border border-amber-400 transition duration-500 px-2 sm:px-5 text-[12px] md:text-base py-2 md:px-d'>
-            Открыть каталог
+            {data.modals.openCatalog}
         </button>
     );
 };
 OpenCatalogButton;
 // HOME PAGE HERO SECTION ZAKAZAT ZVONOK BUTTON
 export const CallButton = ({ onClick }) => {
+    const { data } = useLanguage();
     return (
         <button
             onClick={onClick}
             className='bg-inherit border border-amber-400 text-white rounded hover:bg-amber-400 hover:text-black transition duration-500 px-2 sm:px-5 text-[12px] md:text-base py-2 md:px-7'
         >
-            Заказать звонок
+            {data.modals.zakazatZvonok}
         </button>
     );
 };
 CallButton;
 // HOME PAGE PODROBNEE BUTTON WITH RIGHT
 export const PodrobneeButton = () => {
+    const { data } = useLanguage();
     return (
         <button className='border border-amber-400  bg-amber-400 rounded text-black hover:bg-inherit hover:text-amber-500 transition duration-500 px-2 sm:px-5 text-[12px] md:text-base py-2 md:px-7 flex gap-2 items-center'>
-            Подробнее
+            {data.modals.podrobne}
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='20px'
@@ -96,12 +121,13 @@ export const PodrobneeButton = () => {
 PodrobneeButton;
 // HOME PAGE RECOMMENDED SECTION POLUCHIT BUTTON
 export const PoluchitButton = ({ onClick }) => {
+    const { data } = useLanguage();
     return (
         <button
             onClick={onClick}
             className='text-[#a1a1a1] mx-auto mt-2 hidden md:flex items-center gap-2 hover:text-[#FEC80B] transition duration-300'
         >
-            Получить КП
+            {data.modals.poluchitKP}
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='20'
@@ -121,9 +147,10 @@ export const PoluchitButton = ({ onClick }) => {
 PoluchitButton;
 // HOMEPAGE NOVOSTE SECTION PODROBNEE BUTTON
 export const NewsPodrobneeButton = () => {
+    const { data } = useLanguage();
     return (
         <button className='flex items-center gap-2 text-[#A2A2A2] text-[14px] sm:text-[18px] hover:text-[#FEC80B] transition duration-300'>
-            Подробнее
+            {data.modals.podrobne}
             <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='25px'
@@ -179,12 +206,13 @@ export const EmailInput = () => {
 EmailInput;
 // OTPRAVIT BUTTON
 export const OtpravitButton = () => {
+    const { data } = useLanguage();
     return (
         <button
             type='submit'
             className='h-11 w-full md:w-32.5 border border-amber-400 rounded-[5px] bg-[#FFC107] hover:bg-inherit hover:text-amber-400 text-base text-black transition duration-300'
         >
-            Отправить
+            {data.modals.otpravit}
         </button>
     );
 };
@@ -193,7 +221,6 @@ OtpravitButton;
 // FOOTER ZAKAZAT ZVONOK BUTTON
 export const FooterButton = ({ onClick }) => {
     const { data } = useLanguage();
-
     return (
         <button
             onClick={onClick}
@@ -204,24 +231,25 @@ export const FooterButton = ({ onClick }) => {
     );
 };
 FooterButton;
-
 export const LanguageButton = () => {
     const { RussiaIcon, EnglishIcon, UzbekIcon } = icons;
     const [languageOpen, setLanguageOpen] = useState(false);
     const { language, setLanguage } = useLanguage();
+
     const languageFlags = {
         uz: <UzbekIcon />,
         ru: <RussiaIcon />,
         en: <EnglishIcon />,
     };
+
     return (
         <div className='relative'>
             <button
                 onClick={() => setLanguageOpen((prev) => !prev)}
-                className='flex items-center gap-1 rounded text-sm'
+                className='flex items-center  rounded'
             >
                 <span>{languageFlags[language]}</span>
-                <span>{language.toUpperCase()}</span>
+
                 <span
                     className={`text-yellow-400 transition-transform duration-300 ${
                         languageOpen ? "rotate-180" : ""
@@ -252,6 +280,7 @@ export const LanguageButton = () => {
                     >
                         {languageFlags.ru} Русский
                     </button>
+
                     <button
                         onClick={() => {
                             setLanguage("en");

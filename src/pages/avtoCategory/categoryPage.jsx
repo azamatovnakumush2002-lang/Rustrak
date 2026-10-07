@@ -6,6 +6,7 @@ import { PoluchitButton } from "../../components/buttons/buttons";
 import { useState } from "react";
 import { PoluchitButtonModal } from "../../components/modals/modals";
 import { useCart } from "../../context/cardContext";
+import { useLike } from "../../context/likeContext";
 
 const CategoryPage = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -13,17 +14,25 @@ const CategoryPage = () => {
     const [filterModal, setFilterModal] = useState(false);
     const { slug } = useParams();
     const { data } = useLanguage();
-    const { cart, addToCart } = useCart();
+    const { addToCart } = useCart();
+    const { toggleLike } = useLike();
     const navigate = useNavigate();
+    const [tanlanganBrand, setTanlanganBrand] = useState([]);
+    const [appliedBrands, setAppliedBrands] = useState([]);
     const categories = data.CategoryProducts.categoryCards;
 
     const allProducts = Object.values(data.CategoryProducts.Products).flat();
 
     const category = categories.find((item) => item.slug === slug);
-
-    const products = allProducts.filter(
-        (item) => item.categoryId === category?.id,
-    );
+    const products = allProducts.filter((item) => {
+        if (item.categoryId !== category?.id) {
+            return false;
+        }
+        if (appliedBrands.length === 0) {
+            return true;
+        }
+        return appliedBrands.includes(item.brand);
+    });
 
     return (
         <div className='bg-gray-100'>
@@ -274,7 +283,7 @@ const CategoryPage = () => {
                 {/* gridlaaaaaaaaaaaaaaaaaaaa */}
                 <div className='grid grid-cols-3 lg:grid-cols-4 gap-5'>
                     {/* marka side */}
-                    <div className='p-5 top-0 bg-white self-start max-h-200 overflow-y-auto sticky col-span-1 hidden lg:block'>
+                    <div className='p-5 top-0 bg-white self-start max-h-250 overflow-y-auto sticky col-span-1 hidden lg:block'>
                         <p className='font-medium text-[18px] '>
                             {data.CategoryProducts.Marka.marka}
                         </p>
@@ -293,20 +302,35 @@ const CategoryPage = () => {
                         </div>
                         {/* marka */}
                         <div>
-                            {data.CategoryProducts.Marka.type.map(
-                                (index, i) => (
-                                    <div
-                                        key={i}
-                                        className='flex items-center gap-2 mb-3'
-                                    >
-                                        <input
-                                            type='checkbox'
-                                            className='w-6 h-6 hover:border-b-black accent-black '
-                                        />
-                                        <span>{index.name}</span>
-                                    </div>
-                                ),
-                            )}
+                            {data.CategoryProducts.Marka.type.map((item) => (
+                                <label
+                                    key={item.name}
+                                    className='flex items-center gap-2 mb-2'
+                                >
+                                    <input
+                                        className='w-6 h-6 hover:border-b-black accent-black '
+                                        type='checkbox'
+                                        value={item.name}
+                                        checked={tanlanganBrand.includes(
+                                            item.name,
+                                        )}
+                                        onChange={(e) => {
+                                            const brand = e.target.value;
+
+                                            setTanlanganBrand((prev) =>
+                                                prev.includes(brand)
+                                                    ? prev.filter(
+                                                          (item) =>
+                                                              item !== brand,
+                                                      )
+                                                    : [...prev, brand],
+                                            );
+                                        }}
+                                    />
+
+                                    <span>{item.name}</span>
+                                </label>
+                            ))}
                         </div>
                         {/* general massa */}
                         <p className='font-medium text-[18px] my-5'>
@@ -373,7 +397,10 @@ const CategoryPage = () => {
                                 {data.CategoryProducts.Marka.tonna}
                             </p>
                         </div>
-                        <button className='w-full border border-amber-400 hover:bg-white bg-amber-400 rounded py-2 hover:text-amber-400 transition duration-300'>
+                        <button
+                            onClick={() => setAppliedBrands(tanlanganBrand)}
+                            className='w-full border border-amber-400 hover:bg-white bg-amber-400 rounded py-2 hover:text-amber-400 transition duration-300'
+                        >
                             {data.CategoryProducts.Marka.button}
                         </button>
                     </div>
@@ -461,8 +488,15 @@ const CategoryPage = () => {
                                                         className='h-6 w-6 sm:h-7 sm:w-7'
                                                     />
                                                 </button>
-                                                {/* like */}
-                                                <button>
+                                                {/* likebutton */}
+                                                <button
+                                                    onClick={() =>
+                                                        toggleLike({
+                                                            ...item,
+                                                            categorySlug: slug,
+                                                        })
+                                                    }
+                                                >
                                                     <img
                                                         src={
                                                             allImages
@@ -569,16 +603,6 @@ const CategoryPage = () => {
                                                             setModalOpen(true)
                                                         }
                                                     />
-                                                    {/* <button>
-                                                        <img
-                                                            src={
-                                                                allImages
-                                                                    .headerImages
-                                                                    .heartImg
-                                                            }
-                                                            className='h-6 w-6 sm:h-7 sm:w-7'
-                                                        />
-                                                    </button> */}
                                                 </div>
                                             </div>
                                         </>

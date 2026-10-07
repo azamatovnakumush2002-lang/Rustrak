@@ -3,210 +3,29 @@ import { Link, useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import allImages from "../assets/icons/icons";
 import {
-    CallButton,
     NewsPodrobneeButton,
-    OpenCatalogButton,
-    PodrobneButton,
     PodrobneeButton,
     PoluchitButton,
-} from "../components/buttons/buttons";
-import {
-    PoluchitButtonModal,
-    ZakazatZvonokModal,
-} from "../components/modals/modals";
-import ScrollSlider from "../components/scrollSlider/scrollSlider";
-import YellowSection from "../components/yellowSection/yellow";
-import { useLanguage } from "../context/languageContext";
+} from "../../components/buttons/buttons";
+import { PoluchitButtonModal } from "../../components/modals/modals";
+import ScrollSlider from "../../components/scrollSlider/scrollSlider";
+import YellowSection from "../../components/yellowSection/yellow";
+import { useLanguage } from "../../context/languageContext";
+import Hero from "./hero";
 
 const HomePage = () => {
     const navigate = useNavigate();
     const { data } = useLanguage();
     const [likedCards, setLikedCards] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
-    const [zakazatOpen, setZakazatOpen] = useState(false);
     const allProducts = Object.values(data.CategoryProducts.Products).flat();
 
     return (
         <div>
-            {/* hero section*/}
-            <div className='mx-auto max-w-360 px-5 mb-10 md:mb-20 lg:mb-30'>
-                <Swiper
-                    spaceBetween={30}
-                    navigation={true}
-                    pagination={true}
-                    keyboard={true}
-                    modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                    className='mySwiper'
-                >
-                    <SwiperSlide>
-                        <div className='rounded-2xl'>
-                            <img
-                                src={allImages.homeSwiperImages.img1}
-                                className='object-cover bg-center bg-no-repeat rounded-2xl w-full h-60 md:h-auto'
-                            />
-                        </div>
-                        <div className='absolute top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                            <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                {data.homePageSwiper.swiperSlide1.title}
-                            </h1>
-                            <p className='font-normal text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7'>
-                                {data.homePageSwiper.swiperSlide1.text}
-                            </p>
-                            <CallButton onClick={() => setZakazatOpen(true)} />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='relative'>
-                            <div className='rounded-2xl '>
-                                <img
-                                    src={allImages.homeSwiperImages.img2}
-                                    className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
-                                />
-                            </div>
-                            <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
-                            <div className='absolute z-10 top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                                <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                    {data.homePageSwiper.swiperSlide2.title}
-                                </h1>
-                                <p className='font-normal text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
-                                    {data.homePageSwiper.swiperSlide2.text}
-                                </p>
-
-                                <CallButton
-                                    onClick={() => setZakazatOpen(true)}
-                                />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='relative'>
-                            <div className='rounded-2xl'>
-                                <img
-                                    src={allImages.homeSwiperImages.img3}
-                                    className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
-                                />
-                            </div>
-                            <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
-                            <div className='absolute z-10 top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                                <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                    {data.homePageSwiper.swiperSlide3.title}
-                                </h1>
-                                <p className='text-sm md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
-                                    {data.homePageSwiper.swiperSlide3.text}
-                                </p>
-                                <PodrobneButton />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='relative overflow-hidden rounded-2xl'>
-                            <div className='rounded-2xl'>
-                                <img
-                                    src={allImages.homeSwiperImages.img4}
-                                    className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
-                                />
-                            </div>
-                            <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
-                            <div className='absolute z-10 top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                                <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                    {data.homePageSwiper.swiperSlide4.title}
-                                </h1>
-                                <p className='font-normal text-sm md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130'>
-                                    {data.homePageSwiper.swiperSlide4.text}
-                                </p>
-                                <div className='flex gap-4'>
-                                    <OpenCatalogButton />
-                                    <CallButton
-                                        onClick={() => setZakazatOpen(true)}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='relative overflow-hidden rounded-2xl'>
-                            <div className='rounded-2xl'>
-                                <img
-                                    src={allImages.homeSwiperImages.img5}
-                                    className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
-                                />
-                            </div>
-                            <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
-                            <div className='z-10 absolute top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                                <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                    {data.homePageSwiper.swiperSlide5.title}
-                                </h1>
-                                <p className='font-normal text-[12px] md:text-[18px] leading-[130%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130 line-clamp-5'>
-                                    {data.homePageSwiper.swiperSlide5.text}
-                                </p>
-                                <div className='flex gap-4'>
-                                    <PodrobneButton />
-                                    <CallButton
-                                        onClick={() => setZakazatOpen(true)}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='relative overflow-hidden rounded-2xl'>
-                            <div className='rounded-2xl'>
-                                <img
-                                    src={allImages.homeSwiperImages.img6}
-                                    className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
-                                />
-                            </div>
-                            <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
-                            <div className='z-10 absolute top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                                <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                    {data.homePageSwiper.swiperSlide6.title}
-                                </h1>
-                                <p className='font-normal text-[12px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-130 line-clamp-4'>
-                                    {data.homePageSwiper.swiperSlide6.text}
-                                </p>
-                                <div className='flex gap-4'>
-                                    <PodrobneButton />
-                                    <CallButton
-                                        onClick={() => setZakazatOpen(true)}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='relative overflow-hidden rounded-2xl'>
-                            <div className='rounded-2xl'>
-                                <img
-                                    src={allImages.homeSwiperImages.img7}
-                                    className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
-                                />
-                            </div>
-                            <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
-                            <div className='z-10 absolute top-5 left-5 md:left-9 lg:top-20 lg:left-16'>
-                                <h1 className='font-bold text-[20px] sm:text-[24px] md:text-[30px] leading-[120%] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
-                                    {data.homePageSwiper.swiperSlide7.title}
-                                </h1>
-                                <p className='font-normal text-[12px] sm:text-[14px] md:text-[18px] leading-[150%] text-[#FFFFFF] mb-1 md:mb-7 max-w-120'>
-                                    {data.homePageSwiper.swiperSlide7.text}
-                                </p>
-                                <div className='flex gap-4'>
-                                    <OpenCatalogButton />
-                                    <CallButton
-                                        onClick={() => setZakazatOpen(true)}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-                {zakazatOpen && (
-                    <ZakazatZvonokModal onClose={() => setZakazatOpen(false)} />
-                )}
-            </div>
+            <Hero />
             {/* category section*/}
             <div className='mx-auto max-w-360 px-5 mb-16'>
                 <div className='flex justify-between items-center mb-5 sm:mb-8'>
@@ -316,9 +135,7 @@ const HomePage = () => {
                     />
                 </div>
             </div>
-            {/* yellow section */}
             <YellowSection />
-            {/* scroll slider */}
             <ScrollSlider />
             {/* recommend product section */}
             <div className='bg-[#F9F9F9]'>

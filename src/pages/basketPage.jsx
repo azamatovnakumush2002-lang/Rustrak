@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Breadcrumb from "../components/breadcrum/breadcrum";
 import { OformitZakazModal, OstalisVopros } from "../components/modals/modals";
 import { useCart } from "../context/cardContext";
@@ -6,7 +7,7 @@ import { useLanguage } from "../context/languageContext";
 const BasketPage = () => {
     const { data } = useLanguage();
     const { cart, removeFromCart } = useCart();
-
+    const [counts, setCounts] = useState({});
     return (
         <div>
             <div className='bg-[#f9f9f9] min-h-screen'>
@@ -16,7 +17,7 @@ const BasketPage = () => {
                         {data.basket.pageTitle}
                     </h1>
                     {cart.length === 0 ? (
-                        <div className='bg-white p-8 rounded shadow-sm'>
+                        <div className='bg-white p-4 sm:p-8 rounded shadow-sm'>
                             <p className='text-base sm:text-[20px] mb-2'>
                                 {data.basket.text1}
                             </p>
@@ -27,14 +28,14 @@ const BasketPage = () => {
                             <div className='flex flex-wrap gap-4'>
                                 <a
                                     href='/'
-                                    className='border-2 border-amber-300 px-8 py-2 rounded hover:bg-amber-400 transition duration-300'
+                                    className='border-2 border-amber-300 px-4 sm:px-8 py-2 rounded hover:bg-amber-400 transition duration-300 text-[12px] sm:text-base'
                                 >
                                     {data.basket.button1}
                                 </a>
 
                                 <a
                                     href='/katalog'
-                                    className='border-2 border-amber-300 px-8 py-2 rounded bg-amber-400 hover:bg-white transition duration-300'
+                                    className='border-2 border-amber-300 px-4 sm:px-8 py-2 rounded bg-amber-400 hover:bg-white transition duration-300 text-[12px] sm:text-base'
                                 >
                                     {data.basket.button2}
                                 </a>
@@ -111,13 +112,51 @@ const BasketPage = () => {
                                                     </svg>
                                                 </button>
                                                 <div className='mx-auto w-22 mt-3 flex items-center border border-gray-300 rounded bg-white'>
-                                                    <button className='px-2.5 py-1 text-gray-500 hover:bg-gray-100 border-r border-gray-300'>
+                                                    <button
+                                                        onClick={() => {
+                                                            setCounts(
+                                                                (prev) => ({
+                                                                    ...prev,
+                                                                    [product.id]:
+                                                                        Math.max(
+                                                                            1,
+                                                                            (prev[
+                                                                                product
+                                                                                    .id
+                                                                            ] ||
+                                                                                1) -
+                                                                                1,
+                                                                        ),
+                                                                }),
+                                                            );
+                                                        }}
+                                                        className='px-2.5 py-1 text-gray-500 hover:bg-gray-100 border-r border-gray-300'
+                                                    >
                                                         -
                                                     </button>
+
                                                     <span className='px-3 py-1 text-sm font-medium border-r border-gray-200'>
-                                                        1
+                                                        {counts[product.id] ||
+                                                            1}
                                                     </span>
-                                                    <button className='px-2.5 py-1 text-gray-500 hover:bg-gray-100'>
+
+                                                    <button
+                                                        onClick={() => {
+                                                            setCounts(
+                                                                (prev) => ({
+                                                                    ...prev,
+                                                                    [product.id]:
+                                                                        (prev[
+                                                                            product
+                                                                                .id
+                                                                        ] ||
+                                                                            1) +
+                                                                        1,
+                                                                }),
+                                                            );
+                                                        }}
+                                                        className='px-2.5 py-1 text-gray-500 hover:bg-gray-100'
+                                                    >
                                                         +
                                                     </button>
                                                 </div>

@@ -15,7 +15,7 @@ const CategoryDetailPage = () => {
     const allProducts = Object.values(data.CategoryProducts.Products).flat();
     const category = categories.find((item) => item.slug === slug);
     const product = allProducts.find(
-        (item) => item.id === Number(id) && item.categoryId === category.id,
+        (item) => item.categoryId === category?.id && item.id === Number(id),
     );
     useEffect(() => {
         Fancybox.bind('[data-fancybox="gallery"]');
@@ -42,7 +42,7 @@ const CategoryDetailPage = () => {
                                     <img
                                         src={product.images[0]}
                                         alt={product.name}
-                                        className='w-full h-auto object-cover rounded-2xl'
+                                        className='w-full h-70 md:h-100 lg:h-130 object-cover rounded-2xl'
                                     />
                                 </a>
                                 <div className='hidden'>

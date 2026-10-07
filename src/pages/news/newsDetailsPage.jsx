@@ -15,14 +15,11 @@ const NewsDetail = () => {
     if (!news) {
         return (
             <>
-                <Header />
-                <div className='container mx-auto px-4 py-10'>
-                    <h1 className='text-3xl font-semibold'>
-                        Новость не найдена
+                <div className='mx-auto max-w-360 px-5 py-10'>
+                    <h1 className='text-3xl font-medium'>
+                        {data.newsPage.notFound}
                     </h1>
                 </div>
-                <QuestionsSection />
-                <Footer />
             </>
         );
     }
@@ -102,7 +99,7 @@ const NewsDetail = () => {
                         </div>
                     </div>
 
-                    {/* more news */}
+                    {/* more newssssssssssssssssssssssssssssssss */}
                     <div>
                         <h1 className='font-medium text-[26px]'>
                             {data.newsPage.swiperTitle}

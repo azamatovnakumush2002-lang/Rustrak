@@ -8,12 +8,11 @@ import {
 } from "../buttons/buttons";
 import { useLanguage } from "../../context/languageContext";
 import { Link, useNavigate } from "react-router-dom";
-import { useCart } from "../../context/cardContext";
 
 function Header() {
     const { data } = useLanguage();
-    const { cart } = useCart();
     const navigate = useNavigate();
+    const [search, setSearch] = useState("");
     const [scrolled, setScrolled] = useState(false);
     const [catalogOpen, setCatalogOpen] = useState(null);
     const [workingTimeOpen, setWorkingTimeOpen] = useState(false);
@@ -204,29 +203,31 @@ function Header() {
                     </div>
 
                     <div className='flex items-center gap-3 sm:gap-5'>
-                        <LanguageButton />
                         <div className='hidden lg:flex'>
                             <input
                                 type='text'
-                                className='border border-yellow-400 rounded-full py-1 px-5'
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" && search.trim()) {
+                                        navigate(`/search?query=${search}`);
+                                    }
+                                }}
+                                className='border border-yellow-400 rounded-full py-1 px-4'
                             />
+
                             <img
                                 src={allImages.headerImages.searchImg}
-                                className='-ml-8'
+                                className='-ml-8 cursor-pointer'
+                                onClick={() => {
+                                    if (search.trim()) {
+                                        navigate(`/search?query=${search}`);
+                                    }
+                                }}
                             />
                         </div>
-                        <div
-                            className='relative cursor-pointer'
-                            onClick={() => navigate("/basket")}
-                        >
-                            <BasketButton />
-
-                            {cart.length > 0 && (
-                                <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#FFC400] px-1 text-[11px] font-medium'>
-                                    {cart.length}
-                                </span>
-                            )}
-                        </div>
+                        <LanguageButton />
+                        <BasketButton />
                         <HeartButton />
                     </div>
                 </div>
@@ -299,25 +300,26 @@ function Header() {
                         <div className='hidden lg:flex'>
                             <input
                                 type='text'
-                                className='border border-yellow-400 rounded-full py-0.5 px-5'
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" && search.trim()) {
+                                        navigate(`/search?query=${search}`);
+                                    }
+                                }}
+                                className='border border-yellow-400 rounded-full py-1 px-4'
                             />
                             <img
                                 src={allImages.headerImages.searchImg}
-                                className='-ml-8'
+                                className='-ml-8 cursor-pointer'
+                                onClick={() => {
+                                    if (search.trim()) {
+                                        navigate(`/search?query=${search}`);
+                                    }
+                                }}
                             />
                         </div>
-                        <div
-                            className='relative cursor-pointer'
-                            onClick={() => navigate("/basket")}
-                        >
-                            <BasketButton />
-
-                            {cart.length > 0 && (
-                                <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#FFC400] px-1 text-[11px] font-medium'>
-                                    {cart.length}
-                                </span>
-                            )}
-                        </div>
+                        <BasketButton />
                         <HeartButton />
                         <HeaderCallButton />
                     </div>

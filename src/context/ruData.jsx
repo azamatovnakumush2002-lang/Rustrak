@@ -149,8 +149,17 @@ export const ruData = {
             button2: "Открыть каталог",
         },
         like: {
-            pageTitle:"Избранное",
+            pageTitle: "Избранное",
             text: "Ваше избранное пусто.",
+            all: "Все",
+            nalichi: "В наличии",
+            netNalichi: "Нет в продаже",
+            product: "товара",
+        },
+        search: {
+            search: "Поиск:",
+            notFound: "Товары не найдены",
+            swiperTitle: "Похожие товары",
         },
         // ///////////////////////HOME////////////////////////////////////////////////
         homePageSwiper: {
@@ -293,6 +302,7 @@ export const ruData = {
                             "/categoryPhotos/shtornieAvto/shtorDrawing1.png",
                         name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
                         path: "/Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        brand: "МАЗ",
                         marka: {
                             title: "Марка",
                             value: "МАЗ",
@@ -424,6 +434,7 @@ export const ruData = {
                             "/categoryPhotos/shtornieAvto/shtorDrawing2.png",
                         name: "Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
                         path: "/Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        brand: "МАЗ",
                         marka: {
                             title: "Марка",
                             value: "МАЗ",
@@ -555,6 +566,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ 4308",
                         path: "/Шторный грузовик КАМАЗ 4308",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -686,6 +698,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ 65657",
                         path: "/Шторный грузовик КАМАЗ 65657",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -817,6 +830,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КОМПАС 5",
                         path: "/Шторный грузовик КОМПАС 5",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -949,6 +963,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
                         path: "/Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -1082,6 +1097,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ 65207 (модель 438812)",
                         path: "/Шторный грузовик КАМАЗ 65207 (модель 438812)",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -1212,6 +1228,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
                         path: "/Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -1345,6 +1362,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
                         path: "/Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -1475,6 +1493,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик ВАЛДАЙ 12",
                         path: "/Шторный грузовик ВАЛДАЙ 12",
+                        brand: "ВАЛДАЙ",
                         marka: {
                             title: "Марка",
                             value: "ГАЗ",
@@ -1606,6 +1625,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик JAC 200",
                         path: "/Шторный грузовик JAC 200",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
                             value: "JAC",
@@ -1737,6 +1757,7 @@ export const ruData = {
                         ],
                         name: "Бортовой автомобиль со шторным механизмом открытия тента JAC N120 (модель 538922)",
                         path: "/Бортовой автомобиль со шторным механизмом открытия тента JAC N120 (модель 538922)",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
                             value: "JAC",
@@ -1868,6 +1889,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик JAC 120",
                         path: "/Шторный грузовик JAC 120",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
                             value: "JAC",
@@ -2000,6 +2022,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик JAC 90 (модель 538932)",
                         path: "/Шторный грузовик JAC 90 (модель 538932)",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
                             value: "JAC",
@@ -2134,10 +2157,11 @@ export const ruData = {
                         drawingImage: "kranDrawing1.png",
                         name: "Кран-манипулятор МАЗ 6312С5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
                         path: "/Кран-манипулятор МАЗ 6312С5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
+                        brand: "DAEWOO",
                         marka: [
                             {
                                 title: "Марка",
-                                value: "МАЗ",
+                                value: "DAEWOO",
                             },
                         ],
                         gabariti: {
@@ -2270,9 +2294,10 @@ export const ruData = {
                         name: "Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
                         allCharacter: "Смотреть все характеристики",
+                        brand: "DAEWOO",
                         marka: {
                             title: "Марка",
-                            value: "МАЗ",
+                            value: "DAEWOO",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -2401,6 +2426,7 @@ export const ruData = {
                         ],
                         name: "Кран-манипулятор МАЗ 631228 с КМУ ИНМАН ИТ 150",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ ИНМАН ИТ 150",
+                        brand: "МАЗ",
                         marka: {
                             title: "Марка",
                             value: "МАЗ",
@@ -2532,9 +2558,10 @@ export const ruData = {
                         drawingImage: "/categoryPhotos/kranAvto/kranDrawing4",
                         name: "Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
                         path: "/Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
+                        brand: "МАЗ",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "МАЗ",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -2662,7 +2689,7 @@ export const ruData = {
                         ],
                         name: "Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -2797,9 +2824,10 @@ export const ruData = {
                             "/categoryPhotos/avtotoplivozapravshiki/toplivoDrawing1.png",
                         name: "Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
                         path: "/Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
+                        brand: "FOTON",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "FOTON",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -2931,10 +2959,10 @@ export const ruData = {
                         ],
                         name: "Автотопливозаправщик на шасси ГАЗ C41R13 (модель 4389JY)",
                         path: "/Автотопливозаправщик на шасси ГАЗ C41R13 (модель 4389JY)",
-                        model: "ГАЗ",
+                        brand: "FOTON",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "FOTON",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3063,10 +3091,10 @@ export const ruData = {
                             "/categoryPhotos/avtotoplivozapravshiki/toplivoDrawing3.png",
                         name: "Автотопливозаправщик Валдай 18 FB6R31",
                         path: "/Автотопливозаправщик Валдай 18 FB6R31",
-                        model: "Валдай",
+                        brand: "Валдай",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "Валдай",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3196,10 +3224,10 @@ export const ruData = {
                         ],
                         name: "Автотопливозаправщик Валдай 12 АТЗ 6",
                         path: "/Автотопливозаправщик Валдай 12 АТЗ 6",
-                        model: "Валдай",
+                        brand: "Валдай",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "Валдай",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3324,9 +3352,10 @@ export const ruData = {
                         image: "/categoryPhotos/avtogidropodyomniki/avtogidro1.webp",
                         name: "Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
                         path: "/Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
+                        brand: "SHACMAN",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "SHACMAN",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3449,9 +3478,10 @@ export const ruData = {
                         image: "/categoryPhotos/avtogidropodyomniki/avtogidro2.webp",
                         name: "Автогидроподъёмники PALFINGER P 240A на шасси HD-78",
                         path: "/Автогидроподъёмники PALFINGER P 240A на шасси HD-78",
+                        brand: "SHACMAN",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "SHACMAN",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3582,7 +3612,7 @@ export const ruData = {
                         ],
                         name: "Пищевая цистерна КАМАЗ 43089",
                         path: "/Пищевая цистерна КАМАЗ 43089",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -3713,10 +3743,10 @@ export const ruData = {
                         ],
                         name: "ГАЗон NEXТ с пищевой цистерной 4,2 куба",
                         path: "/ГАЗон NEXТ с пищевой цистерной 4,2 куба",
-                        modal: "NEXТ",
+                        brand: "DONG FENG",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "DONG FENG",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3845,9 +3875,10 @@ export const ruData = {
                         ],
                         name: "Пищевая цистерна JAC N90",
                         path: "/Пищевая цистерна JAC N90",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "JAC",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -3972,9 +4003,10 @@ export const ruData = {
                         image: "/categoryPhotos/avtoevakuator/avakuator1.webp",
                         name: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
                         path: "/Шторный грузовик МАЗ 438121 (модель 5389D5)",
+                        brand: "МАЗ",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "МАЗ",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -4098,6 +4130,7 @@ export const ruData = {
                         image: "/categoryPhotos/avtoevakuator/evakuator2.webp",
                         name: "Эвакуатор на шасси ISUZU FSR-34UL-NCUN с КМУ PALFINGER РК 13500Т",
                         path: "/Эвакуатор на шасси ISUZU FSR-34UL-NCUN с КМУ PALFINGER РК 13500Т",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -4223,6 +4256,7 @@ export const ruData = {
                         image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
                         name: "Шторный грузовик КАМАЗ 4308",
                         path: "/Шторный грузовик КАМАЗ 4308",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -4349,6 +4383,7 @@ export const ruData = {
                         image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
                         name: "Шторный грузовик КАМАЗ 65657",
                         path: "/Шторный грузовик КАМАЗ 65657",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -4483,7 +4518,7 @@ export const ruData = {
                         ],
                         name: "Изотермический фургон КАМАЗ 43089",
                         path: "/Изотермический фургон КАМАЗ 43089",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -4615,7 +4650,7 @@ export const ruData = {
                         ],
                         name: "Изотермический фургон КАМАЗ 43082",
                         path: "/Изотермический фургон КАМАЗ 43082",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -4747,10 +4782,10 @@ export const ruData = {
                         ],
                         name: "Изотермический фургон SHACMAN X3000",
                         path: "/Изотермический фургон SHACMAN X3000",
-                        model: "SHACMAN",
+                        brand: "SHACMAN",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "SHACMAN",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -4880,10 +4915,10 @@ export const ruData = {
                         ],
                         name: "Изотермический фургон JAC 35",
                         path: "/Изотермический фургон JAC 35",
-                        model: "JAC",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
-                            value: "КАМАЗ",
+                            value: "JAC",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -5015,7 +5050,7 @@ export const ruData = {
                         ],
                         name: "Контейнеровоз на шасси КАМАЗ 65115",
                         path: "/Контейнеровоз на шасси КАМАЗ 65115",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -5147,7 +5182,7 @@ export const ruData = {
                         ],
                         name: "Контейнеровоз на шасси ГАЗ С41R33",
                         path: "/Контейнеровоз на шасси ГАЗ С41R33",
-                        model: "ГАЗ",
+                        brand: "ГАЗ",
                         marka: {
                             title: "Марка",
                             value: "ГАЗ",
@@ -5275,7 +5310,7 @@ export const ruData = {
                         image: "/categoryPhotos/kryukovie/pogruzchiki1.webp",
                         name: "Крюковой погрузчик PALFINGER PH T20Pi на шасси ISUZU GIGA-Q",
                         path: "/Крюковой погрузчик PALFINGER PH T20Pi на шасси ISUZU GIGA-Q",
-                        model: "ISUZU",
+                        brand: "ISUZU",
                         marka: {
                             title: "Марка",
                             value: "ISUZU",
@@ -5401,7 +5436,7 @@ export const ruData = {
                         image: "/categoryPhotos/kryukovie/pogruzchiki2.webp",
                         name: "Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси ISUZU NPR75L-K",
                         path: "/Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси ISUZU NPR75L-K",
-                        model: "ISUZU",
+                        brand: "ISUZU",
                         marka: {
                             title: "Марка",
                             value: "ISUZU",
@@ -5527,10 +5562,10 @@ export const ruData = {
                         image: "/categoryPhotos/kryukovie/pogruzchiki3.webp",
                         name: "Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси Hyundai QT EX8",
                         path: "/Крюковой погрузчик PALFINGER PH T05_L3900 SLD на шасси Hyundai QT EX8",
-                        model: "Hyundai",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
-                            value: "Hyundai",
+                            value: "JAC",
                         },
                         gabariti: {
                             title: "Габариты ТС",
@@ -5661,7 +5696,7 @@ export const ruData = {
                         ],
                         name: "Самосвал на шасси КОМПАС 9",
                         path: "/Самосвал на шасси КОМПАС 9",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -5792,7 +5827,7 @@ export const ruData = {
                         ],
                         name: "Самосвал-зерновоз на шасси КАМАЗ 6520-3072-53 (модель 4388G6)",
                         path: "/Самосвал-зерновоз на шасси КАМАЗ 6520-3072-53 (модель 4388G6)",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -5921,6 +5956,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ 4308",
                         path: "/Шторный грузовик КАМАЗ 4308",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -6053,7 +6089,7 @@ export const ruData = {
                         ],
                         name: "Шторный грузовик КАМАЗ 4308 ДОПОГ ЕХII (модель 4388Н2-10)",
                         path: "/Шторный грузовик КАМАЗ 4308 ДОПОГ ЕХII (модель 4388Н2-10)",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -6184,7 +6220,7 @@ export const ruData = {
                         ],
                         name: "Бортовой автомобиль КАМАЗ 4308-3083-69, ДОПОГ категория EX II (модель 4388Н2-10)",
                         path: "/Бортовой автомобиль КАМАЗ 4308-3083-69, ДОПОГ категория EX II (модель 4388Н2-10)",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Марка",
                             value: "КАМАЗ",
@@ -6314,7 +6350,7 @@ export const ruData = {
                         ],
                         name: "Кран-манипулятор JAC N200L c КМУ ИНМАН ИМ150N, ДОПОГ категория EX II (модель 4389К8-10)",
                         path: "/Кран-манипулятор JAC N200L c КМУ ИНМАН ИМ150N, ДОПОГ категория EX II (модель 4389К8-10)",
-                        model: "JAC",
+                        brand: "JAC",
                         marka: {
                             title: "Марка",
                             value: "JAC",
@@ -6445,7 +6481,7 @@ export const ruData = {
                         ],
                         name: "Кран-манипулятор DAEWOO CL8CF С КМУ PALFINGER PK 8500, ДОПОГ категория EX II (модель 5389M2)",
                         path: "/Кран-манипулятор DAEWOO CL8CF С КМУ PALFINGER PK 8500, ДОПОГ категория EX II (модель 5389M2)",
-                        model: "DAEWOO",
+                        brand: "DAEWOO",
                         marka: {
                             title: "Марка",
                             value: "DAEWOO",
@@ -6642,22 +6678,10 @@ export const ruData = {
                         name: "DAEWOO",
                     },
                     {
-                        name: "FAW",
-                    },
-                    {
-                        name: "FOTON",
-                    },
-                    {
                         name: "DONG FENG",
                     },
                     {
                         name: "SHACMAN",
-                    },
-                    {
-                        name: "SOLLERS",
-                    },
-                    {
-                        name: "YANSHI",
                     },
                     {
                         name: "Валдай",
@@ -6682,31 +6706,7 @@ export const ruData = {
                         num: "5200",
                     },
                     {
-                        num: "5500",
-                    },
-                    {
-                        num: "6135",
-                    },
-                    {
-                        num: "6195",
-                    },
-                    {
-                        num: "6200",
-                    },
-                    {
                         num: "6400",
-                    },
-                    {
-                        num: "6500",
-                    },
-                    {
-                        num: "6700",
-                    },
-                    {
-                        num: "6800",
-                    },
-                    {
-                        num: "7000",
                     },
                     {
                         num: "7200",
@@ -7270,6 +7270,7 @@ export const ruData = {
         // ///////////////////////////////NEWS PAGE INFO////////////////////////////////
         newsPage: {
             newsTitle: "Новости",
+            notFound: "Новость не найдена",
             pageTitle: "Новости РусТрак",
             swiperTitle: "Ещё новости",
             allAvto: [
@@ -8064,6 +8065,8 @@ export const ruData = {
             required: "This field is required.",
             question: "Остались вопросы?",
             text: "Свяжитесь с нашим менеджером или оставьте заявку на обратный звонок",
+            openCatalog: "Открыть каталог",
+            otpravit: "Отправить",
         },
     },
 };
