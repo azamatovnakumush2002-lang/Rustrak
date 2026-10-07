@@ -23,8 +23,21 @@ import BasketPage from "./pages/basketPage";
 import LikesPage from "./pages/likesPage";
 import SearchPage from "./pages/searchPage";
 import HomePage from "./pages/home/homePage";
+import { useEffect, useState } from "react";
+import Loader from "./components/loader/loader";
 
 function App() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1500);
+    }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
     return (
         <>
             <Routes>
