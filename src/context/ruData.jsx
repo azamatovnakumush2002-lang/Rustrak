@@ -38,47 +38,47 @@ export const ruData = {
                 types: [
                     {
                         name: "Шторные автомобили",
-                        path: "/category/shtornye-avtomobili",
+                        path: "/catalog/shtornye-avtomobili",
                     },
                     {
                         name: "Краны-манипуляторы",
-                        path: "/category/krany-manipulyatory",
+                        path: "/catalog/krany-manipulyatory",
                     },
                     {
                         name: "Автотопливозаправщики",
-                        path: "/category/avtotoplivozapravshiki",
+                        path: "/catalog/avtotoplivozapravshiki",
                     },
                     {
                         name: "Автогидроподъёмники",
-                        path: "/category/avtogidropodyomniki",
+                        path: "/catalog/avtogidropodyomniki",
                     },
                     {
                         name: "Автоцистерны",
-                        path: "/category/avtocisterny",
+                        path: "/catalog/avtocisterny",
                     },
                     {
                         name: "Автоэвакуаторы",
-                        path: "/category/avtoevakuatory",
+                        path: "/catalog/avtoevakuatory",
                     },
                     {
                         name: "Изотермические фургоны",
-                        path: "/category/izotermicheskie-furgony",
+                        path: "/catalog/izotermicheskie-furgony",
                     },
                     {
                         name: "Контейнеровозы",
-                        path: "/category/konteynerovozy",
+                        path: "/catalog/konteynerovozy",
                     },
                     {
                         name: "Крюковые погрузчики",
-                        path: "/category/kryukovye-pogruzchiki",
+                        path: "/catalog/kryukovye-pogruzchiki",
                     },
                     {
                         name: "Самосвалы",
-                        path: "/category/samosvaly",
+                        path: "/catalog/samosvaly",
                     },
                     {
                         name: "Автомобили ДОПОГ категория EXII",
-                        path: "/category/dopog-exii",
+                        path: "/catalog/dopog-exii",
                     },
                 ],
             },
@@ -164,37 +164,37 @@ export const ruData = {
         // ///////////////////////HOME////////////////////////////////////////////////
         homePageSwiper: {
             swiperSlide1: {
-                image: "public/homePagePhotos/swiper-img.png",
+                image: "/homePagePhotos/swiper-img.png",
                 title: "АТЗ Рустрак включены в реестр российской промышленной продукции",
                 text: "Теперь доступны для приобретения по 44 ФЗ",
             },
             swiperSlide2: {
-                image: "public/homePagePhotos/swiper-image.jpg",
+                image: "/homePagePhotos/swiper-image.jpg",
                 title: "В наличии шторные фургоны КАМАЗ 4308",
                 text: "Размеры надстройки 6200х2550х2850 мм. Цена 5 500 000 руб.",
             },
             swiperSlide3: {
-                image: "public/homePagePhotos/swiper-image2.webp",
+                image: "/homePagePhotos/swiper-image2.webp",
                 title: "Бортовые платформы со шторным механизмом",
                 text: "Производство и поставка коммерческого транспорта, бортовых платформ, в том числе со сдвижными шторами, сдвижной крышей.",
             },
             swiperSlide4: {
-                image: "public/homePagePhotos/swiper-image3.jpg",
+                image: "/homePagePhotos/swiper-image3.jpg",
                 title: "ООО <<РусТрак>>",
                 text: "Производство и поставка специализированной техники и спецтранспорта.",
             },
             swiperSlide5: {
-                image: "public/homePagePhotos/swiper-image4.jpg",
+                image: "/homePagePhotos/swiper-image4.jpg",
                 title: "Краны манипулятори на базе МСV/HCV грузовиков",
                 text: "Производство автомобилей с крано-манипуляторными установками. Использование противосдвиговых пластин, установка блока распределителя управления задними опорами, открытый профиль HOSSEN, монтажные плиты в основании КМУ, окрас платформы в цвет крана.",
             },
             swiperSlide6: {
-                image: "public/homePagePhotos/swiper-image-5.jpg",
+                image: "/homePagePhotos/swiper-image-5.jpg",
                 title: "Автотопливозаправщики на базе MCV/HCV грузовиков",
                 text: "Производство и поставка автотопливозаправщиков объёмом 8 и 6 м.куб. Алюминиевые коммуникации, композитные напорно-всасывающие рукава, производительный узел выдачи топлива",
             },
             swiperSlide7: {
-                image: "public/homePagePhotos/Rectangle 616.png",
+                image: "/homePagePhotos/Rectangle 616.png",
                 title: "Завод-производитель автоспецтехники",
                 text: "ООО «РусТрак» — это компания, занимающаяся производством и поставкой специализированной техники и спецтранспорта",
             },
@@ -8067,6 +8067,10 @@ export const ruData = {
             text: "Свяжитесь с нашим менеджером или оставьте заявку на обратный звонок",
             openCatalog: "Открыть каталог",
             otpravit: "Отправить",
+            questionText:
+                "Оставьте свои контактные данные, и мы перезвоним Вам в ближайшее время",
+            text1: "Нажимая на кнопку отправить",
+            text2: "Вы соглашаетесь на обработку персональных данных",
         },
     },
 };

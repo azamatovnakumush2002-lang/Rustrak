@@ -20,9 +20,7 @@ const CategoryPage = () => {
     const [tanlanganBrand, setTanlanganBrand] = useState([]);
     const [appliedBrands, setAppliedBrands] = useState([]);
     const categories = data.CategoryProducts.categoryCards;
-
     const allProducts = Object.values(data.CategoryProducts.Products).flat();
-
     const category = categories.find((item) => item.slug === slug);
     const products = allProducts.filter((item) => {
         if (item.categoryId !== category?.id) {
@@ -33,7 +31,6 @@ const CategoryPage = () => {
         }
         return appliedBrands.includes(item.brand);
     });
-
     return (
         <div className='bg-gray-100'>
             <div className='mx-auto max-w-360 px-5 py-5'>
@@ -425,7 +422,7 @@ const CategoryPage = () => {
                                     <div
                                         onClick={() =>
                                             navigate(
-                                                `/category/${slug}/${item.id}`,
+                                                `/catalog/${slug}/${item.id}`,
                                             )
                                         }
                                         className={
@@ -450,7 +447,7 @@ const CategoryPage = () => {
                                             <div
                                                 onClick={() =>
                                                     navigate(
-                                                        `/category/${slug}/${item.id}`,
+                                                        `/catalog/${slug}/${item.id}`,
                                                     )
                                                 }
                                                 className='cursor-pointer'
@@ -466,7 +463,7 @@ const CategoryPage = () => {
                                                 <button
                                                     onClick={() =>
                                                         navigate(
-                                                            `/category/${slug}/${item.id}`,
+                                                            `/catalog/${slug}/${item.id}`,
                                                         )
                                                     }
                                                     className='py-2 px-3 bg-amber-300 hover:bg-amber-200 rounded text-[12px]'
@@ -521,7 +518,7 @@ const CategoryPage = () => {
                                                 <h2
                                                     onClick={() =>
                                                         navigate(
-                                                            `/category/${slug}/${item.id}`,
+                                                            `/catalog/${slug}/${item.id}`,
                                                         )
                                                     }
                                                     className='text-base cursor-pointer'
@@ -556,46 +553,21 @@ const CategoryPage = () => {
                                                         ))}
                                                 </div>
                                             </div>
-
                                             <div className='pr-3 shrink-0 flex flex-col items-center justify-center'>
                                                 <h1 className='font-medium text-xl text-center'>
                                                     {data.CategoryProducts.sena}
                                                 </h1>
-
                                                 <div className='flex gap-1 items-center'>
                                                     <button
                                                         onClick={() =>
                                                             navigate(
-                                                                `/category/${slug}/${item.id}`,
+                                                                `/catalog/${slug}/${item.id}`,
                                                             )
                                                         }
                                                         className='py-3 px-5 bg-amber-300 hover:bg-amber-200 rounded mt-4'
                                                     >
                                                         {data.modals.podrobne}
                                                     </button>
-                                                    {/* <div
-                                                        className='relative cursor-pointer'
-                                                        onClick={() =>
-                                                            navigate("/basket")
-                                                        }
-                                                    >
-                                                        <button>
-                                                            <img
-                                                                src={
-                                                                    allImages
-                                                                        .headerImages
-                                                                        .basketImg
-                                                                }
-                                                                className='h-6 w-6 sm:h-7 sm:w-7'
-                                                            />
-                                                        </button>
-
-                                                        {cart.length > 0 && (
-                                                            <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-medium'>
-                                                                {cart.length}
-                                                            </span>
-                                                        )}
-                                                    </div> */}
                                                 </div>
                                                 <div className='flex gap-1 items-center'>
                                                     <PoluchitButton

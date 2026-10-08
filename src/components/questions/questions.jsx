@@ -1,3 +1,4 @@
+import { useLanguage } from "../../context/languageContext";
 import {
     NameInput,
     OtpravitButton,
@@ -5,16 +6,16 @@ import {
 } from "../buttons/buttons";
 
 const QuestionsSection = () => {
+    const { data } = useLanguage();
     return (
         <section className='bg-[#F2F2F2] flex justify-between py-8 xl:py-0'>
             <div className='mx-auto max-w-360 px-5 pb-5 flex justify-between items-center'>
                 <div className='mx-auto lg:mx-0 text-center lg:text-left'>
-                    <h1 className='text-[26px] sm:[34px] md:text-[42px] font-semibold text-[#000000]'>
-                        ОСТАЛИСЬ ВОПРОСЫ?
+                    <h1 className='text-[26px] sm:[34px] md:text-[42px] font-semibold'>
+                        {data.modals.question}
                     </h1>
-                    <p className='text-base sm:text-[18px] text-[#000000] mb-5'>
-                        Оставьте свои контактные данные, и мы перезвоним Вам в
-                        ближайшее время
+                    <p className='text-base sm:text-[18px] mb-5'>
+                        {data.modals.questionText}
                     </p>
                     <div className='flex items-end gap-5'>
                         <form
@@ -26,7 +27,7 @@ const QuestionsSection = () => {
                                     htmlFor='name'
                                     className='text-[14px] leading-5 text-black text-left'
                                 >
-                                    Ваше имя *
+                                    {data.modals.name} *
                                 </label>
                                 <NameInput />
                             </div>
@@ -35,7 +36,7 @@ const QuestionsSection = () => {
                                     htmlFor='phone'
                                     className='text-[14px] leading-5 text-black text-left'
                                 >
-                                    Телефон *
+                                    {data.modals.phone} *
                                 </label>
                                 <PhoneNumberInput />
                             </div>
@@ -43,12 +44,12 @@ const QuestionsSection = () => {
                         </form>
                     </div>
                     <p className='mt-5 text-[#888] text-[14px]'>
-                        Нажимая на кнопку отправить.
+                        {data.modals.text1}
                         <a
                             href='https://rtrf.ru/upload/privacy_policy.pdf'
                             className='underline text-blue-900'
                         >
-                            Вы соглашаетесь на обработку персональных данных
+                            {data.modals.text2}
                         </a>
                     </p>
                 </div>

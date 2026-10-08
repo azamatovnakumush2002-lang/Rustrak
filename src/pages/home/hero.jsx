@@ -33,10 +33,10 @@ const Hero = () => {
                         />
                     </div>
                     <div className='absolute top-5 left-4 sm:left-7'>
-                        <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] max-w-130 mb-1 md:mb-5'>
+                        <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] max-w-140 mb-3'>
                             {data.homePageSwiper.swiperSlide1.title}
                         </h1>
-                        <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-7'>
+                        <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-3'>
                             {data.homePageSwiper.swiperSlide1.text}
                         </p>
                         <CallButton onClick={() => setZakazatOpen(true)} />
@@ -52,10 +52,10 @@ const Hero = () => {
                         </div>
                         <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
                         <div className='absolute z-10 top-5 left-4 sm:left-7'>
-                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
+                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] mb-3'>
                                 {data.homePageSwiper.swiperSlide2.title}
                             </h1>
-                            <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
+                            <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-4 max-w-110'>
                                 {data.homePageSwiper.swiperSlide2.text}
                             </p>
 
@@ -73,10 +73,10 @@ const Hero = () => {
                         </div>
                         <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
                         <div className='absolute z-10 top-5 left-4 sm:left-7'>
-                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
+                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] mb-1 md:mb-3'>
                                 {data.homePageSwiper.swiperSlide3.title}
                             </h1>
-                            <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-7 max-w-90'>
+                            <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-3 max-w-160'>
                                 {data.homePageSwiper.swiperSlide3.text}
                             </p>
                             <PodrobneButton />
@@ -93,10 +93,10 @@ const Hero = () => {
                         </div>
                         <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
                         <div className='absolute z-10 top-5 left-4 sm:left-7'>
-                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] max-w-115 mb-1 md:mb-5'>
+                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF]  mb-3'>
                                 {data.homePageSwiper.swiperSlide4.title}
                             </h1>
-                            <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-7 max-w-130'>
+                            <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-3 max-w-130'>
                                 {data.homePageSwiper.swiperSlide4.text}
                             </p>
                             <div className='flex gap-4'>
@@ -118,10 +118,10 @@ const Hero = () => {
                         </div>
                         <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
                         <div className='z-10 absolute top-5 left-4 sm:left-7'>
-                            <h1 className='font-bold text-base sm:text-[25px] text-[#FFFFFF] mb-1'>
+                            <h1 className='font-bold text-base sm:text-[26px] text-[#FFFFFF] mb-3'>
                                 {data.homePageSwiper.swiperSlide5.title}
                             </h1>
-                            <p className='text-[10px] sm:text-sm md:text-[18px] text-[#FFFFFF] mb-1 lg:mb-2 max-w-130 '>
+                            <p className='text-[10px] sm:text-sm md:text-base text-[#FFFFFF] mb-3 max-w-170 '>
                                 {data.homePageSwiper.swiperSlide5.text}
                             </p>
                             <div className='flex gap-4'>
@@ -143,10 +143,10 @@ const Hero = () => {
                         </div>
                         <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
                         <div className='z-10 absolute top-5 left-4 sm:left-7'>
-                            <h1 className='font-bold text-base sm:text-[26px] text-[#FFFFFF] mb-1'>
+                            <h1 className='font-bold text-base sm:text-[26px] text-[#FFFFFF] mb-3'>
                                 {data.homePageSwiper.swiperSlide6.title}
                             </h1>
-                            <p className='text-[12px] md:text-[18px] text-[#FFFFFF] mb-1 max-w-150'>
+                            <p className='text-[12px] md:text-base text-[#FFFFFF] mb-3 max-w-160'>
                                 {data.homePageSwiper.swiperSlide6.text}
                             </p>
                             <div className='flex gap-4'>
@@ -168,10 +168,10 @@ const Hero = () => {
                         </div>
                         <div className='absolute inset-0 bg-linear-to-r from-black via-black/30 to-transparent rounded-2xl'></div>
                         <div className='z-10 absolute top-5 left-4 sm:left-7'>
-                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] mb-1 md:mb-5'>
+                            <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] mb-3'>
                                 {data.homePageSwiper.swiperSlide7.title}
                             </h1>
-                            <p className='text-[12px] sm:text-[14px] md:text-[18px] text-[#FFFFFF] mb-1 md:mb-3 max-w-120'>
+                            <p className='text-[12px] sm:text-[14px] md:text-[18px] text-[#FFFFFF] mb-3 max-w-140'>
                                 {data.homePageSwiper.swiperSlide7.text}
                             </p>
                             <div className='flex gap-4'>

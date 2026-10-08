@@ -10,7 +10,6 @@ export const uzData = {
             forRegion: "Hududlar uchun: 8 (800) 77-77-210",
             forRegion2: "Nijniy Novgorod: 8 (831) 225-00-55",
             main: "Bosh sahifa",
-
             navigations: {
                 katalogBtn: "Katalog",
                 aboutUs: "Biz haqimizda",
@@ -34,53 +33,52 @@ export const uzData = {
                     },
                 ],
             },
-
             allCategories: {
                 title: "Kategoriyalar",
                 types: [
                     {
                         name: "Tentli avtomobillar",
-                        path: "/category/shtornye-avtomobili",
+                        path: "/catalog/shtornye-avtomobili",
                     },
                     {
                         name: "Kran-manipulyatorlar",
-                        path: "/category/krany-manipulyatory",
+                        path: "/catalog/krany-manipulyatory",
                     },
                     {
                         name: "Avtotransport yoqilg‘i quyish mashinalari",
-                        path: "/category/avtotoplivozapravshiki",
+                        path: "/catalog/avtotoplivozapravshiki",
                     },
                     {
                         name: "Avtogidravlik ko‘targichlar",
-                        path: "/category/avtogidropodyomniki",
+                        path: "/catalog/avtogidropodyomniki",
                     },
                     {
                         name: "Avtosisternalar",
-                        path: "/category/avtocisterny",
+                        path: "/catalog/avtocisterny",
                     },
                     {
                         name: "Avtoevakuatorlar",
-                        path: "/category/avtoevakuatory",
+                        path: "/catalog/avtoevakuatory",
                     },
                     {
                         name: "Izotermik furgonlar",
-                        path: "/category/izotermicheskie-furgony",
+                        path: "/catalog/izotermicheskie-furgony",
                     },
                     {
                         name: "Konteyner tashuvchilar",
-                        path: "/category/konteynerovozy",
+                        path: "/catalog/konteynerovozy",
                     },
                     {
                         name: "Ilgakli yuklagichlar",
-                        path: "/category/kryukovye-pogruzchiki",
+                        path: "/catalog/kryukovye-pogruzchiki",
                     },
                     {
                         name: "Samosvallar",
-                        path: "/category/samosvaly",
+                        path: "/catalog/samosvaly",
                     },
                     {
                         name: "DOPOG EXII toifasidagi avtomobillar",
-                        path: "/category/dopog-exii",
+                        path: "/catalog/dopog-exii",
                     },
                 ],
             },
@@ -162,43 +160,37 @@ export const uzData = {
         // ////////////////////////////HOME PAGE/////////////////////
         homePageSwiper: {
             swiperSlide1: {
-                image: "public/homePagePhotos/swiper-img.png",
+                image: "/homePagePhotos/swiper-img.png",
                 title: "Rustrak ATZlari Rossiya sanoat mahsulotlari reestriga kiritildi",
                 text: "Endi ularni 44-FZ qonuni asosida xarid qilish mumkin",
             },
-
             swiperSlide2: {
-                image: "public/homePagePhotos/swiper-image.jpg",
+                image: "/homePagePhotos/swiper-image.jpg",
                 title: "Mavjud: KAMAZ 4308 tentli furgonlar",
                 text: "Ustki konstruksiya o‘lchamlari 6200x2550x2850 mm. Narxi 5 500 000 rubl.",
             },
-
             swiperSlide3: {
-                image: "public/homePagePhotos/swiper-image2.webp",
+                image: "/homePagePhotos/swiper-image2.webp",
                 title: "Tent mexanizmiga ega bort platformalari",
                 text: "Tijorat transporti, bort platformalari, jumladan suriluvchi tentlar va suriluvchi tomga ega platformalarni ishlab chiqarish va yetkazib berish.",
             },
-
             swiperSlide4: {
-                image: "public/homePagePhotos/swiper-image3.jpg",
+                image: "/homePagePhotos/swiper-image3.jpg",
                 title: "«RusTrak» MChJ",
                 text: "Maxsus texnika va maxsus transport vositalarini ishlab chiqarish va yetkazib berish.",
             },
-
             swiperSlide5: {
-                image: "public/homePagePhotos/swiper-image4.jpg",
+                image: "/homePagePhotos/swiper-image4.jpg",
                 title: "MCV/HCV yuk avtomobillari bazasidagi kran-manipulyatorlar",
                 text: "Kran-manipulyator qurilmalari bilan jihozlangan avtomobillar ishlab chiqarish. Siljishga qarshi plastinalardan foydalanish, orqa tayanchlarni boshqarish taqsimlagich blokini o‘rnatish, HOSSEN ochiq profili, KMU asosidagi montaj plitalari, platformani kran rangiga bo‘yash.",
             },
-
             swiperSlide6: {
-                image: "public/homePagePhotos/swiper-image-5.jpg",
+                image: "/homePagePhotos/swiper-image-5.jpg",
                 title: "MCV/HCV yuk avtomobillari bazasidagi avtoyokilg‘i quyish mashinalari",
                 text: "Sig‘imi 8 va 6 m³ bo‘lgan avtoyokilg‘i quyish mashinalarini ishlab chiqarish va yetkazib berish. Alyuminiy kommunikatsiyalar, kompozit bosimli-so‘ruvchi shlanglar, yuqori unumdor yoqilg‘i tarqatish qurilmasi.",
             },
-
             swiperSlide7: {
-                image: "public/homePagePhotos/Rectangle 616.png",
+                image: "/homePagePhotos/Rectangle 616.png",
                 title: "Avtospetsial texnika ishlab chiqaruvchi zavod",
                 text: "«RusTrak» MChJ — maxsus texnika va maxsus transport vositalarini ishlab chiqarish va yetkazib berish bilan shug‘ullanuvchi kompaniya.",
             },
@@ -303,23 +295,18 @@ export const uzData = {
                             "/categoryPhotos/shtornieAvto/shtor-1-5.webp",
                             "/categoryPhotos/shtornieAvto/shtor-1-6.webp",
                         ],
-
                         drawingImage:
                             "/categoryPhotos/shtornieAvto/shtorDrawing1.png",
-
                         name: "MAZ 438121 tentli yuk avtomobili (5389D5 modeli)",
                         path: "/Шторный грузовик МАЗ 438121 (модель 5389D5)",
-
                         marka: {
                             title: "Markasi",
                             value: "MAZ",
                         },
-
                         gabariti: {
                             title: "Avtomobil o‘lchamlari",
                             value: "9510 x 2550 x 2550 mm",
                         },
-
                         kg: {
                             title: "Yuk ko‘tarish qobiliyati, kg",
                             value: "6340",
@@ -6885,12 +6872,9 @@ export const uzData = {
         aboutPage: {
             pageTitle:
                 "«RusTrak» avtomobil zavodi — Nijniy Novgorod shahrida tijorat transporti va maxsus texnika ishlab chiqaruvchi yetakchi korxona.",
-
             yellowTitle: "yillik tajriba",
-
             swiperTitle:
                 "«RusTrak» avtomobil zavodi to‘liq ishlab chiqarish sikliga ega korxona bo‘lib, konstruktorlik va texnologik ishlanmalardan tayyor mahsulotgacha bo‘lgan barcha jarayonlarni amalga oshiradi.",
-
             swiperInfo: [
                 {
                     id: 1,
@@ -6934,9 +6918,7 @@ export const uzData = {
                     text: "Rossiya Federatsiyasining barcha hududlarida texnik yordam ko‘rsatilishini kafolatlaydi.",
                 },
             ],
-
             title: "Bugungi kunda «RusTrak» MChJ — bu:",
-
             texts: [
                 "umumiy maydoni 7 000 m² dan ortiq bo‘lgan 3 ta ishlab chiqarish korpusi;",
                 "20 000 m² dan ortiq ishlab chiqarish hududi;",
@@ -6945,21 +6927,15 @@ export const uzData = {
                 "oyiga 110 donagacha texnika ishlab chiqarish quvvati;",
                 "o‘z konstruktorlik va texnologik xizmatining mavjudligi.",
             ],
-
             yellowTitle1:
                 "Ishlab chiqariladigan texnikalardan foydalaniladigan sohalar:",
-
             yellowText1:
                 "Qurilish, telekommunikatsiya, kommunal xo‘jalik, yo‘l xo‘jaligi, logistika va qishloq xo‘jaligi.",
-
             yellowTitle2: "Ishlab chiqariladigan texnikalar:",
-
             yellowText2:
                 "Kran-manipulyatorlar, avtotoplivazapravshiklar, avtohavozalar, furgonlar, samosvallar, bortli platformalar, evakuatorlar, ilgakli yuklagichlar, ustaxonalar, oziq-ovqat sisternalari, vakuum mashinalari va avtogidropodyomniklar.",
-
             lastText1:
                 "«RusTrak» MChJ Rossiya Federatsiyasi hududida quyidagi markalarning rasmiy dileri hisoblanadi: Palfinger, INMAN, HKTC, UNIC, DongYang, FASSI, Hangil, XCMG va HIAB.",
-
             lastText2:
                 "16 yillik faoliyati davomida kompaniya distribyutorlar va avtomobil ishlab chiqaruvchilari orasida yuqori darajadagi ishonchga sazovor bo‘ldi: ISUZU RUS, KAMAZ, GAZ, DAEWOO, FAW, JAC, TRUCKS VOSTOK RUS (KOMPAS), MAZ RUS, DAIMLER KAMAZ RUS (FUSO), HINO MOTORS, FOTON, DONG FENG, SHACMAN, NEFAZ, ZAVOD START.",
 
@@ -7912,6 +7888,10 @@ export const uzData = {
             text: "Menejerimiz bilan bog‘laning yoki qayta qo‘ng‘iroq uchun ariza qoldiring",
             openCatalog: "Katalogni ochish",
             otpravit: "Yuborish",
+            questionText:
+                "Aloqa ma’lumotlaringizni qoldiring, biz tez orada Siz bilan bog‘lanamiz",
+            text1: "Yuborish tugmasini bosish orqali",
+            text2: "Siz shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz",
         },
     },
 };

@@ -17,23 +17,9 @@ const AboutPage = () => {
                 </div>
                 <div className='bg-[url(/aboutPagePhotos/about-company.jpg)] object-cover bg-center bg-no-repeat h-70 md:h-110 mb-20'>
                     <div className='mx-auto px-5 max-w-360'>
-                        <h1 className='text-white text-[24px] font-medium max-w-130 pt-23'>
+                        <h1 className='text-white text-[24px] font-medium max-w-130 pt-10'>
                             {data.aboutPage.pageTitle}
                         </h1>
-                        {/* <div className='md:mt-[12%] lg:mt-[8%] ml-5'>
-                            <img
-                                src='/aboutPagePhotos/Union.svg'
-                                className='max-w-32 h-38'
-                            />
-                            <div className='sticky mt-[-12%] lg:mt-[-10%] ml-4'>
-                                <h1 className='text-[64px] font-semibold leading-[100%]'>
-                                    17+
-                                    <span className='text-[20px] font-normal block leading-[100%] text-left max-w-28'>
-                                        {data.aboutPage.yellowTitle}
-                                    </span>
-                                </h1>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 {/* ////////////////////////////////////////////// */}
@@ -122,7 +108,7 @@ const AboutPage = () => {
                             ))}
                         </Swiper>
                     </div>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex flex-col md:flex-row justify-between items-center mb-5 sm:mb-10'>
                         <div>
                             <h1 className='font-medium text-4xl mb-5'>
                                 {data.aboutPage.title}
@@ -156,6 +142,43 @@ const AboutPage = () => {
                                 className='w-auto h-auto object-cover'
                             />
                         </div>
+                    </div>
+                    <div className='grid min-[1200px]:grid-cols-3 gap-5 mb-10 sm:mb-20'>
+                        <div className='rounded-xl bg-primary p-5'>
+                            <h1 className='font-medium text-xl lg:text-[28px] leading-[110%] my-5'>
+                                {data.aboutPage.yellowTitle1}
+                            </h1>
+                            <p className=''>{data.aboutPage.yellowText1}</p>
+                            <h1 className='font-medium text-xl lg:text-[28px] leading-[110%] my-5'>
+                                {data.aboutPage.yellowTitle2}
+                            </h1>
+                            <p className=''>{data.aboutPage.yellowText2}</p>
+                        </div>
+                        <div className='col-span-2 grid grid-cols-2 gap-5'>
+                            <div>
+                                <img
+                                    src='/aboutPagePhotos/about-im_v2.webp'
+                                    className='rounded-xl w-full h-auto object-cover'
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src='/aboutPagePhotos/about-im2_v2.webp'
+                                    className='rounded-xl w-full h-auto object-cover'
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p className='textbase sm:text-[18px] mb-5 sm:mb-10'>
+                            {data.aboutPage.lastText1}
+                        </p>
+                        <p className='textbase sm:text-[18px] mb-5 sm:mb-10'>
+                            {data.aboutPage.lastText2}
+                        </p>
+                        <p className='textbase sm:text-[18px] mb-5 sm:mb-10'>
+                            {data.aboutPage.lastText3}
+                        </p>
                     </div>
                 </div>
             </div>

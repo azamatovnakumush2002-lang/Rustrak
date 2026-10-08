@@ -18,11 +18,11 @@ export const BasketButton = () => {
             <button href='/basket'>
                 <img
                     src={allImages.headerImages.basketImg}
-                    className='h-6 w-6 sm:h-7 sm:w-7'
+                    className='h-7 w-7'
                 />
             </button>
             {cart.length > 0 && (
-                <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-medium'>
+                <span className='absolute -right-2 bottom-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[11px]'>
                     {cart.length}
                 </span>
             )}
@@ -39,11 +39,11 @@ export const HeartButton = () => {
             <button onClick={() => navigate("/liked")} className='relative'>
                 <img
                     src={allImages.headerImages.heartImg}
-                    className='h-6 w-6 sm:h-7 sm:w-7'
+                    className='h-6 w-6'
                 />
 
                 {likedProducts.length > 0 && (
-                    <span className='absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-medium'>
+                    <span className='absolute -right-1 -bottom-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[11px]'>
                         {likedProducts.length}
                     </span>
                 )}
@@ -54,8 +54,11 @@ export const HeartButton = () => {
 // HEADER CALL BUTTON
 export const HeaderCallButton = () => {
     return (
-        <button className='w-9 h-9 sm:w-11 sm:h-11 p-0 border-0 bg-[#fec80b] transition-all duration-300 rounded-full items-center justify-center'>
-            <img src={allImages.headerImages.callImg} className='mx-auto' />
+        <button className='w-8 h-8 p-0 border-0 bg-[#fec80b] transition-all duration-300 rounded-full items-center justify-center'>
+            <img
+                src={allImages.headerImages.callImg}
+                className='mx-auto w-6 h-6'
+            />
         </button>
     );
 };
@@ -260,13 +263,13 @@ export const LanguageButton = () => {
             </button>
 
             {languageOpen && (
-                <div className='absolute p-4 z-70 flex flex-col gap-2 rounded bg-white shadow-lg'>
+                <div className='absolute top-10 p-2 z-70 flex flex-col gap-2 rounded bg-white shadow-lg'>
                     <button
                         onClick={() => {
                             setLanguage("uz");
                             setLanguageOpen(false);
                         }}
-                        className='flex items-center gap-1'
+                        className='flex items-center gap-1 text-sm'
                     >
                         {languageFlags.uz} O'zbek
                     </button>
@@ -276,7 +279,7 @@ export const LanguageButton = () => {
                             setLanguage("ru");
                             setLanguageOpen(false);
                         }}
-                        className='flex items-center gap-1'
+                        className='flex items-center gap-1 text-sm'
                     >
                         {languageFlags.ru} Русский
                     </button>
@@ -286,7 +289,7 @@ export const LanguageButton = () => {
                             setLanguage("en");
                             setLanguageOpen(false);
                         }}
-                        className='flex items-center gap-1'
+                        className='flex items-center gap-1 text-sm'
                     >
                         {languageFlags.en} English
                     </button>

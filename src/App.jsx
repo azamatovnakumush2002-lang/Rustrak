@@ -25,6 +25,7 @@ import SearchPage from "./pages/searchPage";
 import HomePage from "./pages/home/homePage";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/loader";
+import CatalogPage from "./pages/avtoCategory/catalogPage";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -32,9 +33,8 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 1500);
+        }, 1000);
     }, []);
-
     if (loading) {
         return <Loader />;
     }
@@ -43,9 +43,10 @@ function App() {
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route index element={<HomePage />} />
-                    <Route path='/category/:slug' element={<CategoryPage />} />
+                    <Route path='catalog' element={<CatalogPage />} />
+                    <Route path='catalog/:slug' element={<CategoryPage />} />
                     <Route
-                        path='/category/:slug/:id'
+                        path='catalog/:slug/:id'
                         element={<CategoryDetailPage />}
                     />
                     <Route path='about' element={<AboutPage />} />
@@ -63,11 +64,11 @@ function App() {
                     <Route path='service' element={<ServicePage />} />
                     <Route path='contact' element={<ContactsPage />} />
                     <Route path='repair' element={<RepairPage />} />
-                    <Route path='/news' element={<NewsPage />} />
-                    <Route path='/news/:path' element={<NewsDetail />} />
-                    <Route path='/basket' element={<BasketPage />} />
-                    <Route path='/liked' element={<LikesPage />} />
-                    <Route path='/search' element={<SearchPage />} />
+                    <Route path='news' element={<NewsPage />} />
+                    <Route path='news/:path' element={<NewsDetail />} />
+                    <Route path='basket' element={<BasketPage />} />
+                    <Route path='liked' element={<LikesPage />} />
+                    <Route path='search' element={<SearchPage />} />
                 </Route>
             </Routes>
         </>

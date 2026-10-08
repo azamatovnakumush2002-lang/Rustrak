@@ -12,9 +12,9 @@ import {
 } from "../../components/buttons/buttons";
 import { PoluchitButtonModal } from "../../components/modals/modals";
 import ScrollSlider from "../../components/scrollSlider/scrollSlider";
-import YellowSection from "../../components/yellowSection/yellow";
 import { useLanguage } from "../../context/languageContext";
 import Hero from "./hero";
+import YellowSection from "./yellow";
 
 const HomePage = () => {
     const navigate = useNavigate();
@@ -65,7 +65,6 @@ const HomePage = () => {
                         </button>
                     </div>
                 </div>
-
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={10}
@@ -94,9 +93,9 @@ const HomePage = () => {
                     {data.CategoryProducts.categoryCards.map((card, index) => (
                         <SwiperSlide
                             key={index}
-                            onClick={() => navigate(`/category/${card.path}`)}
+                            onClick={() => navigate(`/catalog/${card.path}`)}
                         >
-                            <Link to={`/category/${card.path}`}>
+                            <Link to={`/catalog/${card.path}`}>
                                 <div className='border border-[#EBEBEB] rounded-lg p-3 sm:p-5 h-auto  transition-all duration-300 hover:border-amber-400 hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)]  cursor-pointer'>
                                     <h3 className='font-normal text-[18px] sm:text-2xl overflow-hidden truncate'>
                                         {card.name}
@@ -120,13 +119,15 @@ const HomePage = () => {
                             {data.homePageAboutRustrak.rustrak}
                         </span>
                     </h1>
-                    <p className='font-normal text-base sm:text-[18px] w-full lg:max-w-120 my-3 sm:my-6'>
+                    <p className='text-base sm:text-[18px] w-full lg:max-w-120 my-3 sm:my-6'>
                         {data.homePageAboutRustrak.firstText}
                     </p>
-                    <p className='font-normal text-base sm:text-[18px] w-full lg:max-w-120 mb-5 sm:mb-10'>
+                    <p className='text-base sm:text-[18px] w-full lg:max-w-120 mb-5 sm:mb-10'>
                         {data.homePageAboutRustrak.secondText}
                     </p>
-                    <PodrobneeButton />
+                    <a href='/about'>
+                        <PodrobneeButton />
+                    </a>
                 </div>
                 <div className='mx-auto max-w-187.5 max-h-112.5 mt-4 md:mt-0'>
                     <img
@@ -178,7 +179,6 @@ const HomePage = () => {
                             </button>
                         </div>
                     </div>
-
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={10}
@@ -189,7 +189,11 @@ const HomePage = () => {
                             nextEl: ".custom-next-btn",
                         }}
                         breakpoints={{
-                            640: {
+                            300: {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                            },
+                            480: {
                                 slidesPerView: 2,
                                 spaceBetween: 20,
                             },

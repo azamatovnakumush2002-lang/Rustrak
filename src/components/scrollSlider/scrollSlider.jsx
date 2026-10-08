@@ -36,8 +36,8 @@ const ScrollSlider = () => {
     ];
 
     return (
-        <section ref={sectionRef} className='h-[500vh] mt-10'>
-            <div className='h-dvh sticky gap-10 top-0 w-full flex flex-col justify-start  min-[890px]:h-dvh min-[890px]:flex-row min-[890px]:items-center min-[890px]:justify-between px-5'>
+        <section ref={sectionRef} className='h-[500vh]'>
+            <div className='max-w-360 px-5 mx-auto h-dvh sticky gap-10 top-0 w-full flex flex-col justify-start  min-[890px]:h-dvh min-[890px]:flex-row min-[890px]:items-center min-[890px]:justify-between'>
                 <div className='benefits_left w-[45%] min-[890px]:w-[45%] lg:w-[45%] max-[1235px]:w-[45%] xl:w-[40%]'>
                     <div className='relative w-full'>
                         <img

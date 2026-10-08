@@ -8,7 +8,6 @@ import {
 } from "../buttons/buttons";
 import { useLanguage } from "../../context/languageContext";
 import { Link, useNavigate } from "react-router-dom";
-
 function Header() {
     const { data } = useLanguage();
     const navigate = useNavigate();
@@ -66,7 +65,7 @@ function Header() {
                                 src={allImages.headerImages.qrImg}
                                 className='h-7 w-7'
                             />
-                            <span className='max-w-16 text-[8px] font-bold leading-[100%] text-[#000000]'>
+                            <span className='max-w-16 text-[8px] font-bold leading-[100%]'>
                                 {data.header.qrCode}
                             </span>
                         </div>
@@ -132,10 +131,10 @@ function Header() {
                 }`}
             >
                 <div className='mx-auto flex max-w-360 items-center justify-between px-5'>
-                    <div className='relative flex items-center gap-8 py-4'>
+                    <div className='relative flex items-center gap-4 py-4'>
                         <button
                             onClick={() => handleCatalogOpen("catalog")}
-                            className='flex items-center gap-3 rounded bg-primary px-4 py-2 text-base transition hover:bg-[#eeb600]'
+                            className='flex items-center gap-2 rounded bg-primary px-4 py-2 text-base transition hover:bg-[#eeb600]'
                         >
                             <span className='text-xl leading-none'>
                                 {catalogOpen === "catalog" ? "✕" : "☰"}
@@ -145,10 +144,10 @@ function Header() {
                                 {data.header.navigations.katalogBtn}
                             </span>
                         </button>
-                        <nav className='hidden lg:flex items-center gap-7 '>
+                        <nav className='hidden lg:flex items-center gap-4 '>
                             <button
                                 onClick={() => handleCatalogOpen("aboutUs")}
-                                className='flex items-center gap-1 whitespace-nowrap text-base leading-[130%] transition duration-300 hover:text-[#C99024]'
+                                className='flex items-center gap-1 whitespace-nowrap text-base transition duration-300 hover:text-[#C99024]'
                             >
                                 {data.header.navigations.aboutUs}
 
@@ -202,8 +201,8 @@ function Header() {
                         </nav>
                     </div>
 
-                    <div className='flex items-center gap-3 sm:gap-5'>
-                        <div className='hidden lg:flex'>
+                    <div className='flex items-center gap-3'>
+                        <div className='hidden min-[440px]:flex'>
                             <input
                                 type='text'
                                 value={search}
@@ -218,7 +217,7 @@ function Header() {
 
                             <img
                                 src={allImages.headerImages.searchImg}
-                                className='-ml-8 cursor-pointer'
+                                className='-ml-6 cursor-pointer'
                                 onClick={() => {
                                     if (search.trim()) {
                                         navigate(`/search?query=${search}`);
@@ -237,7 +236,7 @@ function Header() {
                 className={`fixed top-0 z-50 w-full bg-white shadow-sm ${scrolled ? "block opacity-100" : "hidden opacity-0"}`}
             >
                 <div className='mx-auto flex max-w-360 items-center justify-between px-5 py-2'>
-                    <div className='flex items-center gap-2 lg:gap-6'>
+                    <div className='flex items-center gap-2'>
                         <button
                             onClick={() => handleCatalogOpen("catalog")}
                             className='flex items-center justify-center rounded bg-primary px-4 py-2'
@@ -264,7 +263,7 @@ function Header() {
                                 8 800-511-05-25
                             </span>
                         </div>
-                        <nav className='items-center gap-7 hidden xl:flex'>
+                        <nav className='items-center gap-4 hidden xl:flex'>
                             <button
                                 onClick={() => handleCatalogOpen("aboutUs")}
                                 className='flex items-center gap-1 text-base transition duration-300 hover:text-[#C99024]'
@@ -295,9 +294,8 @@ function Header() {
                             ))}
                         </nav>
                     </div>
-                    <div className='flex items-center gap-2 sm:gap-5'>
-                        <LanguageButton />
-                        <div className='hidden lg:flex'>
+                    <div className='flex  justify-center items-center gap-4'>
+                        <div className='hidden min-[480px]:flex items-center'>
                             <input
                                 type='text'
                                 value={search}
@@ -307,11 +305,11 @@ function Header() {
                                         navigate(`/search?query=${search}`);
                                     }
                                 }}
-                                className='border border-yellow-400 rounded-full py-1 px-4'
+                                className='border border-yellow-400 rounded-full py-1 pl-4 '
                             />
                             <img
                                 src={allImages.headerImages.searchImg}
-                                className='-ml-8 cursor-pointer'
+                                className='-ml-7 cursor-pointer'
                                 onClick={() => {
                                     if (search.trim()) {
                                         navigate(`/search?query=${search}`);
@@ -319,6 +317,7 @@ function Header() {
                                 }}
                             />
                         </div>
+                        <LanguageButton />
                         <BasketButton />
                         <HeartButton />
                         <HeaderCallButton />
