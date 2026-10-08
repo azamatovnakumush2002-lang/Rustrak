@@ -293,7 +293,7 @@ export const enData = {
 
                         name: "MAZ 438121 Curtain-Sided Truck (Model 5389D5)",
                         path: "/Шторный грузовик МАЗ 438121 (модель 5389D5)",
-
+                        brand: "МАЗ",
                         marka: {
                             title: "Brand",
                             value: "MAZ",
@@ -431,6 +431,7 @@ export const enData = {
 
                         name: "MAZ 631228-524-010 Curtain-Sided Truck (Model 4389M2)",
                         path: "/Шторный грузовик МАЗ 631228-524-010 (модель 4389M2)",
+                        brand: "МАЗ",
                         marka: {
                             title: "Brand",
                             value: "MAZ",
@@ -569,7 +570,7 @@ export const enData = {
 
                         name: "KAMAZ 4308 Curtain-Sided Truck",
                         path: "/Шторный грузовик КАМАЗ 4308",
-
+                        brand: "KAМАЗ",
                         marka: {
                             title: "Brand",
                             value: "KAMAZ",
@@ -694,7 +695,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 4,
                         categoryId: 1,
@@ -709,6 +709,7 @@ export const enData = {
 
                         name: "KAMAZ 65657 Curtain-Sided Truck",
                         path: "/Шторный грузовик КАМАЗ 65657",
+                        brand: "KAМАЗ",
 
                         marka: {
                             title: "Brand",
@@ -846,6 +847,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck KOMPAS 5",
                         path: "/Шторный грузовик КОМПАС 5",
+                        brand: "KAМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -979,6 +982,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck КАМАЗ 65117 (model 4388F3)",
                         path: "/Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
+                        brand: "KAМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -1112,6 +1117,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck КАМАЗ 65207 (model 438812)",
                         path: "/Шторный грузовик КАМАЗ 65207 (модель 438812)",
+                        brand: "KAМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -1231,7 +1238,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 8,
                         categoryId: 1,
@@ -1243,6 +1249,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck КАМАЗ КОМПАС 43089 (model 5389P1)",
                         path: "/Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
+                        brand: "KAМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -1376,6 +1384,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck КАМАЗ КОМПАС 43082 (model 5389R1)",
                         path: "/Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
+                        brand: "KAМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -1495,7 +1505,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 10,
                         categoryId: 1,
@@ -1507,6 +1516,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck VALDAY 12",
                         path: "/Шторный грузовик ВАЛДАЙ 12",
+                        brand: "ВАЛДАЙ",
+
                         marka: {
                             title: "Brand",
                             value: "ГАЗ",
@@ -1638,6 +1649,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck JAC 200",
                         path: "/Шторный грузовик JAC 200",
+                        brand: "JAC",
+
                         marka: {
                             title: "Brand",
                             value: "JAC",
@@ -1757,7 +1770,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 12,
                         categoryId: 1,
@@ -1770,6 +1782,8 @@ export const enData = {
                         ],
                         name: "Flatbed truck with curtain opening mechanism JAC N120 (model 538922)",
                         path: "/Бортовой автомобиль со шторным механизмом открытия тента JAC N120 (модель 538922)",
+                        brand: "JAC",
+
                         marka: {
                             title: "Brand",
                             value: "JAC",
@@ -1901,6 +1915,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck JAC 120",
                         path: "/Шторный грузовик JAC 120",
+                        brand: "JAC",
+
                         marka: {
                             title: "Brand",
                             value: "JAC",
@@ -2020,7 +2036,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 14,
                         categoryId: 1,
@@ -2034,6 +2049,8 @@ export const enData = {
                         ],
                         name: "Curtain-sided truck JAC 90 (model 538932)",
                         path: "/Шторный грузовик JAC 90 (модель 538932)",
+                        brand: "JAC",
+
                         marka: {
                             title: "Brand",
                             value: "JAC",
@@ -2168,6 +2185,8 @@ export const enData = {
                         drawingImage: "kranDrawing1.png",
                         name: "Truck crane MAZ 6312С5-8535-012 with INMAN IT 150 crane unit (model 4389N8)",
                         path: "/Кран-манипулятор МАЗ 6312С5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
+                        brand: "DAEWOO",
+
                         marka: [
                             {
                                 title: "Brand",
@@ -2289,7 +2308,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 2,
                         categoryId: 2,
@@ -2305,6 +2323,8 @@ export const enData = {
                         name: "Truck crane MAZ 631228 with PALFINGER SPK 23500 crane unit",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
                         allCharacter: "View all specifications",
+                        brand: "DAEWOO",
+
                         marka: {
                             title: "Brand",
                             value: "MAZ",
@@ -2437,6 +2457,8 @@ export const enData = {
                         ],
                         name: "Truck crane MAZ 631228 with INMAN IT 150 crane unit",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ ИНМАН ИТ 150",
+                        brand: "МАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "MAZ",
@@ -2569,6 +2591,8 @@ export const enData = {
                         drawingImage: "/categoryPhotos/kranAvto/kranDrawing4",
                         name: "Truck crane KAMAZ 43118 with INMAN IM150N crane unit (model 4388С2-10)",
                         path: "/Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
+                        brand: "МАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -2700,7 +2724,7 @@ export const enData = {
                         ],
                         name: "Truck crane MAZ 631228 with PALFINGER SPK 23500 crane unit",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -2835,6 +2859,8 @@ export const enData = {
                             "/categoryPhotos/avtotoplivozapravshiki/toplivoDrawing1.png",
                         name: "Fuel tanker Садко 9 (С41А13) with 4.5 m³ two-section fuel tank",
                         path: "/Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
+                        brand: "FOTON",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -2954,7 +2980,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 2,
                         categoryId: 3,
@@ -2970,7 +2995,7 @@ export const enData = {
                         ],
                         name: "Fuel tanker on ГАЗ C41R13 chassis (model 4389JY)",
                         path: "/Автотопливозаправщик на шасси ГАЗ C41R13 (модель 4389JY)",
-                        model: "ГАЗ",
+                        brand: "FOTON",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3090,7 +3115,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 3,
                         categoryId: 3,
@@ -3103,7 +3127,7 @@ export const enData = {
                             "/categoryPhotos/avtotoplivozapravshiki/toplivoDrawing3.png",
                         name: "Valday 18 FB6R31 fuel tanker",
                         path: "/Автотопливозаправщик Валдай 18 FB6R31",
-                        model: "Valday",
+                        brand: "Валдай",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3223,7 +3247,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 4,
                         categoryId: 3,
@@ -3237,7 +3260,7 @@ export const enData = {
                         ],
                         name: "Valday 12 ATZ 6 fuel tanker",
                         path: "/Автотопливозаправщик Валдай 12 АТЗ 6",
-                        model: "Valday",
+                        brand: "Валдай",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3365,6 +3388,8 @@ export const enData = {
                         image: "/categoryPhotos/avtogidropodyomniki/avtogidro1.webp",
                         name: "PALFINGER P 180Т aerial work platform on ГАЗ C41R33 chassis",
                         path: "/Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
+                        brand: "SHACMAN",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3484,13 +3509,13 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 2,
                         categoryId: 4,
                         image: "/categoryPhotos/avtogidropodyomniki/avtogidro2.webp",
                         name: "PALFINGER P 240A aerial work platform on HD-78 chassis",
                         path: "/Автогидроподъёмники PALFINGER P 240A на шасси HD-78",
+                        brand: "SHACMAN",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3624,7 +3649,7 @@ export const enData = {
                         ],
                         name: "КАМАЗ 43089 food-grade tank truck",
                         path: "/КАМАЗ 43089 food-grade tank truck",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3744,7 +3769,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 2,
                         categoryId: 5,
@@ -3756,7 +3780,8 @@ export const enData = {
                         ],
                         name: "GAZon NEXT with 4.2 m³ food-grade tank",
                         path: "/GAZon NEXT with 4.2 m³ food-grade tank",
-                        modal: "NEXT",
+                        brand: "DONG FENG",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -3889,6 +3914,8 @@ export const enData = {
                         ],
                         name: "JAC N90 food-grade tank truck",
                         path: "/JAC N90 food-grade tank truck",
+                        brand: "JAC",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -4016,6 +4043,8 @@ export const enData = {
                         image: "/categoryPhotos/avtoevakuator/avakuator1.webp",
                         name: "МАЗ 438121 curtain-sided truck (model 5389D5)",
                         path: "/МАЗ 438121 curtain-sided truck (model 5389D5)",
+                        brand: "МАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -4143,6 +4172,8 @@ export const enData = {
                         image: "/categoryPhotos/avtoevakuator/evakuator2.webp",
                         name: "Tow truck on an ISUZU FSR-34UL-NCUN chassis with PALFINGER PK 13500T loader crane",
                         path: "/Tow truck on an ISUZU FSR-34UL-NCUN chassis with PALFINGER PK 13500T loader crane",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -4269,6 +4300,8 @@ export const enData = {
                         image: "https://rtrf.ru/upload/resize_cache/iblock/a3a/768_547_0/2zjuulv3g2uqvzv54xonih1zw8yjyvv7.webp",
                         name: "КАМАЗ 4308 curtain-sided truck",
                         path: "/КАМАЗ 4308 curtain-sided truck",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -4397,6 +4430,8 @@ export const enData = {
                         image: "https://rtrf.ru/upload/resize_cache/iblock/e92/768_547_0/fhpk8930lbzv2lxcsm5g6qwm16yw31lx.webp",
                         name: "КАМАЗ 65657 curtain-sided truck",
                         path: "/КАМАЗ 65657 curtain-sided truck",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -4531,7 +4566,8 @@ export const enData = {
                         ],
                         name: "Insulated Van KAMAZ 43089",
                         path: "/Insulated Van KAMAZ 43089",
-                        model: "KAMAZ",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "KAMAZ",
@@ -4663,7 +4699,8 @@ export const enData = {
                         ],
                         name: "Insulated Van KAMAZ 43082",
                         path: "/Insulated Van KAMAZ 43082",
-                        model: "KAMAZ",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "KAMAZ",
@@ -4795,7 +4832,7 @@ export const enData = {
                         ],
                         name: "Insulated Van SHACMAN X3000",
                         path: "/Insulated Van SHACMAN X3000",
-                        model: "SHACMAN",
+                        brand: "SHACMAN",
                         marka: {
                             title: "Brand",
                             value: "KAMAZ",
@@ -4928,7 +4965,7 @@ export const enData = {
                         ],
                         name: "Insulated Van JAC 35",
                         path: "/Insulated Van JAC 35",
-                        model: "JAC",
+                        brand: "JAC",
                         marka: {
                             title: "Brand",
                             value: "KAMAZ",
@@ -5063,7 +5100,8 @@ export const enData = {
                         ],
                         name: "Container truck on KAMAZ 65115 chassis",
                         path: "/Container truck on KAMAZ 65115 chassis",
-                        model: "KAMAZ",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "KAMAZ",
@@ -5195,7 +5233,8 @@ export const enData = {
                         ],
                         name: "Container truck on GAZ C41R33 chassis",
                         path: "/Container truck on GAZ C41R33 chassis",
-                        model: "GAZ",
+                        brand: "ГАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "GAZ",
@@ -5323,7 +5362,7 @@ export const enData = {
                         image: "/categoryPhotos/kryukovie/pogruzchiki1.webp",
                         name: "PALFINGER PH T20Pi hook loader on ISUZU GIGA-Q chassis",
                         path: "/PALFINGER PH T20Pi hook loader on ISUZU GIGA-Q chassis",
-                        model: "ISUZU",
+                        brand: "ISUZU",
                         marka: {
                             title: "Brand",
                             value: "ISUZU",
@@ -5449,7 +5488,7 @@ export const enData = {
                         image: "/categoryPhotos/kryukovie/pogruzchiki2.webp",
                         name: "PALFINGER PH T05_L3900 SLD hook loader on ISUZU NPR75L-K chassis",
                         path: "/PALFINGER PH T05_L3900 SLD hook loader on ISUZU NPR75L-K chassis",
-                        model: "ISUZU",
+                        brand: "ISUZU",
                         marka: {
                             title: "Brand",
                             value: "ISUZU",
@@ -5576,7 +5615,8 @@ export const enData = {
                         image: "/categoryPhotos/kryukovie/pogruzchiki3.webp",
                         name: "PALFINGER PH T05_L3900 SLD hook loader on Hyundai QT EX8 chassis",
                         path: "/PALFINGER PH T05_L3900 SLD hook loader on Hyundai QT EX8 chassis",
-                        model: "Hyundai",
+                        brand: "JAC",
+
                         marka: {
                             title: "Brand",
                             value: "Hyundai",
@@ -5710,7 +5750,7 @@ export const enData = {
                         ],
                         name: "Dump truck on KOMPAS 9 chassis",
                         path: "/Dump truck on KOMPAS 9 chassis",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -5830,7 +5870,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 2,
                         categoryId: 10,
@@ -5842,7 +5881,7 @@ export const enData = {
                         ],
                         name: "Grain dump truck on KAMAZ 6520-3072-53 chassis (model 4388G6)",
                         path: "/Grain dump truck on KAMAZ 6520-3072-53 chassis (model 4388G6)",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -5972,6 +6011,8 @@ export const enData = {
                         ],
                         name: "KAMAZ 4308 curtain-sided truck",
                         path: "/KAMAZ 4308 curtain-sided truck",
+                        brand: "КАМАЗ",
+
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -6105,7 +6146,7 @@ export const enData = {
                         ],
                         name: "KAMAZ 4308 curtain-sided truck, ADR EX II (model 4388Н2-10)",
                         path: "/KAMAZ 4308 curtain-sided truck, ADR EX II (model 4388Н2-10)",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -6225,7 +6266,6 @@ export const enData = {
                             },
                         ],
                     },
-
                     {
                         id: 2,
                         categoryId: 11,
@@ -6237,7 +6277,7 @@ export const enData = {
                         ],
                         name: "KAMAZ 4308-3083-69 flatbed truck, ADR EX II category (model 4388Н2-10)",
                         path: "/KAMAZ 4308-3083-69 flatbed truck, ADR EX II category (model 4388Н2-10)",
-                        model: "КАМАЗ",
+                        brand: "КАМАЗ",
                         marka: {
                             title: "Brand",
                             value: "КАМАЗ",
@@ -6368,7 +6408,7 @@ export const enData = {
                         ],
                         name: "JAC N200L truck-mounted crane with INMAN IM150N crane unit, ADR EX II category (model 4389К8-10)",
                         path: "/JAC N200L truck-mounted crane with INMAN IM150N crane unit, ADR EX II category (model 4389К8-10)",
-                        model: "JAC",
+                        brand: "JAC",
                         marka: {
                             title: "Brand",
                             value: "JAC",
@@ -6500,7 +6540,7 @@ export const enData = {
                         ],
                         name: "DAEWOO CL8CF truck-mounted crane with PALFINGER PK 8500 crane unit, ADR EX II category (model 5389M2)",
                         path: "/DAEWOO CL8CF truck-mounted crane with PALFINGER PK 8500 crane unit, ADR EX II category (model 5389M2)",
-                        model: "DAEWOO",
+                        brand: "DAEWOO",
                         marka: {
                             title: "Brand",
                             value: "DAEWOO",

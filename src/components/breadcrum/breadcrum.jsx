@@ -12,8 +12,6 @@ function Breadcrumb() {
         news: "Новости",
         contact: "Контакты",
         catalog: "Каталог",
-        // category: "catalog",
-        // category: "Каталог",
         partners: "Партнёры",
         service: "Сервис и гарантии",
         info: "Информационные материалы",

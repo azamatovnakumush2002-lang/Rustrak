@@ -8,6 +8,7 @@ import {
 } from "../buttons/buttons";
 import { useLanguage } from "../../context/languageContext";
 import { Link, useNavigate } from "react-router-dom";
+import { ZakazatZvonokModal } from "../modals/modals";
 function Header() {
     const { data } = useLanguage();
     const navigate = useNavigate();
@@ -18,6 +19,7 @@ function Header() {
     const [categoryDropdown, setCategoryDropdown] = useState(null);
     const [aboutDropdown, setAboutDropdown] = useState(null);
     const [mediaDropdown, setMediaDropdown] = useState(null);
+    const [zakazatOpen, setZakazatOpen] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 130);
@@ -118,7 +120,9 @@ function Header() {
                                     {data.header.forRegion2}
                                 </p>
                             </div>
-                            <HeaderCallButton />
+                            <HeaderCallButton
+                                onClick={() => setZakazatOpen(true)}
+                            />
                         </div>
                     </div>
                 </div>
@@ -320,7 +324,9 @@ function Header() {
                         <LanguageButton />
                         <BasketButton />
                         <HeartButton />
-                        <HeaderCallButton />
+                        <HeaderCallButton
+                            onClick={() => setZakazatOpen(true)}
+                        />
                     </div>
                 </div>
             </div>
@@ -536,6 +542,9 @@ function Header() {
                         </div>
                     </div>
                 </div>
+            )}
+            {zakazatOpen && (
+                <ZakazatZvonokModal onClose={() => setZakazatOpen(false)} />
             )}
         </header>
     );

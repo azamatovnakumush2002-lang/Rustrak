@@ -52,9 +52,12 @@ export const HeartButton = () => {
     );
 };
 // HEADER CALL BUTTON
-export const HeaderCallButton = () => {
+export const HeaderCallButton = ({ onClick }) => {
     return (
-        <button className='w-8 h-8 p-0 border-0 bg-[#fec80b] transition-all duration-300 rounded-full items-center justify-center'>
+        <button
+            onClick={onClick}
+            className='w-8 h-8 p-0 border-0 bg-[#fec80b] transition-all duration-300 rounded-full items-center justify-center'
+        >
             <img
                 src={allImages.headerImages.callImg}
                 className='mx-auto w-6 h-6'

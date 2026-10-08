@@ -83,7 +83,7 @@ const CategoryPage = () => {
                             onClick={() => setViewMode("list")}
                             className={`w-8 h-8 rounded-full hidden md:block ${
                                 viewMode === "list"
-                                    ? "bg-[#FFC400]"
+                                    ? "bg-primary"
                                     : "bg-transparent"
                             }`}
                         >
@@ -109,7 +109,7 @@ const CategoryPage = () => {
                             onClick={() => setViewMode("grid")}
                             className={`w-8 h-8 rounded-full hidden md:block ${
                                 viewMode === "grid"
-                                    ? "bg-[#FFC400]"
+                                    ? "bg-primary"
                                     : "bg-transparent"
                             }`}
                         >
