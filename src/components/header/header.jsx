@@ -6,9 +6,9 @@ import {
     HeartButton,
     LanguageButton,
 } from "../buttons/buttons";
-import { useLanguage } from "../../context/languageContext";
 import { Link, useNavigate } from "react-router-dom";
 import { ZakazatZvonokModal } from "../modals/modals";
+import { useLanguage } from "../../context/languageContext";
 function Header() {
     const { data } = useLanguage();
     const navigate = useNavigate();

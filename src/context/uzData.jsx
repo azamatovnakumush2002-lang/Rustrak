@@ -62,7 +62,7 @@ export const uzData = {
                     },
                     {
                         name: "Izotermik furgonlar",
-                        path: "/catalog/izotermicheskie-furgony",
+                        path: "/catalog/izotermicheskiye-furgony",
                     },
                     {
                         name: "Konteyner tashuvchilar",
@@ -213,7 +213,7 @@ export const uzData = {
                     image: "/homePagePhotos/category-img-2.webp",
                     name: "Kran-manipulyatorlar",
                     slug: "krany-manipulyatory",
-                    path: "/krani-manipulyatori",
+                    path: "/krany-manipulyatory",
                 },
                 {
                     id: 3,
@@ -234,7 +234,7 @@ export const uzData = {
                     image: "/homePagePhotos/category-img-5.webp",
                     name: "Avtosisternalar",
                     slug: "avtocisterny",
-                    path: "/avtosisterny",
+                    path: "/avtocisterny",
                 },
                 {
                     id: 6,
@@ -248,27 +248,27 @@ export const uzData = {
                     image: "/homePagePhotos/category-img-7.webp",
                     name: "Izotermik furgonlar",
                     slug: "izotermicheskiye-furgony",
-                    path: "/izotermicheskiye-furgoni",
+                    path: "/izotermicheskiye-furgony",
                 },
                 {
                     id: 8,
                     image: "/homePagePhotos/category-img-8.png",
                     name: "Konteyner tashuvchilar",
                     slug: "konteynerovozy",
-                    path: "/konteynerovozi",
+                    path: "/konteynerovozy",
                 },
                 {
                     id: 9,
                     image: "/homePagePhotos/category-img-9.webp",
                     name: "Ilgakli yuklagichlar",
                     slug: "kryukovye-pogruzchiki",
-                    path: "/kryukovie-pogruzchiki",
+                    path: "/kryukovye-pogruzchiki",
                 },
                 {
                     id: 10,
                     image: "/homePagePhotos/category-img-10.png",
                     name: "Samosvallar",
-                    slug: "samosvali",
+                    slug: "samosvaly",
                     path: "/samosvaly",
                 },
                 {
@@ -276,7 +276,7 @@ export const uzData = {
                     image: "/homePagePhotos/category-img-11.webp",
                     name: "DOPOG EXII toifasidagi avtomobillar",
                     slug: "dopog-exii",
-                    path: "/avtomobili-DOPOG-kategoriya-EXIT",
+                    path: "/dopog-exii",
                 },
             ],
             Products: {
@@ -853,7 +853,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi KOMPAS 5",
                         path: "/Шторный грузовик КОМПАС 5",
                         brand: "KAМАЗ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -987,7 +987,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi КАМАЗ 65117 (model 4388F3)",
                         path: "/Шторный грузовик КАМАЗ 65117 (модель 4388F3)",
                         brand: "KAМАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -1122,7 +1122,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi КАМАЗ 65207 (model 438812)",
                         path: "/Шторный грузовик КАМАЗ 65207 (модель 438812)",
                         brand: "KAМАЗ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -1254,7 +1254,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi КАМАЗ КОМПАС 43089 (model 5389P1)",
                         path: "/Шторный грузовик КАМАЗ КОМПАС 43089 (модель 5389P1)",
                         brand: "KAМАЗ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -1389,7 +1389,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi КАМАЗ КОМПАС 43082 (model 5389R1)",
                         path: "/Шторный грузовик КАМАЗ КОМПАС 43082 (модель 5389R1)",
                         brand: "KAМАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -1521,7 +1521,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi VALDAY 12",
                         path: "/Шторный грузовик ВАЛДАЙ 12",
                         brand: "ВАЛДАЙ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "ГАЗ",
@@ -1654,7 +1654,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi JAC 200",
                         path: "/Шторный грузовик JAC 200",
                         brand: "JAC",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "JAC",
@@ -1787,7 +1787,7 @@ export const uzData = {
                         name: "Tentni ochish mexanizmiga ega bortli avtomobil JAC N120 (model 538922)",
                         path: "/Бортовой автомобиль со шторным механизмом открытия тента JAC N120 (модель 538922)",
                         brand: "JAC",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "JAC",
@@ -1920,7 +1920,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi JAC 120",
                         path: "/Шторный грузовик JAC 120",
                         brand: "JAC",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "JAC",
@@ -2054,7 +2054,7 @@ export const uzData = {
                         name: "Tentli yuk mashinasi JAC 90 (model 538932)",
                         path: "/Шторный грузовик JAC 90 (модель 538932)",
                         brand: "JAC",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "JAC",
@@ -2190,7 +2190,7 @@ export const uzData = {
                         name: "Manipulyator kran MAZ 6312С5-8535-012, INMAN IT 150 KMYU bilan (4389N8 modeli)",
                         path: "/Кран-манипулятор МАЗ 6312С5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
                         brand: "DAEWOO",
-                        
+
                         marka: [
                             {
                                 title: "Marka",
@@ -2328,7 +2328,7 @@ export const uzData = {
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ PALFINGER SPК 23500",
                         allCharacter: "Barcha xususiyatlarni ko‘rish",
                         brand: "DAEWOO",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "MAZ",
@@ -2461,7 +2461,7 @@ export const uzData = {
                         name: "Manipulyator kran MAZ 631228, INMAN IT 150 KMYU bilan",
                         path: "/Кран-манипулятор МАЗ 631228 с КМУ ИНМАН ИТ 150",
                         brand: "МАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "MAZ",
@@ -2594,7 +2594,7 @@ export const uzData = {
                         name: "Manipulyator kran KAMAZ 43118, INMAN IM150N KMYU bilan (4388С2-10 modeli)",
                         path: "/Кран-манипулятор КАМАЗ 43118 c КМУ ИНМАН ИМ150N (модель 4388С2-10)",
                         brand: "МАЗ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -2861,7 +2861,7 @@ export const uzData = {
                         name: "Yoqilg‘i tashuvchi Садко 9 (С41А13), 4,5 m³ hajmli ikki seksiyali ATZ bilan",
                         path: "/Топливозаправщик Садко 9 (С41А13) с АТЗ 4,5 м3 двухсекционная",
                         brand: "FOTON",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -3129,7 +3129,7 @@ export const uzData = {
                         name: "Valday 18 FB6R31 avtoto‘ldirgichi",
                         path: "/Автотопливозаправщик Валдай 18 FB6R31",
                         brand: "Валдай",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -3264,7 +3264,7 @@ export const uzData = {
                         name: "Valday 12 ATZ 6 avtoto‘ldirgichi",
                         path: "/Автотопливозаправщик Валдай 12 АТЗ 6",
                         brand: "Валдай",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -3393,7 +3393,7 @@ export const uzData = {
                         name: "ГАЗ C41R33 shassisidagi PALFINGER P 180Т avto-gidropodyomnik",
                         path: "/Автогидроподъемник PALFINGER P 180Т на шасси ГАЗ C41R33",
                         brand: "SHACMAN",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -3520,7 +3520,7 @@ export const uzData = {
                         name: "HD-78 shassisidagi PALFINGER P 240A avto-gidropodyomnik",
                         path: "/Автогидроподъёмники PALFINGER P 240A на шасси HD-78",
                         brand: "SHACMAN",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "КАМАЗ",
@@ -3786,7 +3786,7 @@ export const uzData = {
                         name: "4,2 kub hajmli oziq-ovqat sisternasiga ega GAZon NEXT",
                         path: "/4,2 kub hajmli oziq-ovqat sisternasiga ega GAZon NEXT",
                         brand: "DONG FENG",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "КАМАЗ",
@@ -3919,7 +3919,7 @@ export const uzData = {
                         name: "JAC N90 oziq-ovqat sisternasi",
                         path: "/JAC N90 oziq-ovqat sisternasi",
                         brand: "JAC",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "КАМАЗ",
@@ -4048,7 +4048,7 @@ export const uzData = {
                         name: "МАЗ 438121 tentli yuk avtomobili (5389D5 modeli)",
                         path: "/МАЗ 438121 tentli yuk avtomobili (5389D5 modeli)",
                         brand: "МАЗ",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "КАМАЗ",
@@ -4176,7 +4176,7 @@ export const uzData = {
                         name: "PALFINGER РК 13500Т KМU bilan ISUZU FSR-34UL-NCUN shassisidagi evakuator",
                         path: "/PALFINGER РК 13500Т KМU bilan ISUZU FSR-34UL-NCUN shassisidagi evakuator",
                         brand: "КАМАЗ",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "КАМАЗ",
@@ -4303,7 +4303,7 @@ export const uzData = {
                         name: "КАМАЗ 4308 tentli yuk avtomobili",
                         path: "/КАМАЗ 4308 tentli yuk avtomobili",
                         brand: "КАМАЗ",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "КАМАЗ",
@@ -4432,7 +4432,7 @@ export const uzData = {
                         name: "КАМАЗ 65657 tentli yuk avtomobili",
                         path: "/КАМАЗ 65657 tentli yuk avtomobili",
                         brand: "КАМАЗ",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "КАМАЗ",
@@ -4568,7 +4568,7 @@ export const uzData = {
                         name: "Izotermik furgon KAMAZ 43089",
                         path: "/Izotermik furgon KAMAZ 43089",
                         brand: "КАМАЗ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "KAMAZ",
@@ -5102,7 +5102,7 @@ export const uzData = {
                         name: "KAMAZ 65115 shassisidagi konteyner tashuvchi",
                         path: "/KAMAZ 65115 shassisidagi konteyner tashuvchi",
                         brand: "КАМАЗ",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "KAMAZ",
@@ -5235,7 +5235,7 @@ export const uzData = {
                         name: "GAZ C41R33 shassisidagi konteyner tashuvchi",
                         path: "/GAZ C41R33 shassisidagi konteyner tashuvchi",
                         brand: "ГАЗ",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "GAZ",
@@ -5617,7 +5617,7 @@ export const uzData = {
                         name: "Hyundai QT EX8 shassisidagi PALFINGER PH T05_L3900 SLD ilgakli yuklagich",
                         path: "/Hyundai QT EX8 shassisidagi PALFINGER PH T05_L3900 SLD ilgakli yuklagich",
                         brand: "JAC",
-                        
+
                         marka: {
                             title: "Markasi",
                             value: "Hyundai",
@@ -5752,7 +5752,7 @@ export const uzData = {
                         name: "KOMPAS 9 shassisidagi samosval",
                         path: "/KOMPAS 9 shassisidagi samosval",
                         brand: "КАМАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "KAMAZ",
@@ -5885,7 +5885,7 @@ export const uzData = {
                         name: "KAMAZ 6520-3072-53 shassisidagi don tashuvchi samosval (4388G6 modeli)",
                         path: "/KAMAZ 6520-3072-53 shassisidagi don tashuvchi samosval (4388G6 modeli)",
                         brand: "КАМАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "KAMAZ",
@@ -6016,7 +6016,7 @@ export const uzData = {
                         name: "KAMAZ 4308 tentli yuk mashinasi",
                         path: "/KAMAZ 4308 tentli yuk mashinasi",
                         brand: "КАМАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "KAMAZ",
@@ -6150,7 +6150,7 @@ export const uzData = {
                         name: "KAMAZ 4308 tentli yuk mashinasi, ADR EX II (4388N2-10 modeli)",
                         path: "/KAMAZ 4308 tentli yuk mashinasi, ADR EX II (4388N2-10 modeli)",
                         brand: "КАМАЗ",
-                        
+
                         marka: {
                             title: "Marka",
                             value: "KAMAZ",
@@ -6283,7 +6283,7 @@ export const uzData = {
                         name: "KAMAZ 4308-3083-69 bortli avtomobili, ADR EX II toifasi (4388N2-10 modeli)",
                         path: "/KAMAZ 4308-3083-69 bortli avtomobili, ADR EX II toifasi (4388N2-10 modeli)",
                         brand: "КАМАЗ",
-                       
+
                         marka: {
                             title: "Marka",
                             value: "KAMAZ",

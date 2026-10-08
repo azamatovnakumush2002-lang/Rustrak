@@ -91,10 +91,7 @@ const HomePage = () => {
                     className='mySwiper'
                 >
                     {data.CategoryProducts.categoryCards.map((card, index) => (
-                        <SwiperSlide
-                            key={index}
-                            onClick={() => navigate(`/catalog/${card.path}`)}
-                        >
+                        <SwiperSlide key={card.id}>
                             <Link to={`/catalog/${card.path}`}>
                                 <div className='border border-[#EBEBEB] rounded-lg p-3 sm:p-5 h-auto  transition-all duration-300 hover:border-amber-400 hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)]  cursor-pointer'>
                                     <h3 className='font-normal text-[18px] sm:text-2xl overflow-hidden truncate'>
