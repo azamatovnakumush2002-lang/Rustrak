@@ -12,6 +12,7 @@ const CategoryPage = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [viewMode, setViewMode] = useState("grid");
     const [filterModal, setFilterModal] = useState(false);
+    const [searchName, setSearchName] = useState("");
     const { slug } = useParams();
     const { data } = useLanguage();
     const { addToCart } = useCart();
@@ -30,6 +31,15 @@ const CategoryPage = () => {
             return true;
         }
         return appliedBrands.includes(item.brand);
+    });
+    const sortedMarks = [...data.CategoryProducts.Marka.type].sort((a, b) => {
+        const query = searchName.toLowerCase();
+        const aMatch = a.name.toLowerCase().includes(query);
+        const bMatch = b.name.toLowerCase().includes(query);
+
+        if (aMatch && !bMatch) return -1;
+        if (!aMatch && bMatch) return 1;
+        return 0;
     });
     return (
         <div className='bg-gray-100'>
@@ -286,10 +296,14 @@ const CategoryPage = () => {
                         </p>
                         <div className='flex items-center my-3'>
                             <input
-                                type='text'
+                                type='search'
                                 placeholder={
                                     data.CategoryProducts.Marka.placeholder
                                 }
+                                value={searchName}
+                                onChange={(e) => {
+                                    setSearchName(e.target.value);
+                                }}
                                 className='border border-gray-400 p-2 rounded w-70'
                             />
                             <img
@@ -299,7 +313,7 @@ const CategoryPage = () => {
                         </div>
                         {/* marka */}
                         <div>
-                            {data.CategoryProducts.Marka.type.map((item) => (
+                            {sortedMarks.map((item) => (
                                 <label
                                     key={item.name}
                                     className='flex items-center gap-2 mb-2'

@@ -332,7 +332,7 @@ function Header() {
             </div>
             {/* catalog modalllllllllllllllllllllllllll */}
             {catalogOpen && (
-                <div className='absolute left-0 top-full z-40 w-full bg-[#F9F9F9] shadow-md'>
+                <div className='absolute left-0 top-full z-40 w-full h-screen bg-[#F9F9F9] shadow-md'>
                     <div className='mx-auto max-w-360 px-5 py-7'>
                         <div className='hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8'>
                             <div>

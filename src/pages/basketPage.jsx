@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Breadcrumb from "../components/breadcrum/breadcrum";
-import { OformitZakazModal, OstalisVopros } from "../components/modals/modals";
+import {
+    OformitZakazModal,
+    OstalisVopros,
+    PoluchitButtonModal,
+} from "../components/modals/modals";
 import { useCart } from "../context/cardContext";
 import { useLanguage } from "../context/languageContext";
 import { Link } from "react-router-dom";
@@ -9,6 +13,7 @@ const BasketPage = () => {
     const { data } = useLanguage();
     const { cart, removeFromCart } = useCart();
     const [counts, setCounts] = useState({});
+    const [modalOpen, setModalOpen] = useState(false);
     const getCategorySlug = (categoryId) => {
         const category = data.CategoryProducts.categoryCards.find(
             (item) => item.id === categoryId,
@@ -103,7 +108,12 @@ const BasketPage = () => {
                                             </div>
                                         </div>
                                         <div className='flex flex-col max-[439px]:flex-row max-[439px]:flex-wrap min-[440px]:flex-row sm:flex-col gap-2 text-center mr-5'>
-                                            <button className='bg-amber-300 hover:bg-amber-400 max-[439px]:w-full min-[440px]:px-3 sm:px-5 py-2 rounded flex items-center justify-center gap-2 transition duration-300 text-[12px] sm:text-base'>
+                                            <button
+                                                onClick={() =>
+                                                    setModalOpen(true)
+                                                }
+                                                className='bg-amber-300 hover:bg-amber-400 max-[439px]:w-full min-[440px]:px-3 sm:px-5 py-2 rounded flex items-center justify-center gap-2 transition duration-300 text-[12px] sm:text-base'
+                                            >
                                                 {data.modals.poluchitKP}
                                                 <svg
                                                     xmlns='http://www.w3.org/2000/svg'
@@ -195,6 +205,10 @@ const BasketPage = () => {
                     )}
                 </div>
             </div>
+
+            {modalOpen && (
+                <PoluchitButtonModal onClose={() => setModalOpen(false)} />
+            )}
         </div>
     );
 };
