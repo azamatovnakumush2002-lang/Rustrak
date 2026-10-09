@@ -15,21 +15,18 @@ const NewsPage = () => {
 
     const allNews = data.newsPage.allAvto;
 
-    // hamma pagination
     const totalPages = Math.ceil(allNews.length / itemsPerPage);
 
     const startIndex = (currentPage - 1) * itemsPerPage;
 
     const currentNews = allNews.slice(startIndex, startIndex + itemsPerPage);
 
-    // "Показать ещё" bosilganda keyingi beta o`tirado`n
     const handleShowMore = () => {
         if (currentPage < totalPages) {
             setCurrentPage((prev) => prev + 1);
         }
     };
 
-    // Pagination
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
@@ -83,7 +80,7 @@ const NewsPage = () => {
                             onClick={() => navigate(`/news/${firstNews.path}`)}
                             className='flex items-center gap-2 text-gray-400 hover:text-amber-400 transition duration-300 text-[18px] mt-10'
                         >
-                            Подробнее
+                            {data.modals.podrobne}
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 width='20'
@@ -102,7 +99,7 @@ const NewsPage = () => {
                     </div>
                 </div>
 
-                {/* cards */}
+                {/* cardsssssssssssssssssssssss */}
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-5'>
                     {currentNews.map((item, index) => (
                         <div key={index}>
@@ -118,7 +115,7 @@ const NewsPage = () => {
                                 onClick={() => navigate(`/news/${item.path}`)}
                                 className='flex items-center gap-2 text-gray-400 hover:text-amber-400 transition duration-300  text-base md:text-[18px] mt-2 md:mt-5'
                             >
-                                Подробнее
+                                {data.modals.podrobne}
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='20'
@@ -138,14 +135,13 @@ const NewsPage = () => {
                     ))}
                 </div>
 
-                {/* Показать ещё */}
                 {currentPage < totalPages && (
                     <div className='flex justify-center mt-10'>
                         <button
                             onClick={handleShowMore}
                             className='rounded bg-[#FEC80B] px-4 py-2 sm:px-6 sm:py-3 text-sm transition duration-300 hover:bg-[#eeb600]'
                         >
-                            Показать ещё
+                            {data.modals.pokazat}
                         </button>
                     </div>
                 )}
@@ -156,7 +152,7 @@ const NewsPage = () => {
                         disabled={currentPage === 1}
                         className='text-gray-700 hover:text-amber-400 transition duration-300 text-[12px] sm:text-base'
                     >
-                        ◁ Назад
+                        ◁ {data.modals.nazad}
                     </button>
                     {Array.from(
                         { length: totalPages },
@@ -174,13 +170,12 @@ const NewsPage = () => {
                             {page}
                         </button>
                     ))}
-                    {/* Дальше */}
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
                         className='text-gray-700 hover:text-amber-400 transition duration-300 text-[12px] sm:text-base'
                     >
-                        Дальше ▷
+                        {data.modals.dalshe} ▷
                     </button>
                 </div>
             </div>

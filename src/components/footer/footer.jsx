@@ -155,7 +155,7 @@ const Footer = () => {
                             {data.footer.footerSecondText}
                         </p>
                     </div>
-                    {/* social media */}
+                    {/* social mediaaaaaaaaaaaaaaaaaaaaaaa */}
                     <div className='flex gap-2 items-center my-8 md:my-0'>
                         <a href='' target='_blank'>
                             <img

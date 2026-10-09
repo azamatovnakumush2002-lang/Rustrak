@@ -136,7 +136,7 @@ const NewsDetail = () => {
                                             }
                                             className='flex items-center gap-2 text-gray-400 hover:text-amber-400 transition duration-300  text-base lg:text-[20px] mt-2 sm:mt-5'
                                         >
-                                            Подробнее
+                                            {data.modals.podrobne}
                                             <svg
                                                 xmlns='http://www.w3.org/2000/svg'
                                                 width='20'

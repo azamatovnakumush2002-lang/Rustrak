@@ -7971,6 +7971,9 @@ export const enData = {
                 "Leave your contact details and we will call you back shortly",
             text1: "By clicking the Send button",
             text2: "you agree to the processing of your personal data",
+            pokazat: `Show more`,
+            nazad: "Prev",
+            dalshe: "Next",
         },
     },
 };

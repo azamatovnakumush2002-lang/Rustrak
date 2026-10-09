@@ -7944,6 +7944,9 @@ export const uzData = {
                 "Aloqa ma’lumotlaringizni qoldiring, biz tez orada Siz bilan bog‘lanamiz",
             text1: "Yuborish tugmasini bosish orqali",
             text2: "Siz shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz",
+         pokazat: `Ko'proq ko'rsatish`,
+            nazad:"Oldinga",
+            dalshe: "Orqaga",
         },
     },
 };

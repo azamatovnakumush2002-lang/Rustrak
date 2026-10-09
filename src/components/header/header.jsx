@@ -14,7 +14,7 @@ function Header() {
     const navigate = useNavigate();
     const [search, setSearch] = useState("");
     const [scrolled, setScrolled] = useState(false);
-    const [catalogOpen, setCatalogOpen] = useState(null);
+    const [catalogOpen, setCatalogOpen] = useState(false);
     const [workingTimeOpen, setWorkingTimeOpen] = useState(false);
     const [categoryDropdown, setCategoryDropdown] = useState(null);
     const [aboutDropdown, setAboutDropdown] = useState(null);
@@ -55,7 +55,7 @@ function Header() {
                 <div className='mx-auto flex max-w-360 items-center justify-between px-5 py-2'>
                     <div className='flex items-center gap-4'>
                         <div className='flex items-center gap-2'>
-                            <a href='home' className='cursor-pointer'>
+                            <a href='/' className='cursor-pointer'>
                                 <img src='https://rtrf.ru/local/templates/rustruck/images/logo.svg' />
                             </a>
                             <p className='hidden lg:block max-w-45 border-l border-yellow-500 pl-2 text-[14px] leading-[110%] text-black'>
@@ -249,7 +249,7 @@ function Header() {
                                 {catalogOpen === "catalog" ? "✕" : "☰"}
                             </span>
                         </button>
-                        <a href='home'>
+                        <a href='/'>
                             <img
                                 src='https://rtrf.ru/local/templates/rustruck/images/logo.svg'
                                 className='hidden lg:block object-contain'
@@ -345,6 +345,9 @@ function Header() {
                                             <Link
                                                 to={type.path}
                                                 key={i}
+                                                onClick={() =>
+                                                    setCatalogOpen(false)
+                                                }
                                                 className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
                                             >
                                                 {type.name}
@@ -362,6 +365,9 @@ function Header() {
                                         (type, index) => (
                                             <Link
                                                 to={type.path}
+                                                onClick={() =>
+                                                    setCatalogOpen(false)
+                                                }
                                                 key={index}
                                                 className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
                                             >
@@ -380,6 +386,9 @@ function Header() {
                                         (type, index) => (
                                             <Link
                                                 to={type.path}
+                                                onClick={() =>
+                                                    setCatalogOpen(false)
+                                                }
                                                 key={index}
                                                 className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
                                             >
@@ -395,6 +404,9 @@ function Header() {
                                         <Link
                                             key={i}
                                             to={item.path}
+                                            onClick={() =>
+                                                setCatalogOpen(false)
+                                            }
                                             className='text-[18px] font-bold transition duration-300 hover:text-[#C99024]'
                                         >
                                             {item.name}
@@ -436,6 +448,9 @@ function Header() {
                                             (type, i) => (
                                                 <Link
                                                     key={i}
+                                                    onClick={() =>
+                                                        setCatalogOpen(false)
+                                                    }
                                                     to={type.path}
                                                     className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
                                                 >
@@ -476,6 +491,9 @@ function Header() {
                                             (type, i) => (
                                                 <Link
                                                     key={i}
+                                                    onClick={() =>
+                                                        setCatalogOpen(false)
+                                                    }
                                                     to={type.path}
                                                     className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
                                                 >
@@ -515,6 +533,9 @@ function Header() {
                                         {data.header.allMedia.types.map(
                                             (type, i) => (
                                                 <Link
+                                                    onClick={() =>
+                                                        setCatalogOpen(false)
+                                                    }
                                                     key={i}
                                                     to={type.path}
                                                     className='text-sm leading-[250%] transition duration-300 hover:text-[#C99024]'
@@ -530,6 +551,9 @@ function Header() {
                                 {data.header.navigations.media1.map(
                                     (item, i) => (
                                         <Link
+                                            onClick={() =>
+                                                setCatalogOpen(false)
+                                            }
                                             key={i}
                                             to={item.path}
                                             className='text-[22px] font-bold transition duration-300 hover:text-[#C99024]'
