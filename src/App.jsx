@@ -26,6 +26,7 @@ import HomePage from "./pages/home/homePage";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/loader";
 import CatalogPage from "./pages/avtoCategory/catalogPage";
+import OrderedPage from "./pages/orderedPage";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -69,6 +70,7 @@ function App() {
                     <Route path='basket' element={<BasketPage />} />
                     <Route path='liked' element={<LikesPage />} />
                     <Route path='search' element={<SearchPage />} />
+                    <Route path='ordered' element={<OrderedPage />} />
                 </Route>
             </Routes>
         </>

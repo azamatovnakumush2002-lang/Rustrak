@@ -163,8 +163,13 @@ export const ruData = {
         },
         // ///////////////////////HOME////////////////////////////////////////////////
         homePageSwiper: {
+            swiperSlide0: {
+                image: "/homePagePhotos/0000.jpg",
+                title: "Безбортовой Свайпер разработал Рустрак",
+                text: "Открывание 3 секунды.",
+            },
             swiperSlide1: {
-                image: "/homePagePhotos/swiper-img.png",
+                image: "/homePagePhotos/swiper-img.jpg",
                 title: "АТЗ Рустрак включены в реестр российской промышленной продукции",
                 text: "Теперь доступны для приобретения по 44 ФЗ",
             },
@@ -221,7 +226,7 @@ export const ruData = {
                 },
                 {
                     id: 3,
-                    image: "/homePagePhotos/category-img-3.png",
+                    image: "/homePagePhotos/categoryyy.png",
                     name: "Автотопливозаправщики",
                     slug: "avtotoplivozapravshiki",
                     path: "/avtotoplivozapravshiki",
@@ -8095,6 +8100,7 @@ export const ruData = {
             pokazat: "Показать ещё",
             nazad: "Назад",
             dalshe: "Дальше",
+            added: "В корзине",
         },
     },
 };

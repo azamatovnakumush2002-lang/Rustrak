@@ -4,7 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import allImages from "../../assets/icons/icons";
+// import allImages from "../../assets/icons/icons";
 import {
     CallButton,
     OpenCatalogButton,
@@ -28,7 +28,24 @@ const Hero = () => {
                 <SwiperSlide>
                     <div className='rounded-2xl'>
                         <img
-                            src={allImages.homeSwiperImages.img1}
+                            src={data.homePageSwiper.swiperSlide0.image}
+                            className='object-cover bg-center bg-no-repeat rounded-2xl w-full h-60 md:h-auto'
+                        />
+                    </div>
+                    <div className='absolute top-5 left-4 sm:left-7'>
+                        <h1 className='font-bold text-[20px] sm:text-[28px] text-[#FFFFFF] max-w-140 mb-3'>
+                            {data.homePageSwiper.swiperSlide0.title}
+                        </h1>
+                        <p className='text-sm md:text-[18px] text-[#FFFFFF] mb-1 md:mb-3'>
+                            {data.homePageSwiper.swiperSlide0.text}
+                        </p>
+                        <CallButton onClick={() => setZakazatOpen(true)} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='rounded-2xl'>
+                        <img
+                            src={data.homePageSwiper.swiperSlide1.image}
                             className='object-cover bg-center bg-no-repeat rounded-2xl w-full h-60 md:h-auto'
                         />
                     </div>
@@ -46,7 +63,7 @@ const Hero = () => {
                     <div className='relative'>
                         <div className='rounded-2xl '>
                             <img
-                                src={allImages.homeSwiperImages.img2}
+                                src={data.homePageSwiper.swiperSlide2.image}
                                 className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
                             />
                         </div>
@@ -67,7 +84,7 @@ const Hero = () => {
                     <div className='relative'>
                         <div className='rounded-2xl'>
                             <img
-                                src={allImages.homeSwiperImages.img3}
+                                src={data.homePageSwiper.swiperSlide3.image}
                                 className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
                             />
                         </div>
@@ -87,7 +104,7 @@ const Hero = () => {
                     <div className='relative overflow-hidden rounded-2xl'>
                         <div className='rounded-2xl'>
                             <img
-                                src={allImages.homeSwiperImages.img4}
+                                src={data.homePageSwiper.swiperSlide4.image}
                                 className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
                             />
                         </div>
@@ -112,7 +129,7 @@ const Hero = () => {
                     <div className='relative overflow-hidden rounded-2xl'>
                         <div className='rounded-2xl'>
                             <img
-                                src={allImages.homeSwiperImages.img5}
+                                src={data.homePageSwiper.swiperSlide5.image}
                                 className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
                             />
                         </div>
@@ -137,7 +154,7 @@ const Hero = () => {
                     <div className='relative overflow-hidden rounded-2xl'>
                         <div className='rounded-2xl'>
                             <img
-                                src={allImages.homeSwiperImages.img6}
+                                src={data.homePageSwiper.swiperSlide6.image}
                                 className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
                             />
                         </div>
@@ -162,7 +179,7 @@ const Hero = () => {
                     <div className='relative overflow-hidden rounded-2xl'>
                         <div className='rounded-2xl'>
                             <img
-                                src={allImages.homeSwiperImages.img7}
+                                src={data.homePageSwiper.swiperSlide7.image}
                                 className='object-cover bg-center bg-no-repeat rounded-2xl h-60 md:h-auto w-full'
                             />
                         </div>

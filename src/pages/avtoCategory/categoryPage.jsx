@@ -44,7 +44,7 @@ const CategoryPage = () => {
     return (
         <div className='bg-gray-100'>
             <div className='mx-auto max-w-360 px-5 py-5'>
-                <Breadcrumb />
+                <Breadcrumb categoryName={category?.name} />
                 <div className='flex  py-5'>
                     <div className='flex gap-5 items-center'>
                         <h1 className='text-base sm:text-xl md:text-2xl lg:text-3xl font-medium'>
@@ -60,7 +60,7 @@ const CategoryPage = () => {
                 <div className='flex items-center justify-end mb-5'>
                     <button
                         onClick={() => setFilterModal(true)}
-                        className='block lg:hidden w-6 h-6  bg-amber-400 rounded'
+                        className='block lg:hidden w-6 h-6  bg-amber-400 rounded mr-4 absolute left-5'
                     >
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -290,7 +290,7 @@ const CategoryPage = () => {
                 {/* gridlaaaaaaaaaaaaaaaaaaaa */}
                 <div className='grid grid-cols-3 lg:grid-cols-4 gap-5'>
                     {/* marka side */}
-                    <div className='p-5 top-0 bg-white self-start max-h-250 overflow-y-auto sticky col-span-1 hidden lg:block'>
+                    <div className='p-5 top-0 bg-white self-start h-150 overflow-y-auto sticky col-span-1 hidden lg:block'>
                         <p className='font-medium text-[18px] '>
                             {data.CategoryProducts.Marka.marka}
                         </p>
@@ -409,8 +409,11 @@ const CategoryPage = () => {
                             </p>
                         </div>
                         <button
-                            onClick={() => setAppliedBrands(tanlanganBrand)}
-                            className='w-full border border-amber-400 hover:bg-white bg-amber-400 rounded py-2 hover:text-amber-400 transition duration-300'
+                            onClick={() => {
+                                setAppliedBrands(tanlanganBrand);
+                                setTanlanganBrand([]);
+                            }}
+                            className='w-full border border-amber-400 hover:bg-white bg-amber-400 rounded py-2 hover:text-amber-400 transition duration-300 mb-10'
                         >
                             {data.CategoryProducts.Marka.button}
                         </button>
@@ -420,7 +423,7 @@ const CategoryPage = () => {
                         <div
                             className={
                                 viewMode === "grid"
-                                    ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
+                                    ? "grid grid-cols-2 md:grid-cols-3 gap-5"
                                     : "flex flex-col gap-5"
                             }
                         >
@@ -449,7 +452,7 @@ const CategoryPage = () => {
                                             src={item.image}
                                             className={
                                                 viewMode === "grid"
-                                                    ? "w-full h-45 object-cover"
+                                                    ? "w-full h-35 sm:h-45 object-cover"
                                                     : "w-full h-full min-h-47.5 object-cover"
                                             }
                                         />
@@ -466,14 +469,14 @@ const CategoryPage = () => {
                                                 }
                                                 className='cursor-pointer'
                                             >
-                                                <h2 className='text-base px-2 pt-2 line-clamp-1 overflow-hidden text-center'>
+                                                <h2 className='text-sm sm:text-base px-2 pt-2 line-clamp-1 overflow-hidden'>
                                                     {item.name}
                                                 </h2>
-                                                <h1 className='font-medium text-xl mx-auto text-center pb-2'>
+                                                <h1 className='font-medium text-sm sm:text-xl mx-auto text-center pb-2'>
                                                     {data.CategoryProducts.sena}
                                                 </h1>
                                             </div>
-                                            <div className='flex items-center gap-4 text-center justify-center mx-auto'>
+                                            <div className='flex items-center gap-1 sm:gap-4 text-center justify-center mx-auto'>
                                                 <button
                                                     onClick={() =>
                                                         navigate(

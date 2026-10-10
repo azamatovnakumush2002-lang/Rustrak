@@ -183,7 +183,7 @@ export const NameInput = () => {
         <input
             type='text'
             placeholder='Иван'
-            className='h-11 w-full md:w-62.5 rounded border border-black px-4 text-base placeholder:text-[#888] hover:border-amber-400 transition duration-300'
+            className='h-11 w-full rounded border border-black px-4 text-base placeholder:text-[#888] hover:border-amber-400 transition duration-300'
         />
     );
 };
@@ -194,7 +194,7 @@ export const PhoneNumberInput = () => {
         <input
             type='number'
             placeholder='+998'
-            className='h-11 w-full md:w-62.5 rounded border border-black px-4 text-base placeholder:text-[#888] hover:border-amber-400 transition duration-300'
+            className='h-11 w-full rounded border border-black px-4 text-base placeholder:text-[#888] hover:border-amber-400 transition duration-300'
         />
     );
 };
@@ -213,10 +213,16 @@ EmailInput;
 // OTPRAVIT BUTTON
 export const OtpravitButton = () => {
     const { data } = useLanguage();
+    const navigate = useNavigate();
+
+    const send = () => {
+        navigate("/ordered");
+    };
     return (
         <button
             type='submit'
-            className='h-11 w-full md:w-32.5 border border-amber-400 rounded-[5px] bg-[#FFC107] hover:bg-inherit hover:text-amber-400 text-base text-black transition duration-300'
+            onClick={send}
+            className='h-11 w-full md:w-auto md:px-6 border border-amber-400 rounded-[5px] bg-[#FFC107] hover:bg-inherit hover:text-amber-400 text-base text-black transition duration-300 '
         >
             {data.modals.otpravit}
         </button>

@@ -90,8 +90,8 @@ const HomePage = () => {
                     }}
                     className='mySwiper'
                 >
-                    {data.CategoryProducts.categoryCards.map((card, index) => (
-                        <SwiperSlide key={card.id}>
+                    {data.CategoryProducts.categoryCards.map((card, id) => (
+                        <SwiperSlide key={id}>
                             <Link to={`/catalog/${card.path}`}>
                                 <div className='border border-[#EBEBEB] rounded-lg p-3 sm:p-5 h-auto  transition-all duration-300 hover:border-amber-400 hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)]  cursor-pointer'>
                                     <h3 className='font-normal text-[18px] sm:text-2xl overflow-hidden truncate'>
@@ -289,7 +289,7 @@ const HomePage = () => {
                                             <button
                                                 onClick={() =>
                                                     navigate(
-                                                        `/category/${category.slug}/${card.id}`,
+                                                        `/catalog/${category.slug}/${card.id}`,
                                                     )
                                                 }
                                                 className='py-1 md:py-2 rounded bg-[#FEC80B] border border-[#FEC80B] hover:text-[#FEC80B] hover:bg-white w-full text-center justify-center text-[12px] sm:text-base transition duration-300'

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 
-function Breadcrumb() {
+function Breadcrumb({ categoryName, productName }) {
     const location = useLocation();
     const path = location.pathname;
 
@@ -14,7 +14,6 @@ function Breadcrumb() {
         catalog: "Каталог",
         partners: "Партнёры",
         service: "Сервис и гарантии",
-        info: "Информационные материалы",
         promo: "Рекламные материалы",
         video: "Видео",
         fotogallery: "Фотогалерея",
@@ -22,24 +21,32 @@ function Breadcrumb() {
         vacancies: "Вакансии",
         sertificate: "Сертификаты",
         suppliers: "Поставщикам и партнёрам",
-        otziv: "Отзывы и рекомендательные письма партнёров ООО «Рустрак»",
         production: "Производство",
     };
 
     const parts = path.split("/").filter(Boolean);
 
     return (
-        <div className='flex items-center gap-2 text-sm'>
+        <div className='flex items-center gap-2 text-sm flex-wrap'>
             <Link to='/' className='text-gray-400'>
                 Главная
             </Link>
 
             {parts.map((part, index) => {
                 const isLast = index === parts.length - 1;
-
                 const currentPath = "/" + parts.slice(0, index + 1).join("/");
 
-                const name = names[part] || part;
+                let name = names[part] || part;
+
+                // Kategoriya slug o'rniga kategoriya nomi
+                if (parts[0] === "catalog" && index === 1 && categoryName) {
+                    name = categoryName;
+                }
+
+                // Mahsulot ID o'rniga mahsulot nomi
+                if (parts[0] === "catalog" && index === 2 && productName) {
+                    name = productName;
+                }
 
                 return (
                     <div
@@ -51,7 +58,10 @@ function Breadcrumb() {
                         {isLast ? (
                             <span>{name}</span>
                         ) : (
-                            <Link to={currentPath} className='text-gray-400'>
+                            <Link
+                                to={currentPath}
+                                className='text-gray-400 hover:text-amber-400'
+                            >
                                 {name}
                             </Link>
                         )}

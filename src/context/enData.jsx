@@ -158,31 +158,43 @@ export const enData = {
         },
         // /////////////////////////HOME PAGE////////////////////////////////
         homePageSwiper: {
+            swiperSlide0: {
+                image: "/homePagePhotos/0000.jpg",
+                title: "The Flatbed Swiper Developed by Rustrak",
+                text: "Opens in 3 seconds.",
+            },
             swiperSlide1: {
+                image:"/homePagePhotos/swiper-img.jpg",
                 title: "Rustrak fuel trucks have been included in the Russian Industrial Products Register",
                 text: "They are now available for purchase under Federal Law 44-FZ",
             },
             swiperSlide2: {
+                image: "/homePagePhotos/swiper-image.jpg",
                 title: "KAMAZ 4308 curtain-sided vans available",
                 text: "Superstructure dimensions: 6200x2550x2850 mm. Price: RUB 5,500,000.",
             },
             swiperSlide3: {
+                image: "/homePagePhotos/swiper-image2.webp",
                 title: "Flatbed platforms with curtain mechanisms",
                 text: "Manufacturing and supply of commercial vehicles and flatbed platforms, including platforms with sliding curtains and sliding roofs.",
             },
             swiperSlide4: {
+                image: "/homePagePhotos/swiper-image3.jpg",
                 title: "Rustrak LLC",
                 text: "Manufacturing and supply of specialized equipment and special-purpose vehicles.",
             },
             swiperSlide5: {
+                image: "/homePagePhotos/swiper-image4.jpg",
                 title: "Truck-mounted cranes based on MCV/HCV trucks",
                 text: "Manufacturing of vehicles equipped with truck-mounted crane units. Use of anti-shift plates, installation of a distributor control unit for rear supports, HOSSEN open profile, mounting plates at the base of the crane unit, and painting the platform in the crane color.",
             },
             swiperSlide6: {
+                image: "/homePagePhotos/swiper-image-5.jpg",
                 title: "Fuel tank trucks based on MCV/HCV trucks",
                 text: "Manufacturing and supply of fuel tank trucks with capacities of 8 and 6 m³. Aluminum piping, composite pressure-suction hoses, and a high-performance fuel dispensing unit.",
             },
             swiperSlide7: {
+                image: "/homePagePhotos/Rectangle 616.png",
                 title: "Special-purpose vehicle manufacturing plant",
                 text: "Rustrak LLC is a company engaged in the manufacturing and supply of specialized equipment and special-purpose vehicles.",
             },
@@ -209,7 +221,7 @@ export const enData = {
                 },
                 {
                     id: 3,
-                    image: "/homePagePhotos/category-img-3.png",
+                    image: "/homePagePhotos/categoryyy.png",
                     name: "Fuel tank trucks",
                     slug: "avtotoplivozapravshiki",
                     path: "/avtotoplivozapravshiki",
@@ -7974,6 +7986,7 @@ export const enData = {
             pokazat: `Show more`,
             nazad: "Prev",
             dalshe: "Next",
+            added: "Added",
         },
     },
 };

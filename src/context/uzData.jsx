@@ -159,8 +159,13 @@ export const uzData = {
         },
         // ////////////////////////////HOME PAGE/////////////////////
         homePageSwiper: {
+            swiperSlide0: {
+                image: "/homePagePhotos/0000.jpg",
+                title: "Rustrak ishlab chiqqan bortisiz svayper",
+                text: "3 soniyada ochiladi.",
+            },
             swiperSlide1: {
-                image: "/homePagePhotos/swiper-img.png",
+                image: "/homePagePhotos/swiper-img.jpg",
                 title: "Rustrak ATZlari Rossiya sanoat mahsulotlari reestriga kiritildi",
                 text: "Endi ularni 44-FZ qonuni asosida xarid qilish mumkin",
             },
@@ -217,7 +222,7 @@ export const uzData = {
                 },
                 {
                     id: 3,
-                    image: "/homePagePhotos/category-img-3.png",
+                    image: "/homePagePhotos/categoryyy.png",
                     name: "Avtoyokilg‘i quyish mashinalari",
                     slug: "avtotoplivozapravshiki",
                     path: "/avtotoplivozapravshiki",
@@ -7944,9 +7949,10 @@ export const uzData = {
                 "Aloqa ma’lumotlaringizni qoldiring, biz tez orada Siz bilan bog‘lanamiz",
             text1: "Yuborish tugmasini bosish orqali",
             text2: "Siz shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz",
-         pokazat: `Ko'proq ko'rsatish`,
-            nazad:"Oldinga",
+            pokazat: `Ko'proq ko'rsatish`,
+            nazad: "Oldinga",
             dalshe: "Orqaga",
+            added: "Savatda",
         },
     },
 };

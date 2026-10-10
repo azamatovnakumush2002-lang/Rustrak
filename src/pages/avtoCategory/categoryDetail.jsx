@@ -9,6 +9,7 @@ import { useCart } from "../../context/cardContext";
 const CategoryDetailPage = () => {
     const { slug, id } = useParams();
     const { data } = useLanguage();
+
     const { addToCart, isInCart } = useCart();
     const [modalOpen, setModalOpen] = useState(false);
     const categories = data.CategoryProducts.categoryCards;
@@ -26,7 +27,10 @@ const CategoryDetailPage = () => {
     }, []);
     return (
         <div className='mx-auto max-w-360 px-5'>
-            <Breadcrumb />
+            <Breadcrumb
+                categoryName={category?.name}
+                productName={product?.name}
+            />
             <div className='mb-5'>
                 <h1 className='text-xl sm:text-2xl lg:text-4xl font-medium my-3 md:my-8'>
                     {product.name}
@@ -41,7 +45,6 @@ const CategoryDetailPage = () => {
                                 >
                                     <img
                                         src={product.images[0]}
-                                        alt={product.name}
                                         className='w-full h-70 md:h-100 lg:h-130 object-cover rounded-2xl'
                                     />
                                 </a>
@@ -69,7 +72,7 @@ const CategoryDetailPage = () => {
                                 className='w-full py-3 border border-amber-300 hover:text-amber-300 hover:bg-white bg-amber-300 rounded text-sm transition duration-300'
                             >
                                 {isInCart(product)
-                                    ? "В корзине"
+                                    ? data.modals.added
                                     : data.CategoryProducts.dobavitButton}
                             </button>
                             <button

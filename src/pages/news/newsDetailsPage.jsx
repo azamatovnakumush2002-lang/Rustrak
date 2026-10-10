@@ -12,6 +12,7 @@ const NewsDetail = () => {
     const news = allNews.find((item) => {
         return item.path === `/${path}/`;
     });
+    const moreNews = allNews.filter((item) => item.path !== news?.path);
     if (!news) {
         return (
             <>
@@ -26,7 +27,7 @@ const NewsDetail = () => {
     return (
         <>
             <div className='bg-[#f9f9f9]'>
-                <div className='mx-auto max-w-360 px-5'>
+                <div className='mx-auto max-w-360 pt-5 px-5'>
                     <Breadcrumb />
                     <div className='py-8'>
                         <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold mb-3'>
@@ -123,8 +124,8 @@ const NewsDetail = () => {
                             modules={[Mousewheel, Keyboard]}
                             className='mySwiper'
                         >
-                            {data.newsPage.allAvto.map((item) => (
-                                <SwiperSlide>
+                            {moreNews.map((item) => (
+                                <SwiperSlide key={item.path}>
                                     <div className='my-5 md:my-10 p-3 lg:p-5 rounded bg-white'>
                                         <p>{item.year}</p>
                                         <h1 className='line-clamp-2 text-base lg:text-[20px] font-medium'>

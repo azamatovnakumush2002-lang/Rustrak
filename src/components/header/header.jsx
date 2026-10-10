@@ -44,6 +44,18 @@ function Header() {
     const handleMediaDropdown = (name) => {
         setMediaDropdown((prev) => (prev === name ? null : name));
     };
+
+    useEffect(() => {
+        if (catalogOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [catalogOpen]);
     return (
         <header className='relative w-full'>
             {/* first header */}
@@ -332,8 +344,8 @@ function Header() {
             </div>
             {/* catalog modalllllllllllllllllllllllllll */}
             {catalogOpen && (
-                <div className='absolute left-0 top-full z-40 w-full h-screen bg-[#F9F9F9] shadow-md'>
-                    <div className='mx-auto max-w-360 px-5 py-7'>
+                <div className='fixed left-0 top-[130px] z-40 w-full h-[calc(100vh-129px)] overflow-y-auto bg-[#F9F9F9] shadow-md'>
+                    <div className='h-full mx-auto max-w-360 px-5 py-7'>
                         <div className='hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8'>
                             <div>
                                 <h2 className='text-[22px] font-bold leading-[160%]'>
