@@ -318,8 +318,8 @@ const HomePage = () => {
                 </div>
             </div>
             {/* news sectionnnnnnnnnnnnnnnnn */}
-            <div className='mx-auto max-w-360 px-5 sm:my-8'>
-                <div className='flex justify-between items-center mb-5 sm:mb-8'>
+            <div className='mx-auto max-w-360 px-5 my-8'>
+                <div className='flex justify-between items-center mb-8'>
                     <h1 className='font-medium text-[24px] sm:text-[36px] md:text-[42px]'>
                         {data.newsPage.newsTitle}
                     </h1>

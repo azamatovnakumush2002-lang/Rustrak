@@ -47,7 +47,7 @@ const QuestionsSection = () => {
                     <div className=''>
                         <form
                             onSubmit={send}
-                            className='md:flex md:items-start gap-5 mx-auto w-full md:mx-0'
+                            className='md:flex md:items-start gap-5 pr-5 md:pr-0 mx-auto w-full md:mx-0'
                         >
                             <div className='flex flex-col gap-1 w-full'>
                                 <label
@@ -144,7 +144,7 @@ const QuestionsSection = () => {
                             <div className='shrink-0 md:pt-6'>
                                 <button
                                     type='submit'
-                                    className='h-11 w-full md:w-auto md:px-6 border border-amber-400 rounded-[5px] bg-[#FFC107] hover:bg-inherit hover:text-amber-400 text-base text-black transition duration-300'
+                                    className='h-11 w-full md:w-auto md:px-6 border border-amber-400 rounded-[5px] bg-[#FFC107] hover:bg-inherit hover:text-amber-400 text-base  transition duration-300'
                                 >
                                     {data.modals.otpravit}
                                 </button>
