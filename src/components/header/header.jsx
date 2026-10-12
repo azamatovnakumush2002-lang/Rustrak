@@ -13,6 +13,7 @@ function Header() {
     const { data } = useLanguage();
     const navigate = useNavigate();
     const [search, setSearch] = useState("");
+    const [searchOpen, setSearchOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [catalogOpen, setCatalogOpen] = useState(false);
     const [workingTimeOpen, setWorkingTimeOpen] = useState(false);
@@ -20,6 +21,7 @@ function Header() {
     const [aboutDropdown, setAboutDropdown] = useState(null);
     const [mediaDropdown, setMediaDropdown] = useState(null);
     const [zakazatOpen, setZakazatOpen] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 130);
@@ -218,29 +220,80 @@ function Header() {
                     </div>
 
                     <div className='flex items-center gap-3'>
-                        <div className='hidden min-[440px]:flex'>
-                            <input
-                                type='text'
-                                value={search}
-                                onChange={(e) => setSearch(e.target.value)}
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter" && search.trim()) {
-                                        navigate(`/search?query=${search}`);
-                                    }
-                                }}
-                                className='border border-yellow-400 rounded-full py-1 px-4'
-                            />
+                        <div className='relative'>
+                            <div className='max-[439px]:hidden min-[440px]:flex items-center'>
+                                <input
+                                    type='text'
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (
+                                            e.key === "Enter" &&
+                                            search.trim()
+                                        ) {
+                                            navigate(
+                                                `/search?query=${encodeURIComponent(search.trim())}`,
+                                            );
+                                        }
+                                    }}
+                                    className='border border-yellow-400 rounded-full py-1 px-4'
+                                />
 
-                            <img
-                                src={allImages.headerImages.searchImg}
-                                className='-ml-6 cursor-pointer'
-                                onClick={() => {
-                                    if (search.trim()) {
-                                        navigate(`/search?query=${search}`);
-                                    }
-                                }}
-                            />
+                                <img
+                                    src={allImages.headerImages.searchImg}
+                                    alt='Search'
+                                    className='-ml-6 cursor-pointer'
+                                    onClick={() => {
+                                        if (search.trim()) {
+                                            navigate(
+                                                `/search?query=${encodeURIComponent(search.trim())}`,
+                                            );
+                                        }
+                                    }}
+                                />
+                            </div>
+
+                            <button
+                                type='button'
+                                onClick={() => setSearchOpen(!searchOpen)}
+                                className='min-[440px]:hidden flex items-center justify-center'
+                            >
+                                <img
+                                    src={allImages.headerImages.searchImg}
+                                    className='w-5 h-5 cursor-pointer'
+                                />
+                            </button>
+
+                            {searchOpen && (
+                                <div className='flex items-center absolute -right-30 top-7 mt-3 w-70 rounded-4xl bg-white p-2 shadow-lg  z-50 min-[440px]:hidden'>
+                                    <input
+                                        type='text'
+                                        autoFocus
+                                        value={search}
+                                        onChange={(e) =>
+                                            setSearch(e.target.value)
+                                        }
+                                        onKeyDown={(e) => {
+                                            if (
+                                                e.key === "Enter" &&
+                                                search.trim()
+                                            ) {
+                                                setSearchOpen(false);
+                                                navigate(
+                                                    `/search?query=${encodeURIComponent(search.trim())}`,
+                                                );
+                                            }
+                                        }}
+                                        className='w-full border border-yellow-400 rounded-full py-2 px-4'
+                                    />
+                                    <img
+                                        src={allImages.headerImages.searchImg}
+                                        className='relative -ml-7 w-5 h-5'
+                                    />
+                                </div>
+                            )}
                         </div>
+
                         <LanguageButton />
                         <BasketButton />
                         <HeartButton />

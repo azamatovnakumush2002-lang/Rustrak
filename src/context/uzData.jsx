@@ -157,6 +157,11 @@ export const uzData = {
             netNalichi: "Sotuvda mavjud emas",
             product: "mahsulot",
         },
+        search: {
+            search: "Qidiruv:",
+            notFound: "Mahsulotlar topilmadi",
+            swiperTitle: "O‘xshash mahsulotlar",
+        },
         // ////////////////////////////HOME PAGE/////////////////////
         homePageSwiper: {
             swiperSlide0: {
@@ -7953,6 +7958,7 @@ export const uzData = {
             nazad: "Oldinga",
             dalshe: "Orqaga",
             added: "Savatda",
+            required: "Bu maydonni toldiring",
         },
     },
 };

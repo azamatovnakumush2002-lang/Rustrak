@@ -22,6 +22,7 @@ function Breadcrumb({ categoryName, productName }) {
         sertificate: "Сертификаты",
         suppliers: "Поставщикам и партнёрам",
         production: "Производство",
+        search: "Поиск",
     };
 
     const parts = path.split("/").filter(Boolean);

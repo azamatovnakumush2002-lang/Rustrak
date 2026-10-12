@@ -33,7 +33,7 @@ const SearchPage = () => {
         const slug = cardniOlish(product);
 
         if (slug) {
-            navigate(`/category/${slug}/${product.id}`);
+            navigate(`/catalog/${slug}/${product.id}`);
         }
     };
 

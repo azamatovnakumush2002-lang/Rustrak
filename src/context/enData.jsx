@@ -156,6 +156,11 @@ export const enData = {
             netNalichi: "Out of stock",
             product: "products",
         },
+        search: {
+            search: "Search:",
+            notFound: "Products not found",
+            swiperTitle: "Similar products",
+        },
         // /////////////////////////HOME PAGE////////////////////////////////
         homePageSwiper: {
             swiperSlide0: {
@@ -164,7 +169,7 @@ export const enData = {
                 text: "Opens in 3 seconds.",
             },
             swiperSlide1: {
-                image:"/homePagePhotos/swiper-img.jpg",
+                image: "/homePagePhotos/swiper-img.jpg",
                 title: "Rustrak fuel trucks have been included in the Russian Industrial Products Register",
                 text: "They are now available for purchase under Federal Law 44-FZ",
             },
@@ -7987,6 +7992,7 @@ export const enData = {
             nazad: "Prev",
             dalshe: "Next",
             added: "Added",
+            required: "Please fill in this field",
         },
     },
 };

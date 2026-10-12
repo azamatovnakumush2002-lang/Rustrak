@@ -8101,6 +8101,7 @@ export const ruData = {
             nazad: "Назад",
             dalshe: "Дальше",
             added: "В корзине",
+            required: "Заполните это поле",
         },
     },
 };

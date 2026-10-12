@@ -177,29 +177,6 @@ export const NewsPodrobneeButton = () => {
     );
 };
 NewsPodrobneeButton;
-// NAME INPUT
-export const NameInput = () => {
-    return (
-        <input
-            type='text'
-            placeholder='Иван'
-            className='h-11 w-full rounded border border-black px-4 text-base placeholder:text-[#888] hover:border-amber-400 transition duration-300'
-        />
-    );
-};
-NameInput;
-// PHONE NUMBER INPUT
-export const PhoneNumberInput = () => {
-    return (
-        <input
-            type='number'
-            placeholder='+998'
-            className='h-11 w-full rounded border border-black px-4 text-base placeholder:text-[#888] hover:border-amber-400 transition duration-300'
-        />
-    );
-};
-PhoneNumberInput;
-// EMAIL INPUT
 export const EmailInput = () => {
     return (
         <input
@@ -213,11 +190,6 @@ EmailInput;
 // OTPRAVIT BUTTON
 export const OtpravitButton = () => {
     const { data } = useLanguage();
-    const navigate = useNavigate();
-
-    const send = () => {
-        navigate("/ordered");
-    };
     return (
         <button
             type='submit'
