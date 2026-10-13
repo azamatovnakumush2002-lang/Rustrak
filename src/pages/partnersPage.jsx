@@ -1,8 +1,9 @@
-import { div } from "motion/react-client";
 import { useLanguage } from "../context/languageContext";
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 
 const PartnersPage = () => {
+    PageTitle("Партнёры завода-производителя автоспецтехники «РусТрак»");
     const { data } = useLanguage();
 
     return (

@@ -94,10 +94,10 @@ const QuestionsSection = () => {
                                 >
                                     {data.modals.phone} *
                                 </label>
-
                                 <IMaskInput
                                     id='phone'
                                     mask='+{998} (00) 000-00-00'
+                                    lazy={!phoneHovered && !phoneFocused}
                                     value={phone}
                                     unmask={false}
                                     onAccept={(value) => {
@@ -117,21 +117,18 @@ const QuestionsSection = () => {
                                     onBlur={() => setPhoneFocused(false)}
                                     onMouseEnter={() => setPhoneHovered(true)}
                                     onMouseLeave={() => setPhoneHovered(false)}
-                                    placeholder='+998 (__) ___-__-__'
+                                    placeholder='+998'
                                     inputMode='numeric'
                                     className={`h-11 w-full rounded border px-4 text-base outline-none transition duration-300 ${
                                         errors.phone
                                             ? "border-amber-400"
-                                            : "border-black hover:border-amber-400"
+                                            : "border-black"
                                     } ${
                                         phoneFocused
                                             ? "text-black placeholder:text-black"
-                                            : phoneHovered
-                                              ? "text-black placeholder:text-gray-400"
-                                              : "text-black placeholder:text-gray-400"
+                                            : "text-gray-400 placeholder:text-gray-400"
                                     }`}
                                 />
-
                                 <div className='min-h-5'>
                                     {errors.phone && (
                                         <p className='text-amber-500 text-xs'>

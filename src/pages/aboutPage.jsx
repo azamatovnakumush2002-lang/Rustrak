@@ -5,8 +5,9 @@ import Breadcrumb from "../components/breadcrum/breadcrum";
 import { useLanguage } from "../context/languageContext";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { div } from "motion/react-client";
+import PageTitle from "../components/pageTitle/pageTitle";
 const AboutPage = () => {
+    PageTitle("Информация о производителе автоспецтехники «РусТрак»");
     const { data } = useLanguage();
 
     return (

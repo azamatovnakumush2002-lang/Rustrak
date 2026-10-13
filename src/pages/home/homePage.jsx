@@ -15,8 +15,10 @@ import ScrollSlider from "../../components/scrollSlider/scrollSlider";
 import { useLanguage } from "../../context/languageContext";
 import Hero from "./hero";
 import YellowSection from "./yellow";
+import PageTitle from "../../components/pageTitle/pageTitle";
 
 const HomePage = () => {
+    PageTitle("Завод производитель автоспецтехники «РусТрак»");
     const navigate = useNavigate();
     const { data } = useLanguage();
     const [likedCards, setLikedCards] = useState([]);

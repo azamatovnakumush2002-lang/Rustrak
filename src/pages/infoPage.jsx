@@ -1,7 +1,11 @@
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 import { useLanguage } from "../context/languageContext";
 
 const InfoMaterial = () => {
+    PageTitle(
+        "Информационные материалы | Производитель автоспецтехники РусТрак",
+    );
     const { data } = useLanguage();
     return (
         <>

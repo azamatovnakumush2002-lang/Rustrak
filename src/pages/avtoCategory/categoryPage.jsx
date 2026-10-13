@@ -3,7 +3,7 @@ import allImages from "../../assets/icons/icons";
 import { useParams, useNavigate } from "react-router-dom";
 import Breadcrumb from "../../components/breadcrum/breadcrum";
 import { PoluchitButton } from "../../components/buttons/buttons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PoluchitButtonModal } from "../../components/modals/modals";
 import { useCart } from "../../context/cardContext";
 import { useLike } from "../../context/likeContext";
@@ -41,6 +41,11 @@ const CategoryPage = () => {
         if (!aMatch && bMatch) return 1;
         return 0;
     });
+    useEffect(() => {
+        document.title = category
+            ? `${category.name}`
+            : "Завод производитель автоспецтехники «РусТрак»";
+    }, [category]);
     return (
         <div className='bg-gray-100'>
             <div className='mx-auto max-w-360 px-5 py-5'>
@@ -290,7 +295,7 @@ const CategoryPage = () => {
                 {/* gridlaaaaaaaaaaaaaaaaaaaa */}
                 <div className='grid grid-cols-3 lg:grid-cols-4 gap-5'>
                     {/* marka side */}
-                    <div className='p-5 top-0 bg-white self-start h-150 overflow-y-auto sticky col-span-1 hidden lg:block'>
+                    <div className='p-5 top-0 bg-white self-start svh overflow-y-auto sticky col-span-1 hidden lg:block'>
                         <p className='font-medium text-[18px] '>
                             {data.CategoryProducts.Marka.marka}
                         </p>

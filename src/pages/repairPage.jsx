@@ -2,7 +2,10 @@ import { useState } from "react";
 import { useLanguage } from "../context/languageContext";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 const RepairPage = () => {
+    PageTitle("remont");
+
     const { data } = useLanguage();
     const [isModalOpen, setIsModalOpen] = useState(false);
 

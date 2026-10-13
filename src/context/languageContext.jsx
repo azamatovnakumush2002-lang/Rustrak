@@ -7,7 +7,9 @@ import { enData } from "../context/enData";
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState("ru");
+    const [language, setLanguage] = useState(() => {
+        return localStorage.getItem("language") || "ru";
+    });
 
     const languages = {
         uz: uzData.allData,
@@ -15,14 +17,17 @@ export const LanguageProvider = ({ children }) => {
         en: enData.allData,
     };
 
-    const data = languages[language];
+    const changeLanguage = (newLanguage) => {
+        localStorage.setItem("language", newLanguage);
+        setLanguage(newLanguage);
+    };
 
     return (
         <LanguageContext.Provider
             value={{
                 language,
-                setLanguage,
-                data,
+                setLanguage: changeLanguage,
+                data: languages[language],
             }}
         >
             {children}
@@ -30,6 +35,4 @@ export const LanguageProvider = ({ children }) => {
     );
 };
 
-export const useLanguage = () => {
-    return useContext(LanguageContext);
-};
+export const useLanguage = () => useContext(LanguageContext);

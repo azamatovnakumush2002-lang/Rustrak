@@ -25,6 +25,11 @@ const CategoryDetailPage = () => {
             Fancybox.unbind('[data-fancybox="gallery"]');
         };
     }, []);
+    useEffect(() => {
+        document.title = product
+            ? `${product.name}`
+            : "Завод производитель автоспецтехники «РусТрак»";
+    }, [product]);
     return (
         <div className='mx-auto max-w-360 px-5'>
             <Breadcrumb

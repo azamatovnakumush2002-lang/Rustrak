@@ -1,7 +1,9 @@
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 import { useLanguage } from "../context/languageContext";
 
 const VideoPage = () => {
+    PageTitle("Видеогалерея производителя автоспецтехники РусТрак");
     const { data } = useLanguage();
     return (
         <>

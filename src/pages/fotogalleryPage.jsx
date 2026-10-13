@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useLanguage } from "../context/languageContext";
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 
 const FotogalleryPage = () => {
+    PageTitle("Фотогалерея производителя автоспецтехники РусТрак");
     const { data } = useLanguage();
     const [activeButton, setActiveButton] = useState("avtomobili");
 

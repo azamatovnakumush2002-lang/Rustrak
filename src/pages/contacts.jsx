@@ -1,7 +1,11 @@
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 import { useLanguage } from "../context/languageContext";
 
 const ContactsPage = () => {
+    PageTitle(
+        "Контактная информация «РусТрак» – быстрая связь для заказа и поддержки",
+    );
     const { data } = useLanguage();
 
     return (

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useLanguage } from "../context/languageContext";
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 
 const VacanciesPage = () => {
+    PageTitle("Вакансии | Производитель автоспецтехники РусТрак");
     const { data } = useLanguage();
     const [modalOpen, setModalOpen] = useState(true);
     const [buttonOpen, setButtonOpen] = useState(false);

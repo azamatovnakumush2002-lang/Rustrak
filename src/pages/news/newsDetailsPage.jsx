@@ -1,8 +1,9 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
 import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Breadcrumb from "../../components/breadcrum/breadcrum";
+import { useEffect } from "react";
 
 const NewsDetail = () => {
     const { path } = useParams();
@@ -12,6 +13,11 @@ const NewsDetail = () => {
     const news = allNews.find((item) => {
         return item.path === `/${path}/`;
     });
+    useEffect(() => {
+        document.title = news
+            ? `${news.name}`
+            : "Завод производитель автоспецтехники «РусТрак»";
+    }, [news]);
     const moreNews = allNews.filter((item) => item.path !== news?.path);
     if (!news) {
         return (
@@ -49,8 +55,11 @@ const NewsDetail = () => {
                                 <h1 className='font-bold text-[20px] mb-5'>
                                     {news?.keyCharacter}
                                 </h1>
-                                {news.keyCharacters?.map((item) => (
-                                    <p className='text-base md:text-[20px]'>
+                                {news.keyCharacters?.map((item, i) => (
+                                    <p
+                                        key={i}
+                                        className='text-base md:text-[20px]'
+                                    >
                                         {item}
                                     </p>
                                 ))}
@@ -67,8 +76,11 @@ const NewsDetail = () => {
                                 <h1 className='font-bold text-[20px] my-5'>
                                     {news?.protection}
                                 </h1>
-                                {news.protectionText?.map((item) => (
-                                    <p className='text-base md:text-[20px]'>
+                                {news.protectionText?.map((item, i) => (
+                                    <p
+                                        key={i}
+                                        className='text-base md:text-[20px]'
+                                    >
                                         {item}
                                     </p>
                                 ))}
@@ -131,13 +143,12 @@ const NewsDetail = () => {
                                         <h1 className='line-clamp-2 text-base lg:text-[20px] font-medium'>
                                             {item.name}
                                         </h1>
-                                        <button
-                                            onClick={() =>
-                                                navigate(`/news/${item.path}`)
-                                            }
-                                            className='flex items-center gap-2 text-gray-400 hover:text-amber-400 transition duration-300  text-base lg:text-[20px] mt-2 sm:mt-5'
+                                        <Link
+                                            to={`/news/${item.path}`}
+                                            className='flex items-center gap-2 text-gray-400 hover:text-amber-400 transition duration-300 text-base lg:text-[20px] mt-2 sm:mt-5'
                                         >
                                             {data.modals.podrobne}
+
                                             <svg
                                                 xmlns='http://www.w3.org/2000/svg'
                                                 width='20'
@@ -155,7 +166,7 @@ const NewsDetail = () => {
                                                     d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8'
                                                 />
                                             </svg>
-                                        </button>
+                                        </Link>
                                     </div>
                                 </SwiperSlide>
                             ))}

@@ -1,7 +1,9 @@
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 import { useLanguage } from "../context/languageContext";
 
 const KreditPage = () => {
+    PageTitle("Кредит и лизинг на автоспецтехнику компании РусТрак");
     const { data } = useLanguage();
 
     return (

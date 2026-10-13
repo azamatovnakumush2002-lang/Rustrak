@@ -5,8 +5,10 @@ import "swiper/css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Breadcrumb from "../../components/breadcrum/breadcrum";
+import PageTitle from "../../components/pageTitle/pageTitle";
 
 const NewsPage = () => {
+    PageTitle("Актуальные новости производителя автоспецтехники «РусТрак»");
     const { data } = useLanguage();
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);

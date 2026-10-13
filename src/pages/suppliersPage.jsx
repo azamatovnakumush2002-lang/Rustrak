@@ -1,8 +1,11 @@
-import { p } from "motion/react-client";
 import { useLanguage } from "../context/languageContext";
 import Breadcrumb from "../components/breadcrum/breadcrum";
+import PageTitle from "../components/pageTitle/pageTitle";
 
 const SuppliersPage = () => {
+    PageTitle(
+        "Поставщикам и партнёрам  | Производитель автоспецтехники РусТрак",
+    );
     const { data } = useLanguage();
 
     return (
