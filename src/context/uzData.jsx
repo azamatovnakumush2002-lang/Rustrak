@@ -141,6 +141,32 @@ export const uzData = {
                 ],
             },
         },
+        helmet: {
+            home: "«RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchi zavodi",
+            about: "«RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi haqida ma’lumot",
+            contacts:
+                "«RusTrak» aloqa ma’lumotlari – buyurtma va qo‘llab-quvvatlash uchun tezkor aloqa",
+            fotogalereya:
+                "«RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisining fotogalereyasi",
+            info: "Axborot materiallari | «RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi",
+            kredit: "«RusTrak» kompaniyasining maxsus avtomobil texnikasi uchun kredit va lizing",
+            otziv: "Mijozlar fikrlari | «RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi",
+            partners:
+                "«RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchi zavodining hamkorlari",
+            production:
+                "«RusTrak» maxsus avtomobil texnikasi ishlab chiqarish va texnologiyalari",
+            promo: "Reklama materiallari | «RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi",
+            repair: "Ta’mirlash",
+            sertificate:
+                "Sertifikatlar | «RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi",
+            service:
+                "«RusTrak» maxsus avtomobil texnikasiga kafolatli xizmat ko‘rsatish va ta’mirlash",
+            suppliers:
+                "Yetkazib beruvchilar va hamkorlar uchun | «RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi",
+            vacancies:
+                "Bo‘sh ish o‘rinlari | «RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisi",
+            video: "«RusTrak» maxsus avtomobil texnikasi ishlab chiqaruvchisining videogalereyasi",
+        },
         // ///////////////////////BASKET///////////////////////
         basket: {
             pageTitle: "Savat",

@@ -52,7 +52,7 @@ const ContactsPage = () => {
                         <iframe
                             src='https://yandex.uz/map-widget/v1/?from=mapframe&ll=43.821337%2C56.345010&mode=usermaps&source=mapframe&um=constructor%3A5ae836d5720676e2f0d32162afa86c3b03a8a1a0359f4732fa442277488cf68a&utm_source=mapframe&z=9.8'
                             frameborder='1'
-                            allowfullscreen='true'
+                            allowFullScreen='true'
                             className='w-full cursor-pointer h-50 md:h-87.5'
                         ></iframe>
                     </div>
@@ -63,8 +63,11 @@ const ContactsPage = () => {
                         {data.contactPage.employees}
                     </h1>
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
-                        {data.contactPage.testimonials.map((item) => (
-                            <div className='border border-gray-200 rounded-lg p-5 items-center text-center justify-center bg-[#ffffff] hover:shadow-[0_0_15px_rgba(0,0,0,0.15)] transition duration-300'>
+                        {data.contactPage.testimonials.map((item, i) => (
+                            <div
+                                key={i}
+                                className='border border-gray-200 rounded-lg p-5 items-center text-center justify-center bg-[#ffffff] hover:shadow-[0_0_15px_rgba(0,0,0,0.15)] transition duration-300'
+                            >
                                 <div>
                                     <img
                                         src={item.image}

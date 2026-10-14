@@ -139,6 +139,31 @@ export const enData = {
                 ],
             },
         },
+        helmet: {
+            home: "RusTrak Special-Purpose Vehicle Manufacturing Plant",
+            about: "About RusTrak, a Special-Purpose Vehicle Manufacturer",
+            contacts:
+                "RusTrak Contact Information – Quick Assistance with Orders and Support",
+            fotogalereya:
+                "Photo Gallery of RusTrak Special-Purpose Vehicle Manufacturer",
+            info: "Information Resources | RusTrak Special-Purpose Vehicle Manufacturer",
+            kredit: "Loans and Leasing for RusTrak Special-Purpose Vehicles",
+            otziv: "Customer Reviews | RusTrak Special-Purpose Vehicle Manufacturer",
+            partners:
+                "Partners of the RusTrak Special-Purpose Vehicle Manufacturing Plant",
+            production:
+                "Manufacturing and Technologies of RusTrak Special-Purpose Vehicles",
+            promo: "Promotional Materials | RusTrak Special-Purpose Vehicle Manufacturer",
+            repair: "Repair",
+            sertificate:
+                "Certificates | RusTrak Special-Purpose Vehicle Manufacturer",
+            service:
+                "Warranty Repair and Service for RusTrak Special-Purpose Vehicles",
+            suppliers:
+                "For Suppliers and Partners | RusTrak Special-Purpose Vehicle Manufacturer",
+            vacancies: "Careers | RusTrak Special-Purpose Vehicle Manufacturer",
+            video: "Video Gallery of RusTrak Special-Purpose Vehicle Manufacturer",
+        },
         // ///////////////////////BASKET///////////////////////
         basket: {
             pageTitle: "Shopping Cart",

@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
 import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,7 +8,6 @@ import { useEffect } from "react";
 const NewsDetail = () => {
     const { path } = useParams();
     const { data } = useLanguage();
-    const navigate = useNavigate();
     const allNews = data?.newsPage?.allAvto ?? [];
     const news = allNews.find((item) => {
         return item.path === `/${path}/`;
