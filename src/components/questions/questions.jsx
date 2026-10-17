@@ -1,7 +1,6 @@
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
 import { useLanguage } from "../../context/languageContext";
-
 const QuestionsSection = () => {
     const { data } = useLanguage();
     const [name, setName] = useState("");
@@ -9,25 +8,19 @@ const QuestionsSection = () => {
     const [errors, setErrors] = useState({});
     const [phoneFocused, setPhoneFocused] = useState(false);
     const [phoneHovered, setPhoneHovered] = useState(false);
-
     const send = (e) => {
         e.preventDefault();
-
         const newErrors = {};
-
         if (!name.trim()) {
             newErrors.name = true;
         }
-
         if (phone.replace(/\D/g, "").length !== 12) {
             newErrors.phone = true;
         }
         setErrors(newErrors);
-
         if (Object.keys(newErrors).length > 0) {
             return;
         }
-
         setName("");
         setPhone("");
         setErrors({});
@@ -44,7 +37,7 @@ const QuestionsSection = () => {
                             {data.modals.questionText}
                         </p>
                     </div>
-                    <div className=''>
+                    <div>
                         <form
                             onSubmit={send}
                             className='md:flex md:items-start gap-5 pr-5 md:pr-0 mx-auto w-full md:mx-0'
@@ -86,17 +79,16 @@ const QuestionsSection = () => {
                                     )}
                                 </div>
                             </div>
-
                             <div className='flex flex-col gap-1 my-5 md:my-0 w-full'>
                                 <label
                                     htmlFor='phone'
-                                    className='text-[14px] leading-5 text-black text-left'
+                                    className='text-sm leading-5 text-black text-left'
                                 >
                                     {data.modals.phone} *
                                 </label>
                                 <IMaskInput
                                     id='phone'
-                                    mask='+{998} (00) 000-00-00'
+                                    mask='+{998} 00-000-00-00'
                                     lazy={!phoneHovered && !phoneFocused}
                                     value={phone}
                                     unmask={false}
@@ -114,7 +106,15 @@ const QuestionsSection = () => {
                                         }
                                     }}
                                     onFocus={() => setPhoneFocused(true)}
-                                    onBlur={() => setPhoneFocused(false)}
+                                    onBlur={() => {
+                                        setPhoneFocused(false);
+
+                                        if (
+                                            phone.replace(/\D/g, "").length <= 3
+                                        ) {
+                                            setPhone("");
+                                        }
+                                    }}
                                     onMouseEnter={() => setPhoneHovered(true)}
                                     onMouseLeave={() => setPhoneHovered(false)}
                                     placeholder='+998'
@@ -137,7 +137,6 @@ const QuestionsSection = () => {
                                     )}
                                 </div>
                             </div>
-
                             <div className='shrink-0 md:pt-6'>
                                 <button
                                     type='submit'
@@ -158,7 +157,6 @@ const QuestionsSection = () => {
                         </p>
                     </div>
                 </div>
-
                 <div className='hidden min-[1100px]:block w-100 h-80 shrink-0'>
                     <img
                         src='/homePagePhotos/questions-section-img.webp'

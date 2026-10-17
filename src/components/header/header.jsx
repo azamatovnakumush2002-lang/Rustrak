@@ -339,7 +339,7 @@ function Header() {
                             >
                                 {data.header.navigations.aboutUs}
                                 <span
-                                    className={`inline-block text-yellow-400 transition-transform
+                                    className={`inline-block text-yellow-400 transition
                                         duration-300 ${catalogOpen === "aboutUs" ? "rotate-180" : "rotate-0"}`}
                                 >
                                     ▼
@@ -351,7 +351,7 @@ function Header() {
                             >
                                 {data.header.navigations.media}
                                 <span
-                                    className={`inline-block text-yellow-400 transition-transform duration-300 ${catalogOpen === "media" ? "rotate-180" : "rotate-0"}`}
+                                    className={`inline-block text-yellow-400 transition duration-300 ${catalogOpen === "media" ? "rotate-180" : "rotate-0"}`}
                                 >
                                     ▼
                                 </span>
@@ -397,7 +397,11 @@ function Header() {
             </div>
             {/* catalog modalllllllllllllllllllllllllll */}
             {catalogOpen && (
-                <div className='fixed left-0 top-32.5 z-40 w-full h-[calc(100vh-129px)] overflow-y-auto bg-[#F9F9F9] shadow-md'>
+                <div
+                    className={`fixed left-0 z-40 w-full h-full bg-[#F9F9F9] shadow-md ${
+                        scrolled ? "top-15" : "top-32.5"
+                    }`}
+                >
                     <div className='h-full mx-auto max-w-360 px-5 py-7'>
                         <div className='hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8'>
                             <div>

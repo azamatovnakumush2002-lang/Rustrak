@@ -80,9 +80,12 @@ PodrobneButton;
 export const OpenCatalogButton = () => {
     const { data } = useLanguage();
     return (
-        <button className='bg-amber-400 rounded text-black hover:bg-transparent hover:text-white border border-amber-400 transition duration-500 px-2 sm:px-5 text-[12px] md:text-base py-2 md:px-d'>
+        <a
+            href='/catalog'
+            className='bg-amber-400 rounded text-black hover:bg-transparent hover:text-white border border-amber-400 transition duration-500 px-2 sm:px-5 text-[12px] md:text-base py-2 md:px-d'
+        >
             {data.modals.openCatalog}
-        </button>
+        </a>
     );
 };
 OpenCatalogButton;

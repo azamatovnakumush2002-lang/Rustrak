@@ -52,20 +52,19 @@ const ScrollSlider = () => {
         <div className='mx-auto max-w-360 px-5'>
             <section
                 ref={sectionRef}
-                className='relative max-[889px]:h-[150vh] min-[890px]:h-[250vh] mt-10 md:my-20'
+                className='relative max-[889px]:h-[150vh] min-[890px]:h-[250vh] mt-10 md:mt-20'
             >
                 <div
                     className='
             sticky top-25
             h-[calc(100vh-6.25rem)]
-            gap-10 sm:gap-15
+            gap-5
             w-full flex flex-col
             min-[890px]:flex-row
             min-[890px]:items-start
-            min-[890px]:overflow-hidden
-            max-[889px]:static
-            max-[889px]:h-auto
-            max-[889px]:overflow-visible
+            max-[889px]:sticky
+            max-[889px]:h-130
+            max-[600px]:h-110
         '
                 >
                     <div
@@ -150,19 +149,10 @@ const ScrollSlider = () => {
                                 )}
                             </div>
                         </div>
-                        <div className='flex items-center min-[630px]:items-start w-full ml-5 mt-10'>
-                            <div className='w-full flex flex-col items-strecht min-[540]:flex-col gap-5 min-[630px]:mb-20 min-[890px]:flex-col min-[890px]:items-start mb-2 min-[700px]:flex-row min-[700px]:items-center'>
-                                <div>
-                                    {ItemSvg && (
-                                        <ItemSvg.svg
-                                            className='w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12
-                                        text-[#FEC80B] drop-shadow-[0_2px_3px_rgba(0,0,0,0.08)]
-                                        transition-all duration-300 group-hover:text-white
-                                        group-hover:drop-shadow-none'
-                                        />
-                                    )}
-                                </div>
-                                <div className='max-w-2xl transition-all duration-300 mb-10'>
+                        <div className='flex items-center min-[630px]:items-start w-full ml-5 mt-5'>
+                            <div className='w-full flex flex-col items-strecht min-[540]:flex-col gap-5 min-[890px]:flex-col min-[890px]:items-start mb-2 min-[700px]:flex-row min-[700px]:items-center'>
+                                <div>{ItemSvg && <ItemSvg.svg />}</div>
+                                <div className='max-w-2xl transition duration-300'>
                                     <p className='text-[12px] sm-[890px]:text-sm w-full font-medium leading-6 tracking-[0.01em]'>
                                         {item.text}
                                     </p>

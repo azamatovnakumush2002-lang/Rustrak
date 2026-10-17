@@ -295,7 +295,7 @@ const CategoryPage = () => {
                 {/* gridlaaaaaaaaaaaaaaaaaaaa */}
                 <div className='grid grid-cols-3 lg:grid-cols-4 gap-5'>
                     {/* marka side */}
-                    <div className='p-5 top-0 bg-white self-start svh overflow-y-auto sticky col-span-1 hidden lg:block'>
+                    <div className='sticky top-0 self-start col-span-1 hidden h-screen overflow-y-auto bg-white p-5 lg:block'>
                         <p className='font-medium text-[18px] '>
                             {data.CategoryProducts.Marka.marka}
                         </p>
